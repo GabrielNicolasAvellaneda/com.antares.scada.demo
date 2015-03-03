@@ -16,6 +16,12 @@
           </levels>
         </levels>
       </levels>
+      <levels xmi:id="_1C9JgMHzEeSt_YDd5zSHwg" name="Modbus">
+        <components xsi:type="component:ExternalValue" xmi:id="_32r1YMHzEeSt_YDd5zSHwg" shortDescription="This is the Variable V1" name="VariableV1" dataType="INT32" sourceName="modbus.data.S1.B1.V1">
+          <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
+        </components>
+      </levels>
     </levels>
   </levels>
   <configurations xsi:type="component:MarkerConfiguration" xmi:id="_1DA8TsHlEeSt_YDd5zSHwg">

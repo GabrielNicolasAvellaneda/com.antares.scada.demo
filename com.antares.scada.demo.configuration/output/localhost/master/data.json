@@ -16,6 +16,10 @@
       "connection.id": "self",
       "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.state"
     },
+    "REGION1.SITE1.Modbus.VariableV1.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.B1.V1"
+    },
     "REGION1.SITE1.SYS.LAVG15.V.source": {
       "connection.id": "driver.exec.on.localhost",
       "item.id": "CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg15"
@@ -30,6 +34,10 @@
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
       "subDatasource.0": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master"
     },
+    "REGION1.SITE1.Modbus.SUM.V.sum": {
+      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
+      "datasource.0": "REGION1.SITE1.Modbus.VariableV1.X.master"
+    },
     "REGION1.SITE1.SYS.SUM.V.sum": {
       "datasource.1": "REGION1.SITE1.SYS.LAVG15.V.master",
       "datasource.2": "REGION1.SITE1.SYS.LAVG5.V.master",
@@ -38,8 +46,9 @@
       "datasource.0": "REGION1.SITE1.SYS.LAVG1.V.master"
     },
     "REGION1.SITE1.SUM.V.sum": {
+      "subDatasource.1": "REGION1.SITE1.SYS.SUM.V.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "subDatasource.0": "REGION1.SITE1.SYS.SUM.V.master"
+      "subDatasource.0": "REGION1.SITE1.Modbus.SUM.V.master"
     },
     "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.sum": {
       "datasource.1": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
@@ -56,6 +65,11 @@
     "master/exporter/REGION1.SUM.V": {
       "datasource.id": "REGION1.SUM.V.master",
       "item.id": "REGION1.SUM.V"
+    },
+    "master/exporter/REGION1.SITE1.Modbus.VariableV1.X": {
+      "datasource.id": "REGION1.SITE1.Modbus.VariableV1.X.master",
+      "item.id": "REGION1.SITE1.Modbus.VariableV1.X",
+      "description": "This is the Variable V1"
     },
     "master/exporter/REGION1.SITE1.SYS.LAVG1.V": {
       "datasource.id": "REGION1.SITE1.SYS.LAVG1.V.master",
@@ -140,6 +154,10 @@
     "master/exporter/REGION1.SITE1.SYS.DRV.EXEC.CON.M": {
       "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
       "item.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M"
+    },
+    "master/exporter/REGION1.SITE1.Modbus.SUM.V": {
+      "datasource.id": "REGION1.SITE1.Modbus.SUM.V.master",
+      "item.id": "REGION1.SITE1.Modbus.SUM.V"
     }
   },
   "ae.monitor.query": {
@@ -211,6 +229,9 @@
     }
   },
   "da.connection": {
+    "driver.modbus.on.localhost": {
+      "connection.uri": "da:ngp://interconnect:interconnect12@localhost:2114"
+    },
     "driver.exec.on.localhost": {
       "connection.uri": "da:ngp://interconnect:interconnect12@localhost:2107"
     },
@@ -297,6 +318,14 @@
       "marker.maintenance.ack": "",
       "marker.maintenance.warning": ""
     },
+    "REGION1_SITE1_Modbus": {
+      "master.id": "REGION1.SITE1.Modbus.SUM.V.master, REGION1.SITE1.Modbus.VariableV1.X.master",
+      "handlerPriority": "10",
+      "exportAttribute": "true",
+      "alwaysExport": "true",
+      "marker.maintenance.ack": "",
+      "marker.maintenance.warning": ""
+    },
     "REGION1_SITE1": {
       "master.id": "REGION1.SITE1.SUM.V.master",
       "handlerPriority": "10",
@@ -327,6 +356,9 @@
     "REGION1.SITE1.SYS.LAVG5.V.master": {
       "datasource.id": "REGION1.SITE1.SYS.LAVG5.V.source"
     },
+    "REGION1.SITE1.Modbus.SUM.V.master": {
+      "datasource.id": "REGION1.SITE1.Modbus.SUM.V.sum"
+    },
     "ae.server.info.INIT.master": {
       "datasource.id": "ae.server.info.INIT"
     },
@@ -344,6 +376,9 @@
     },
     "REGION1.SUM.V.master": {
       "datasource.id": "REGION1.SUM.V.sum"
+    },
+    "REGION1.SITE1.Modbus.VariableV1.X.master": {
+      "datasource.id": "REGION1.SITE1.Modbus.VariableV1.X.source"
     },
     "REGION1.SITE1.SUM.V.master": {
       "datasource.id": "REGION1.SITE1.SUM.V.sum"
@@ -383,6 +418,16 @@
     }
   },
   "da.master.handler.sum": {
+    "REGION1.SITE1.Modbus.SUM.V.sum.phase1": {
+      "master.id": "REGION1.SITE1.Modbus.SUM.V.master",
+      "info.item": "REGION1.SITE1.Modbus.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "Modbus",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error"
+    },
     "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
       "info.item": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V",
@@ -592,6 +637,24 @@
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
+    "REGION1.SITE1.Modbus.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.Modbus.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "Modbus",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.Modbus.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
     "REGION1.SITE1.SYS.LAVG1.V.sum.phase1": {
       "master.id": "REGION1.SITE1.SYS.LAVG1.V.master",
       "info.item": "REGION1.SITE1.SYS.LAVG1.V",
@@ -602,6 +665,17 @@
       "info.level.0": "REGION1",
       "tag": "error",
       "info.itemDescription": "Load Average 1m"
+    },
+    "REGION1.SITE1.Modbus.VariableV1.X.sum.phase1": {
+      "master.id": "REGION1.SITE1.Modbus.VariableV1.X.master",
+      "info.item": "REGION1.SITE1.Modbus.VariableV1.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "Modbus",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error",
+      "info.itemDescription": "This is the Variable V1"
     },
     "REGION1.SITE1.SUM.V.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
@@ -673,6 +747,25 @@
       "tag.alarm.prefix": "phase2",
       "tag.info.prefix": "phase2",
       "master.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SITE1.Modbus.VariableV1.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.Modbus.VariableV1.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "Modbus",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "This is the Variable V1",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.Modbus.VariableV1.X.master",
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"

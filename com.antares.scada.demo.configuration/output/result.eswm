@@ -32,6 +32,9 @@
       <connections xsi:type="osgi:DataAccessConnection" name="driver.exec.on.localhost" endpoint="//@nodes.0/@endpoints.5">
         <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
       </connections>
+      <connections xsi:type="osgi:DataAccessConnection" name="driver.modbus.on.localhost" endpoint="//@nodes.0/@endpoints.6">
+        <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
+      </connections>
       <exporter xsi:type="osgi:ConfigurationAdministratorExporter" name="master/exporter" endpoints="//@nodes.0/@endpoints.0"/>
       <exporter xsi:type="osgi:AlarmsEventsExporter" name="master/exporter" endpoints="//@nodes.0/@endpoints.1"/>
       <exporter xsi:type="osgi:DataAccessExporter" name="master/exporter" endpoints="//@nodes.0/@endpoints.2">
@@ -40,21 +43,23 @@
         <exports item="//@nodes.0/@applications.0/@items.2" exportName="REGION1.SITE1.SYS.LAVG15.V"/>
         <exports item="//@nodes.0/@applications.0/@items.3" exportName="REGION1.SITE1.SYS.DRV.EXEC.CON.M"/>
         <exports item="//@nodes.0/@applications.0/@items.4" exportName="REGION1.SITE1.SYS.DRV.EXEC.STATE.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.5" exportName="REGION1.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.6" exportName="REGION1.SITE1.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.7" exportName="REGION1.SITE1.SYS.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.8" exportName="REGION1.SITE1.SYS.DRV.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.9" exportName="REGION1.SITE1.SYS.DRV.EXEC.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.10" exportName="ae.server.info.ALERT_ACTIVE"/>
-        <exports item="//@nodes.0/@applications.0/@items.11" exportName="ae.server.info.ALERT_DISABLED"/>
-        <exports item="//@nodes.0/@applications.0/@items.12" exportName="ae.server.info.OK"/>
-        <exports item="//@nodes.0/@applications.0/@items.13" exportName="ae.server.info.NOT_OK"/>
-        <exports item="//@nodes.0/@applications.0/@items.14" exportName="ae.server.info.UNSAFE"/>
-        <exports item="//@nodes.0/@applications.0/@items.15" exportName="ae.server.info.INACTIVE"/>
-        <exports item="//@nodes.0/@applications.0/@items.16" exportName="ae.server.info.INIT"/>
-        <exports item="//@nodes.0/@applications.0/@items.17" exportName="ae.server.info.NOT_OK_AKN"/>
-        <exports item="//@nodes.0/@applications.0/@items.18" exportName="ae.server.info.NOT_OK_NOT_AKN"/>
-        <exports item="//@nodes.0/@applications.0/@items.19" exportName="ae.server.info.NOT_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.5" exportName="REGION1.SITE1.Modbus.VariableV1.X"/>
+        <exports item="//@nodes.0/@applications.0/@items.6" exportName="REGION1.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.7" exportName="REGION1.SITE1.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.8" exportName="REGION1.SITE1.SYS.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.9" exportName="REGION1.SITE1.SYS.DRV.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.10" exportName="REGION1.SITE1.SYS.DRV.EXEC.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.11" exportName="REGION1.SITE1.Modbus.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.12" exportName="ae.server.info.ALERT_ACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.13" exportName="ae.server.info.ALERT_DISABLED"/>
+        <exports item="//@nodes.0/@applications.0/@items.14" exportName="ae.server.info.OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.15" exportName="ae.server.info.NOT_OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.16" exportName="ae.server.info.UNSAFE"/>
+        <exports item="//@nodes.0/@applications.0/@items.17" exportName="ae.server.info.INACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.18" exportName="ae.server.info.INIT"/>
+        <exports item="//@nodes.0/@applications.0/@items.19" exportName="ae.server.info.NOT_OK_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.20" exportName="ae.server.info.NOT_OK_NOT_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.21" exportName="ae.server.info.NOT_AKN"/>
       </exporter>
       <customizationProfile name="Local customization profile">
         <start name="org.eclipse.scada.sec.provider.plain.property"/>
@@ -65,13 +70,14 @@
         <includes href="../global/master.customization.profile.xml#/"/>
       </customizationProfile>
       <securityConfiguration href="../global/global.security#/"/>
-      <summaryGroups name="REGION1" items="//@nodes.0/@applications.0/@items.6">
-        <subGroups name="SITE1" items="//@nodes.0/@applications.0/@items.7">
-          <subGroups name="SYS" items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.8">
-            <subGroups name="DRV" items="//@nodes.0/@applications.0/@items.9">
+      <summaryGroups name="REGION1" items="//@nodes.0/@applications.0/@items.7">
+        <subGroups name="SITE1" items="//@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.11">
+          <subGroups name="SYS" items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.9">
+            <subGroups name="DRV" items="//@nodes.0/@applications.0/@items.10">
               <subGroups name="EXEC" items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4"/>
             </subGroups>
           </subGroups>
+          <subGroups name="Modbus" items="//@nodes.0/@applications.0/@items.5"/>
         </subGroups>
       </summaryGroups>
       <items xsi:type="osgi:SourceItem" name="REGION1.SITE1.SYS.LAVG1.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg1">
@@ -173,6 +179,27 @@
           <hierarchy>EXEC</hierarchy>
         </information>
         <itemFeatures xsi:type="osgi:ManualOverride" name="local.manual"/>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="REGION1.SITE1.Modbus.VariableV1.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.B1.V1">
+        <information description="This is the Variable V1" dataType="INT32">
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>Modbus</hierarchy>
+        </information>
         <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
           <attributes>error</attributes>
         </itemFeatures>
@@ -293,6 +320,27 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
+      <items xsi:type="osgi:SummaryItem" name="REGION1.SITE1.Modbus.SUM.V" group="//@nodes.0/@applications.0/@summaryGroups.0/@subGroups.0/@subGroups.1">
+        <information>
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>Modbus</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
       <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.ALERT_ACTIVE" dataSourceId="ae.server.info.ALERT_ACTIVE">
         <information description="Alert active" system="SCADA"/>
       </items>
@@ -324,23 +372,27 @@
         <information description="Summarized state NOT_OK_AKN" system="SCADA"/>
       </items>
       <markers>
-        <markerGroups items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.9" name="REGION1_SITE1_SYS_DRV_EXEC">
+        <markerGroups items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.10" name="REGION1_SITE1_SYS_DRV_EXEC">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.5" name="REGION1">
+        <markerGroups items="//@nodes.0/@applications.0/@items.6" name="REGION1">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.8" name="REGION1_SITE1_SYS_DRV">
+        <markerGroups items="//@nodes.0/@applications.0/@items.9" name="REGION1_SITE1_SYS_DRV">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.6" name="REGION1_SITE1">
+        <markerGroups items="//@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.11" name="REGION1_SITE1_Modbus">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.7" name="REGION1_SITE1_SYS">
+        <markerGroups items="//@nodes.0/@applications.0/@items.7" name="REGION1_SITE1">
+          <markers name="maintenance.warning"/>
+          <markers name="maintenance.ack"/>
+        </markerGroups>
+        <markerGroups items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.8" name="REGION1_SITE1_SYS">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
