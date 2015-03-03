@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_DghdwMHdEeS1psWssi2O_A">
+  <levels xmi:id="_DgiE0MHdEeS1psWssi2O_A" name="REGION1">
+    <levels xmi:id="_DgiE0cHdEeS1psWssi2O_A" name="SITE1">
+      <levels xmi:id="_DgiE0sHdEeS1psWssi2O_A" name="SYS">
+        <components xsi:type="exec:LoadAverage" xmi:id="_Dgj6AMHdEeS1psWssi2O_A" name="LAVG">
+          <masterOn href="world.esim#_DgaJBMHdEeS1psWssi2O_A"/>
+          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_DgaJAsHdEeS1psWssi2O_A"/>
+        </components>
+        <levels xmi:id="_Dgj6AcHdEeS1psWssi2O_A" name="DRV">
+          <levels xmi:id="_Dgj6AsHdEeS1psWssi2O_A" name="EXEC">
+            <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_Dgj6A8HdEeS1psWssi2O_A">
+              <masterOn href="world.esim#_DgaJBMHdEeS1psWssi2O_A"/>
+              <driver xsi:type="infrastructure:CommonDriver" href="world.esim#_DgaJAsHdEeS1psWssi2O_A"/>
+            </components>
+          </levels>
+        </levels>
+      </levels>
+    </levels>
+    <levels xmi:id="_Dgj6BMHdEeS1psWssi2O_A" name="SITE2">
+      <levels xmi:id="_Dgj6BcHdEeS1psWssi2O_A" name="SYS">
+        <components xsi:type="exec:LoadAverage" xmi:id="_Dgj6BsHdEeS1psWssi2O_A" name="LAVG">
+          <masterOn href="world.esim#_DgZh9MHdEeS1psWssi2O_A"/>
+          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_DgZh8sHdEeS1psWssi2O_A"/>
+        </components>
+        <levels xmi:id="_Dgj6B8HdEeS1psWssi2O_A" name="DRV">
+          <levels xmi:id="_Dgj6CMHdEeS1psWssi2O_A" name="EXEC">
+            <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_Dgj6CcHdEeS1psWssi2O_A">
+              <masterOn href="world.esim#_DgZh9MHdEeS1psWssi2O_A"/>
+              <driver xsi:type="infrastructure:CommonDriver" href="world.esim#_DgZh8sHdEeS1psWssi2O_A"/>
+            </components>
+          </levels>
+        </levels>
+      </levels>
+    </levels>
+  </levels>
+  <configurations xsi:type="component:MarkerConfiguration" xmi:id="_Dgj6CsHdEeS1psWssi2O_A">
+    <markers xmi:id="_Dgj6C8HdEeS1psWssi2O_A" name="maintenance.warning"/>
+    <markers xmi:id="_Dgj6DMHdEeS1psWssi2O_A" name="maintenance.ack"/>
+  </configurations>
+  <infrastructure href="world.esim#_DgZh8MHdEeS1psWssi2O_A"/>
+  <defaultCustomizationPipeline xsi:type="item:JavaScriptCustomizationPipeline" href="customization/default.icm_js#/"/>
+  <defaultArchiveSelector xsi:type="item:JavaScriptSelector" href="customization/archiveSelector.isel_js#/"/>
+</component:ComponentWorld>
