@@ -1,0 +1,71 @@
+{
+  "org.eclipse.scada.sec.osgi.manager": {
+    "reject.all.session": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "PRIV",
+      "priority": "1200",
+      "properties.script": "false;",
+      "for.type": "SESSION"
+    },
+    "allow.admin.session": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "PRIV",
+      "priority": "1300",
+      "properties.script": "user !\u003d null \u0026\u0026 user.hasRole ( \"ADMIN\" );",
+      "for.type": "SESSION",
+      "for.id": "admin"
+    },
+    "allow.logon": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "CONNECT",
+      "priority": "1500",
+      "properties.script": "true;",
+      "for.type": "SESSION"
+    },
+    "logon": {
+      "serviceType": "logon",
+      "for.action": "CONNECT",
+      "priority": "1600",
+      "for.type": "SESSION"
+    },
+    "allow.all": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "priority": "1100",
+      "properties.script": "user !\u003d null;"
+    },
+    "allow.operator.session": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "PRIV",
+      "priority": "1400",
+      "properties.script": "user !\u003d null;",
+      "for.type": "SESSION",
+      "for.id": "operator"
+    }
+  },
+  "org.eclipse.scada.da.server.osgi.modbus.slaveDevice": {
+    "S1": {
+      "dataOrder": "BIG_ENDIAN",
+      "block.B1": "HOLDING:0:10:250:10000:T1",
+      "modbus.master.id": "modbus",
+      "slave.id": "0"
+    }
+  },
+  "org.eclipse.scada.da.server.osgi.modbus.masterDevice": {
+    "modbus": {
+      "port": "502",
+      "host": "localhost",
+      "protocolType": "TCP"
+    }
+  },
+  "org.eclipse.scada.da.server.common.memory.types": {
+    "T1": {
+      "variable.V2": "UINT16:2:0:BIG_ENDIAN",
+      "variable.V1": "UINT16:0:0:BIG_ENDIAN"
+    }
+  }
+}

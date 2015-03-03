@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="ASCII"?>
-<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_DgZh8MHdEeS1psWssi2O_A">
-  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_DgaJAcHdEeS1psWssi2O_A" hostName="localhost">
-    <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_DgaJAsHdEeS1psWssi2O_A" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
-    <valueArchives xmi:id="_DgaJA8HdEeS1psWssi2O_A" name="hdserver" instanceNumber="2"/>
-    <masters xmi:id="_DgaJBMHdEeS1psWssi2O_A" name="master" driver="_DgaJAsHdEeS1psWssi2O_A" archiveTo="_DgaJA8HdEeS1psWssi2O_A">
-      <authoratives xmi:id="_DgaJBcHdEeS1psWssi2O_A">
+<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_1C948MHlEeSt_YDd5zSHwg">
+  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_1C949sHlEeSt_YDd5zSHwg" hostName="localhost">
+    <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_1C9498HlEeSt_YDd5zSHwg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
+    <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_xyApEMHmEeSt_YDd5zSHwg" name="modbus" driverTypeId="org.eclipse.scada.da.server.modbus" devices="_Nw3WEMHmEeSt_YDd5zSHwg" instanceNumber="14"/>
+    <valueArchives xmi:id="_1C94-MHlEeSt_YDd5zSHwg" name="hdserver" instanceNumber="2"/>
+    <masters xmi:id="_1C94-cHlEeSt_YDd5zSHwg" name="master" driver="_1C9498HlEeSt_YDd5zSHwg" archiveTo="_1C94-MHlEeSt_YDd5zSHwg">
+      <authoratives xmi:id="_1C94-sHlEeSt_YDd5zSHwg">
         <hierarchy>REGION1</hierarchy>
         <hierarchy>SITE1</hierarchy>
       </authoratives>
     </masters>
   </nodes>
-  <options xmi:id="_DgaJBsHdEeS1psWssi2O_A">
-    <monitorPools xmi:id="_Dgb-MMHdEeS1psWssi2O_A" name="monitors.unsafe" filter="(status=UNSAFE)"/>
-    <monitorPools xmi:id="_Dgb-McHdEeS1psWssi2O_A" name="monitors.inactive" filter="(status=INACTIVE)"/>
-    <monitorPools xmi:id="_Dgb-MsHdEeS1psWssi2O_A" name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
-    <monitorPools xmi:id="_Dgb-M8HdEeS1psWssi2O_A" name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
-    <monitorPools xmi:id="_DgclQMHdEeS1psWssi2O_A" name="monitors.init" filter="(status=INIT)"/>
-    <monitorPools xmi:id="_DgclQcHdEeS1psWssi2O_A" name="monitors.all" filter="(status=*)"/>
-    <eventPools xmi:id="_DgclQsHdEeS1psWssi2O_A" name="events.all" filter="(eventType=*)" size="10000"/>
-    <defaultUserService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_DgclQ8HdEeS1psWssi2O_A">
-      <users xmi:id="_DgclRMHdEeS1psWssi2O_A" name="admin" password="admin12">
+  <nodes xsi:type="infrastructure:ExternalNode" xmi:id="_JhaTEMHmEeSt_YDd5zSHwg" hostName="localhost">
+    <devices xsi:type="modbus:ModbusDevice" xmi:id="_Nw3WEMHmEeSt_YDd5zSHwg" name="modbus" port="502">
+      <slaves xmi:id="_qhyjwMHmEeSt_YDd5zSHwg" id="S1">
+        <blocks xmi:id="_rZfAwMHmEeSt_YDd5zSHwg" id="B1" name="" blockType="HOLDING" count="10" period="250" timeout="10000">
+          <type href="modbusTypes.mtd#T1"/>
+        </blocks>
+      </slaves>
+      <typeSystem href="modbusTypes.mtd#TS1"/>
+    </devices>
+  </nodes>
+  <options xmi:id="_1C94-8HlEeSt_YDd5zSHwg">
+    <monitorPools xmi:id="_1C94_MHlEeSt_YDd5zSHwg" name="monitors.unsafe" filter="(status=UNSAFE)"/>
+    <monitorPools xmi:id="_1C94_cHlEeSt_YDd5zSHwg" name="monitors.inactive" filter="(status=INACTIVE)"/>
+    <monitorPools xmi:id="_1C94_sHlEeSt_YDd5zSHwg" name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
+    <monitorPools xmi:id="_1C94_8HlEeSt_YDd5zSHwg" name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
+    <monitorPools xmi:id="_1C95AMHlEeSt_YDd5zSHwg" name="monitors.init" filter="(status=INIT)"/>
+    <monitorPools xmi:id="_1C95AcHlEeSt_YDd5zSHwg" name="monitors.all" filter="(status=*)"/>
+    <eventPools xmi:id="_1C95AsHlEeSt_YDd5zSHwg" name="events.all" filter="(eventType=*)" size="10000"/>
+    <defaultUserService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_1C95A8HlEeSt_YDd5zSHwg">
+      <users xmi:id="_1C95BMHlEeSt_YDd5zSHwg" name="admin" password="admin12">
         <roles>ADMIN</roles>
       </users>
-      <users xmi:id="_DgclRcHdEeS1psWssi2O_A" name="interconnect" password="interconnect12">
+      <users xmi:id="_1C95BcHlEeSt_YDd5zSHwg" name="interconnect" password="interconnect12">
         <roles>INTERCONNECT</roles>
       </users>
     </defaultUserService>
   </options>
   <defaultSecurityConfiguration href="global/global.security#/"/>
   <defaultMasterHandlerPriorities href="platform:/plugin/org.eclipse.scada.configuration.lib/model/defaultPriorities.eswm#_sLVwoN_iEeKP_IG4d7_Nqg"/>
-  <defaultCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_DgclRsHdEeS1psWssi2O_A" username="interconnect" password="interconnect12"/>
+  <defaultCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_1C95BsHlEeSt_YDd5zSHwg" username="interconnect" password="interconnect12"/>
   <defaultMasterCustomizationProfile href="global/master.customization.profile.xml#/"/>
   <defaultValueArchiveCustomizationProfile href="global/hdserver.customization.profile.xml#/"/>
-  <defaultDriverPassword xmi:id="_DgclR8HdEeS1psWssi2O_A" password="driver12"/>
-  <configurations xmi:id="_DgclSMHdEeS1psWssi2O_A"/>
+  <defaultDriverPassword xmi:id="_1C95B8HlEeSt_YDd5zSHwg" password="driver12"/>
+  <configurations xmi:id="_1C95CMHlEeSt_YDd5zSHwg"/>
 </infrastructure:World>

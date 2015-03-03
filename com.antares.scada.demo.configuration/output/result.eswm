@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<world:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:world="http://eclipse.org/SCADA/Configuration/World">
+<world:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:memoryManager="http://eclipse.org/SCADA/Configuration/Memory/Manager" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:world="http://eclipse.org/SCADA/Configuration/World">
   <nodes xsi:type="world:ApplicationNode" hostName="localhost">
     <endpoints name="Exporter Endpoint: ca - null" portNumber="2401">
       <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.0/@exporter.0"/>
@@ -18,6 +18,12 @@
     </endpoints>
     <endpoints name="CommonDriver Endpoint: null" portNumber="2107">
       <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.2"/>
+    </endpoints>
+    <endpoints name="EquinoxDriver Endpoint: modbus" portNumber="2114">
+      <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.3/@exporter.0"/>
+    </endpoints>
+    <endpoints name="CA Exporter: modbus" portNumber="2414">
+      <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.3/@exporter.1"/>
     </endpoints>
     <applications xsi:type="osgi:DefaultMasterServer" name="master">
       <connections xsi:type="osgi:DataAccessConnection" shortDescription="Connection to ourself" name="self" endpoint="//@nodes.0/@endpoints.2">
@@ -367,6 +373,30 @@
     <applications xsi:type="world:ExecDriver" name="exec" endpoints="//@nodes.0/@endpoints.5">
       <password password="driver12"/>
     </applications>
+    <applications xsi:type="modbus:ModbusDriver" name="modbus">
+      <exporter xsi:type="osgi:DataAccessExporter" name="exporter" endpoints="//@nodes.0/@endpoints.6"/>
+      <exporter xsi:type="osgi:ConfigurationAdministratorExporter" name="caExporter" endpoints="//@nodes.0/@endpoints.7"/>
+      <customizationProfile>
+        <start name="org.eclipse.scada.sec.provider.plain.property"/>
+        <property key="org.eclipse.scada.sec.provider.plain.property.data" value="admin:admin12:ADMIN|interconnect:interconnect12:INTERCONNECT"/>
+        <property key="org.eclipse.scada.da.server.exporter.ngp.exportUri" value="da:ngp://0.0.0.0:2114"/>
+        <property key="org.eclipse.scada.ca.server.exporter.ngp.exportUri" value="ca:ngp://0.0.0.0:2414"/>
+      </customizationProfile>
+      <securityConfiguration href="../global/global.security#/"/>
+      <modules xsi:type="memoryManager:MemoryManagerModule">
+        <typeSystem href="../modbusTypes.mtd#TS1"/>
+      </modules>
+      <masters endpoint="//@nodes.1/@endpoints.0" id="modbus">
+        <slaves id="S1">
+          <blocks id="B1" name="" blockType="HOLDING" count="10" period="250" timeout="10000">
+            <type href="../modbusTypes.mtd#T1"/>
+          </blocks>
+        </slaves>
+      </masters>
+    </applications>
+  </nodes>
+  <nodes xsi:type="world:ExternalNode" hostName="localhost">
+    <endpoints name="Modbus Device Endpoint" portNumber="502"/>
   </nodes>
   <options>
     <masterHandlerPriorities href="platform:/plugin/org.eclipse.scada.configuration.lib/model/defaultPriorities.eswm#_sLVwoN_iEeKP_IG4d7_Nqg"/>
