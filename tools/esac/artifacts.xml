@@ -1,0 +1,1702 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='Bundle pool' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1422273871871'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='329'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.details.model.editor' version='0.2.0.v20141016-1046'>
+      <properties size='1'>
+        <property name='download.size' value='76497'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.runtime' version='3.9.100.v20131218-1515'>
+      <properties size='1'>
+        <property name='download.size' value='73658'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.touchpoint.eclipse' version='2.1.200.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='127557'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.databinding.observable' version='1.4.1.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='297395'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.common.ngp' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='10288'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.client.ngp' version='0.2.0.v20140528-1003'>
+      <properties size='1'>
+        <property name='download.size' value='24903'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.widgets' version='1.0.0.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='14205'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.simpleconfigurator' version='1.0.400.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='40533'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.net' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='18363'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.utils.osgi' version='0.1.0.v20141013-1430'>
+      <properties size='1'>
+        <property name='download.size' value='48635'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.http.jetty' version='3.0.100.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='25187'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.localization' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='16184'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.utils.core.runtime' version='0.2.0.v20140718-1310'>
+      <properties size='1'>
+        <property name='download.size' value='9973'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.frameworkadmin.equinox' version='1.0.500.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='63436'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui.importer' version='0.2.0.v20140804-1410'>
+      <properties size='1'>
+        <property name='download.size' value='57547'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.ui.connection.creator.net' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='11673'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.protocol.ngp.common' version='0.2.0.v20140527-1241'>
+      <properties size='1'>
+        <property name='download.size' value='70993'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.chart.model' version='0.1.0.v20140617-1211'>
+      <properties size='1'>
+        <property name='download.size' value='25808'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.chart.ui' version='0.2.0.v20140711-1235'>
+      <properties size='1'>
+        <property name='download.size' value='8484'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.common.ngp' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='10296'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.ui.draw2d' version='0.2.0.v20141020-1516'>
+      <properties size='1'>
+        <property name='download.size' value='108492'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help.webapp' version='3.6.200.v20130514-1258'>
+      <properties size='1'>
+        <property name='download.size' value='613581'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.client.test' version='0.2.0.v20141112-1534'>
+      <properties size='1'>
+        <property name='download.size' value='78304'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.ui.user' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='86813'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.client.common' version='0.2.0.v20140528-1003'>
+      <properties size='1'>
+        <property name='download.size' value='25245'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ecf.identity' version='3.2.0.v20130604-1622'>
+      <properties size='1'>
+        <property name='download.size' value='54407'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.emf.ecore' version='2.9.2.v20131212-0545'>
+      <properties size='1'>
+        <property name='download.size' value='18412'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.databinding.property' version='1.4.200.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='169046'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='javax.servlet' version='3.0.0.v201112011016'>
+      <properties size='1'>
+        <property name='download.size' value='201594'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.data' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='23783'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jetty.security' version='8.1.14.v20131031'>
+      <properties size='1'>
+        <property name='download.size' value='98898'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ngp' version='0.1.0.v20140804-1358'>
+      <properties size='1'>
+        <property name='download.size' value='11696'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.client.ngp' version='0.2.0.v20140528-1003'>
+      <properties size='1'>
+        <property name='download.size' value='29571'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.views' version='3.6.100.v20130326-1250'>
+      <properties size='1'>
+        <property name='download.size' value='91328'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.details.model.edit' version='0.2.0.v20141016-1046'>
+      <properties size='1'>
+        <property name='download.size' value='159460'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.ui.views' version='0.2.0.v20140827-0904'>
+      <properties size='1'>
+        <property name='download.size' value='247661'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.sec.ui.providers' version='0.2.0.v20140604-1228'>
+      <properties size='1'>
+        <property name='download.size' value='57842'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.w3c.dom.smil' version='1.0.0.v200806040011'>
+      <properties size='1'>
+        <property name='download.size' value='15995'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.oscar' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='15132'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.compare.core' version='3.5.300.v20130514-1224'>
+      <properties size='1'>
+        <property name='download.size' value='63379'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.connection.provider' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='13927'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hmi.adminclient.app' version='0.2.0.v20140711-1058'>
+      <properties size='1'>
+        <property name='download.size' value='149497'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.widgets' version='0.2.0.v20141112-1534'>
+      <properties size='1'>
+        <property name='download.size' value='54854'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.swt.win32.win32.x86_64' version='3.102.1.v20140206-1358'>
+      <properties size='1'>
+        <property name='download.size' value='2712791'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.details.model' version='0.2.0.v20141016-1046'>
+      <properties size='1'>
+        <property name='download.size' value='171863'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.blink' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='16545'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.e4.rcp' version='1.2.2.v20140206-1358'>
+      <properties size='1'>
+        <property name='download.size' value='32441'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.common' version='0.2.0.v20140527-1449'>
+      <properties size='1'>
+        <property name='download.size' value='43310'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.ds' version='1.4.101.v20130813-1853'>
+      <properties size='1'>
+        <property name='download.size' value='194441'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.databinding' version='1.4.1.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='202137'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.core.services' version='1.1.0.v20130515-1343'>
+      <properties size='1'>
+        <property name='download.size' value='23152'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jetty.io' version='8.1.14.v20131031'>
+      <properties size='1'>
+        <property name='download.size' value='113315'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.ui.sdk.scheduler' version='1.2.0.v20140122-1840'>
+      <properties size='1'>
+        <property name='download.size' value='113168'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.styles' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='10998'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.ui' version='0.1.0.v20141112-1049'>
+      <properties size='1'>
+        <property name='download.size' value='49938'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.resources' version='3.8.101.v20130717-0806'>
+      <properties size='1'>
+        <property name='download.size' value='830014'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.jarprocessor' version='1.0.300.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='65588'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.expressions' version='3.4.501.v20131118-1915'>
+      <properties size='1'>
+        <property name='download.size' value='88715'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.xmi' version='2.9.1.v20131212-0545'>
+      <properties size='1'>
+        <property name='download.size' value='227790'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.junit' version='4.11.0.v201303080030'>
+      <properties size='1'>
+        <property name='download.size' value='228620'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.utils.filter' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='41683'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.sec.ui.providers.windows' version='0.2.0.v20140604-1228'>
+      <properties size='1'>
+        <property name='download.size' value='13332'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.chart.model' version='0.2.0.v20141112-1030'>
+      <properties size='1'>
+        <property name='download.size' value='113735'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.navigator' version='3.5.300.v20130517-0139'>
+      <properties size='1'>
+        <property name='download.size' value='406375'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.core.di.extensions' version='0.11.100.v20130514-1256'>
+      <properties size='1'>
+        <property name='download.size' value='23348'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.httpcomponents.httpcore' version='4.1.4.v201203221030'>
+      <properties size='1'>
+        <property name='download.size' value='208576'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.protocol.sfp' version='0.2.0.v20141007-1111'>
+      <properties size='1'>
+        <property name='download.size' value='33431'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.connection.provider' version='0.1.0.v20140717-0948'>
+      <properties size='1'>
+        <property name='download.size' value='21868'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.variables' version='3.2.700.v20130402-1741'>
+      <properties size='1'>
+        <property name='download.size' value='34228'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.client.dataitem.details.chart.nl1' version='0.1.0.v20131011-1228'>
+      <properties size='1'>
+        <property name='download.size' value='8975'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.forms' version='3.6.1.v20130822-1117'>
+      <properties size='1'>
+        <property name='download.size' value='302339'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.details' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='23681'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui.connection' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='28978'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.css.swt' version='0.11.0.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='155359'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.console' version='1.0.300.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='27716'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.intro' version='3.4.200.v20130326-1254'>
+      <properties size='1'>
+        <property name='download.size' value='309441'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help.ui' version='4.0.1.v20130708-1201'>
+      <properties size='1'>
+        <property name='download.size' value='499671'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca' version='0.2.0.v20140901-1405'>
+      <properties size='1'>
+        <property name='download.size' value='22552'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.sec.utils' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='25427'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui' version='3.105.0.v20130522-1122'>
+      <properties size='1'>
+        <property name='download.size' value='154349'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.client' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='22358'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.databinding.beans' version='1.2.200.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='76513'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help' version='3.6.0.v20130326-1254'>
+      <properties size='1'>
+        <property name='download.size' value='258927'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.edit.ui' version='2.9.0.v20140203-1126'>
+      <properties size='1'>
+        <property name='download.size' value='218468'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae' version='0.2.0.v20140827-0810'>
+      <properties size='1'>
+        <property name='download.size' value='33561'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.data' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='31605'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.frameworkadmin' version='2.0.100.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='35960'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.css.core' version='0.10.100.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='199760'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.common.ngp' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='10296'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.http.servlet' version='1.1.400.v20130418-1354'>
+      <properties size='1'>
+        <property name='download.size' value='44975'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hmi' version='0.2.0.v20140507-1319'>
+      <properties size='1'>
+        <property name='download.size' value='13636'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.help' version='2.0.2.v20140221-1700'>
+      <properties size='1'>
+        <property name='download.size' value='18075'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.ui.connection.creator.ngp' version='0.2.0.v20140528-0906'>
+      <properties size='1'>
+        <property name='download.size' value='10834'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.protocol.ngp.codec' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='43216'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf' version='2.6.0.v20140203-1126'>
+      <properties size='1'>
+        <property name='download.size' value='11264'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.client.ngp' version='0.2.0.v20140528-1003'>
+      <properties size='1'>
+        <property name='download.size' value='39179'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.workbench' version='3.105.2.v20140211-1711'>
+      <properties size='1'>
+        <property name='download.size' value='3844116'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.ui' version='0.2.0.v20140711-1235'>
+      <properties size='1'>
+        <property name='download.size' value='9179'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.repository' version='2.3.0.v20130412-2032'>
+      <properties size='1'>
+        <property name='download.size' value='129564'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.client.common' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='8222'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.jobs' version='3.5.300.v20130429-1813'>
+      <properties size='1'>
+        <property name='download.size' value='92479'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui.styles' version='0.2.0.v20141016-0735'>
+      <properties size='1'>
+        <property name='download.size' value='66324'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.slf4j.ext' version='1.7.2.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='50611'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.contenttype' version='3.4.200.v20130326-1255'>
+      <properties size='1'>
+        <property name='download.size' value='93013'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.ui' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='8420'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.connection.creator.sfp' version='0.1.0.v20140317-1426'>
+      <properties size='1'>
+        <property name='download.size' value='10752'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.metadata.repository' version='1.2.100.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='111551'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.touchpoint.natives' version='1.1.100.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='53136'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.net' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='57544'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.chart.model.editor' version='0.2.0.v20140603-1345'>
+      <properties size='1'>
+        <property name='download.size' value='80334'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.sec.ui' version='0.2.0.v20140604-1228'>
+      <properties size='1'>
+        <property name='download.size' value='27991'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.equinox.p2.rcp.feature' version='1.2.0.v20140221-1852'>
+      <properties size='1'>
+        <property name='download.size' value='17741'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.workbench' version='1.0.2.v20131202-1739'>
+      <properties size='1'>
+        <property name='download.size' value='247937'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui.editor.wizard' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='20680'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.scada.license' version='0.1.0.v20131202-1030'>
+      <properties size='1'>
+        <property name='download.size' value='20069'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.di' version='1.0.0.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='15730'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.ui.viewer.ext' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='26833'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='13774'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.data' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='22419'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jetty.server' version='8.1.14.v20131031'>
+      <properties size='1'>
+        <property name='download.size' value='370503'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ngp.common' version='0.2.0.v20140513-1546'>
+      <properties size='1'>
+        <property name='download.size' value='26421'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.jsp.jasper' version='1.0.400.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='28124'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.css.swt.theme' version='0.9.100.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='25528'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.client.net' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='28438'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='javax.annotation' version='1.1.0.v201209060031'>
+      <properties size='1'>
+        <property name='download.size' value='27664'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.ui.connection' version='0.2.0.v20140827-0938'>
+      <properties size='1'>
+        <property name='download.size' value='29330'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.connection.provider' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='11034'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.client.sfp' version='0.2.0.v20141016-1505'>
+      <properties size='1'>
+        <property name='download.size' value='48067'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ecf.ssl' version='1.1.0.v20130604-1622'>
+      <properties size='1'>
+        <property name='download.size' value='14553'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.util' version='1.0.500.v20130404-1337'>
+      <properties size='1'>
+        <property name='download.size' value='77932'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.core' version='2.3.0.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='71398'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.client.signalgenerator' version='0.2.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='48815'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.registry' version='3.5.301.v20130717-1549'>
+      <properties size='1'>
+        <property name='download.size' value='184147'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.draw2d' version='3.9.0.201308190730'>
+      <properties size='1'>
+        <property name='download.size' value='570306'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jetty.util' version='8.1.14.v20131031'>
+      <properties size='1'>
+        <property name='download.size' value='301680'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui.connection.discoverer.file' version='0.1.0.v20140702-0924'>
+      <properties size='1'>
+        <property name='download.size' value='18593'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.filetransfer.ssl' version='1.0.0.v20130604-1622'>
+      <properties size='1'>
+        <property name='download.size' value='9676'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.connection.provider' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='13861'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='ch.qos.logback.classic' version='1.0.7.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='262120'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.swt' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='21530'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui' version='0.2.0.v20140804-1410'>
+      <properties size='1'>
+        <property name='download.size' value='27118'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.preferences' version='3.5.100.v20130422-1538'>
+      <properties size='1'>
+        <property name='download.size' value='127170'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.connection.creator.ngp' version='0.2.0.v20140528-0906'>
+      <properties size='1'>
+        <property name='download.size' value='10858'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ecf.filetransfer' version='5.0.0.v20130604-1622'>
+      <properties size='1'>
+        <property name='download.size' value='51730'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui.connection.login' version='0.2.0.v20140901-1207'>
+      <properties size='1'>
+        <property name='download.size' value='73751'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.workbench.swt' version='0.12.2.v20140117-1939'>
+      <properties size='1'>
+        <property name='download.size' value='171259'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui.exporter' version='0.2.0.v20140804-1400'>
+      <properties size='1'>
+        <property name='download.size' value='20650'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.chart.swt' version='0.2.0.v20141113-0840'>
+      <properties size='1'>
+        <property name='download.size' value='99117'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jcraft.jzlib' version='1.1.1.v201205102305'>
+      <properties size='1'>
+        <property name='download.size' value='79678'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.text' version='3.5.300.v20130515-1451'>
+      <properties size='1'>
+        <property name='download.size' value='249432'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui.connection' version='0.2.0.v20141112-1514'>
+      <properties size='1'>
+        <property name='download.size' value='97940'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='javax.servlet.jsp' version='2.2.0.v201112011158'>
+      <properties size='1'>
+        <property name='download.size' value='107235'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.utils.stats' version='0.1.0.v20140317-1412'>
+      <properties size='1'>
+        <property name='download.size' value='13321'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.ui.connection' version='0.2.0.v20140602-1131'>
+      <properties size='1'>
+        <property name='download.size' value='51056'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.commands' version='3.6.100.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='108765'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.core.common' version='0.2.0.v20140825-0934'>
+      <properties size='1'>
+        <property name='download.size' value='19140'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.common' version='2.9.2.v20131212-0545'>
+      <properties size='1'>
+        <property name='download.size' value='351628'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.workbench.addons.swt' version='1.0.2.v20131129-1621'>
+      <properties size='1'>
+        <property name='download.size' value='135085'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.sec' version='0.1.0.v20140801-1054'>
+      <properties size='1'>
+        <property name='download.size' value='53132'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.utils' version='0.2.0.v20141023-0849'>
+      <properties size='1'>
+        <property name='download.size' value='112379'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.slf4j.api' version='1.7.2.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='35173'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.equinox.p2.core.feature' version='1.2.1.v20140221-1852'>
+      <properties size='1'>
+        <property name='download.size' value='18443'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui.editor' version='0.2.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='60971'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jetty.http' version='8.1.14.v20131031'>
+      <properties size='1'>
+        <property name='download.size' value='103777'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.bidi' version='0.10.0.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='48549'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.utils' version='0.2.0.v20141015-1126'>
+      <properties size='1'>
+        <property name='download.size' value='20926'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.core.contexts' version='1.3.1.v20130905-0905'>
+      <properties size='1'>
+        <property name='download.size' value='47374'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.sun.el' version='2.2.0.v201303151357'>
+      <properties size='1'>
+        <property name='download.size' value='137042'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.model' version='0.2.0.v20141020-1516'>
+      <properties size='1'>
+        <property name='download.size' value='140206'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jface' version='3.9.1.v20130725-1141'>
+      <properties size='1'>
+        <property name='download.size' value='1100507'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.transport.ecf' version='1.1.0.v20130516-1858'>
+      <properties size='1'>
+        <property name='download.size' value='41515'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.edit' version='2.9.0.v20140203-1126'>
+      <properties size='1'>
+        <property name='download.size' value='269628'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.hamcrest.core' version='1.3.0.v201303031735'>
+      <properties size='1'>
+        <property name='download.size' value='55802'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.jsp.jasper.registry' version='1.0.300.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='12190'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.ide' version='3.9.2.v20131004-0923'>
+      <properties size='1'>
+        <property name='download.size' value='2366198'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jetty.continuation' version='8.1.14.v20131031'>
+      <properties size='1'>
+        <property name='download.size' value='27561'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui.connection.discoverer.prefs' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='19552'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.w3c.css.sac' version='1.3.1.v200903091627'>
+      <properties size='1'>
+        <property name='download.size' value='32952'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.client' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='9893'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.ql' version='2.0.100.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='9084'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.console' version='1.0.100.v20130429-0953'>
+      <properties size='1'>
+        <property name='download.size' value='116277'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.runtime' version='0.10.0.v201209301036'>
+      <properties size='1'>
+        <property name='download.size' value='80249'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.scada.hmi.adminclient.app' version='0.2.0.v20141112-1534'>
+      <properties size='1'>
+        <property name='download.size' value='19580'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.mina.core' version='2.0.7.v201401071602'>
+      <properties size='1'>
+        <property name='download.size' value='678129'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui.connection.discoverer.osgi' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='14263'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.model.tests' version='0.2.0.v20140723-0754'>
+      <properties size='1'>
+        <property name='download.size' value='38082'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='ch.qos.logback.core' version='1.0.7.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='389972'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui.connection.provider' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='14111'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.model.workbench' version='1.0.1.v20131118-1956'>
+      <properties size='1'>
+        <property name='download.size' value='379185'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.filetransfer.httpclient4.ssl' version='1.0.0.v20130604-1622'>
+      <properties size='1'>
+        <property name='download.size' value='13790'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.ui' version='2.3.0.v20131209-2052'>
+      <properties size='1'>
+        <property name='download.size' value='552123'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.connection' version='0.2.0.v20141112-0859'>
+      <properties size='1'>
+        <property name='download.size' value='51556'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.services' version='1.0.1.v20131118-1940'>
+      <properties size='1'>
+        <property name='download.size' value='25174'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.lucene.analysis' version='3.5.0.v20120725-1805'>
+      <properties size='1'>
+        <property name='download.size' value='909272'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.console' version='3.5.200.v20130514-0954'>
+      <properties size='1'>
+        <property name='download.size' value='161127'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.event' version='1.3.0.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='32690'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.commons.codec' version='1.4.0.v201209201156'>
+      <properties size='1'>
+        <property name='download.size' value='74542'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.metadata' version='2.2.0.v20130523-1557'>
+      <properties size='1'>
+        <property name='download.size' value='337972'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.data' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='25431'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.ui.chart.draw2d' version='0.2.0.v20141010-0950'>
+      <properties size='1'>
+        <property name='download.size' value='28663'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.filetransfer.httpclient4' version='1.0.300.v20130604-1622'>
+      <properties size='1'>
+        <property name='download.size' value='70909'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.sat4j.core' version='2.3.5.v201308161310'>
+      <properties size='1'>
+        <property name='download.size' value='363567'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.launcher' version='1.3.0.v20130327-1440'>
+      <properties size='1'>
+        <property name='download.size' value='49968'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui.connection.information' version='0.1.0.v20140617-0741'>
+      <properties size='1'>
+        <property name='download.size' value='49824'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.data' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='22264'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jetty.servlet' version='8.1.14.v20131031'>
+      <properties size='1'>
+        <property name='download.size' value='109181'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.ui.views.export.excel' version='0.2.0.v20140804-0927'>
+      <properties size='1'>
+        <property name='download.size' value='34745'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jface.text' version='3.8.101.v20130802-1147'>
+      <properties size='1'>
+        <property name='download.size' value='992827'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.command' version='0.10.0.v201209301215'>
+      <properties size='1'>
+        <property name='download.size' value='57646'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.artifact.repository' version='1.1.200.v20130515-2028'>
+      <properties size='1'>
+        <property name='download.size' value='135772'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.sec.osgi' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='28155'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.help.base' version='4.0.1.v20140221-1700'>
+      <properties size='1'>
+        <property name='download.size' value='406943'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.utils.propertyeditors' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='19023'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.update.configurator' version='3.3.200.v20140203-1328'>
+      <properties size='1'>
+        <property name='download.size' value='101021'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.jasper.glassfish' version='2.2.2.v201205150955'>
+      <properties size='1'>
+        <property name='download.size' value='2383691'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='javax.inject' version='1.0.0.v20091030'>
+      <properties size='1'>
+        <property name='download.size' value='12288'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.chart.model.edit' version='0.2.0.v20140722-1529'>
+      <properties size='1'>
+        <property name='download.size' value='21569'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.scada.hmi' version='0.2.0.v20141112-1534'>
+      <properties size='1'>
+        <property name='download.size' value='20840'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.sat4j.pb' version='2.3.5.v201308161310'>
+      <properties size='1'>
+        <property name='download.size' value='242569'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui.connection.creator.jaxws' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='14598'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.ui.connection.creator.net' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='12135'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.chart.model.edit' version='0.2.0.v20140604-1544'>
+      <properties size='1'>
+        <property name='download.size' value='97168'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.security.ui' version='1.1.100.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='215381'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.director' version='2.3.1.v20140221-1852'>
+      <properties size='1'>
+        <property name='download.size' value='103072'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.client.net' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='32288'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.intro.universal' version='3.2.600.v20130326-1254'>
+      <properties size='1'>
+        <property name='download.size' value='1631206'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.model.editor' version='0.2.0.v20140723-0754'>
+      <properties size='1'>
+        <property name='download.size' value='78092'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.workbench.renderers.swt' version='0.11.2.v20140205-1834'>
+      <properties size='1'>
+        <property name='download.size' value='338293'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='ch.qos.logback.slf4j' version='1.0.7.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='11048'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.chart' version='0.2.0.v20141112-1107'>
+      <properties size='1'>
+        <property name='download.size' value='189721'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.launcher.win32.win32.x86_64' version='1.1.200.v20140116-2212'>
+      <properties size='1'>
+        <property name='download.size' value='29364'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.common' version='0.1.0.v20140317-1426'>
+      <properties size='1'>
+        <property name='download.size' value='20931'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.connection.creator.net' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='11668'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui' version='0.2.0.v20140711-1238'>
+      <properties size='1'>
+        <property name='download.size' value='9157'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.model.edit' version='0.2.0.v20141020-1516'>
+      <properties size='1'>
+        <property name='download.size' value='123917'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.chart.model.tests' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='14236'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.commons.beanutils' version='1.8.0.v201205091237'>
+      <properties size='1'>
+        <property name='download.size' value='247269'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.operations' version='2.3.0.v20130711-1809'>
+      <properties size='1'>
+        <property name='download.size' value='75613'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.client.ngp' version='0.2.0.v20140528-1003'>
+      <properties size='1'>
+        <property name='download.size' value='28688'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.updatechecker' version='1.1.200.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='17684'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.subscription' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='21051'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.batik.util' version='1.6.0.v201011041432'>
+      <properties size='1'>
+        <property name='download.size' value='101159'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.security' version='1.2.0.v20130424-1801'>
+      <properties size='1'>
+        <property name='download.size' value='107313'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.protocol.ngp.codec' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='38627'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.ui.sdk' version='1.0.300.v20130503-1750'>
+      <properties size='1'>
+        <property name='download.size' value='46235'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.w3c.dom.svg' version='1.1.0.v201011041433'>
+      <properties size='1'>
+        <property name='download.size' value='87897'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.emf.common' version='2.9.2.v20131212-0545'>
+      <properties size='1'>
+        <property name='download.size' value='18364'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.chart.model.tests' version='0.2.0.v20140604-1335'>
+      <properties size='1'>
+        <property name='download.size' value='35450'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.details.model.tests' version='0.2.0.v20141016-1046'>
+      <properties size='1'>
+        <property name='download.size' value='47869'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.osgi' version='3.9.1.v20140110-1610'>
+      <properties size='1'>
+        <property name='download.size' value='1394033'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.shell' version='0.10.0.v201212101605'>
+      <properties size='1'>
+        <property name='download.size' value='60827'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.ui.printing' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='14862'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.views.properties.tabbed' version='3.6.0.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='106563'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.client.net' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='33765'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.databinding.item' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='18484'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.protocol.ngp.codec' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='34813'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.sec.authz.signature' version='0.1.0.v20140625-1411'>
+      <properties size='1'>
+        <property name='download.size' value='36669'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.summary.explorer' version='0.2.0.v20140825-0939'>
+      <properties size='1'>
+        <property name='download.size' value='27149'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.net' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='22190'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore' version='2.9.2.v20131212-0545'>
+      <properties size='1'>
+        <property name='download.size' value='1182673'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.connection.provider' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='26936'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.mina.filter.compression' version='2.0.7.v201401141305'>
+      <properties size='1'>
+        <property name='download.size' value='24547'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.filetransfer' version='3.2.0.v20130604-1622'>
+      <properties size='1'>
+        <property name='download.size' value='127621'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.chart' version='0.2.0.v20140603-1326'>
+      <properties size='1'>
+        <property name='download.size' value='29154'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.ibm.icu' version='50.1.1.v201304230130'>
+      <properties size='1'>
+        <property name='download.size' value='9451362'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.engine' version='2.3.0.v20130526-2122'>
+      <properties size='1'>
+        <property name='download.size' value='200296'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.workbench.texteditor' version='3.8.101.v20130729-1318'>
+      <properties size='1'>
+        <property name='download.size' value='584739'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.ui.connection.creator.ngp' version='0.2.0.v20140528-0906'>
+      <properties size='1'>
+        <property name='download.size' value='10824'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.client.connection.service' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='12740'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.platform' version='4.3.2.v20140221-1700'>
+      <properties size='1'>
+        <property name='download.size' value='400783'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.sec.ui.providers.pkcs12' version='0.2.0.v20140604-1228'>
+      <properties size='1'>
+        <property name='download.size' value='19930'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui.connection.creator.ngp' version='0.2.0.v20140528-0906'>
+      <properties size='1'>
+        <property name='download.size' value='10850'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.filter' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='16055'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.databinding' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='44713'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.client.net' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='35925'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.rcp' version='4.3.0.v20140221-1700'>
+      <properties size='1'>
+        <property name='download.size' value='13225'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.client.dataitem.details.extra' version='0.2.0.v20140721-1255'>
+      <properties size='1'>
+        <property name='download.size' value='70484'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.databinding' version='1.3.0.v20140203-1126'>
+      <properties size='1'>
+        <property name='download.size' value='89109'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.protocol.ngp.codec' version='0.2.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='30650'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.client' version='0.1.0.v20141014-1337'>
+      <properties size='1'>
+        <property name='download.size' value='44071'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='javax.xml' version='1.3.4.v201005080400'>
+      <properties size='1'>
+        <property name='download.size' value='237996'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.google.guava' version='15.0.0.v201403281430'>
+      <properties size='1'>
+        <property name='download.size' value='2264167'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.http.registry' version='1.1.300.v20130402-1529'>
+      <properties size='1'>
+        <property name='download.size' value='45207'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.httpcomponents.httpclient' version='4.1.3.v201209201135'>
+      <properties size='1'>
+        <property name='download.size' value='514499'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.bindings' version='0.10.102.v20140117-1939'>
+      <properties size='1'>
+        <property name='download.size' value='48753'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.swt' version='3.102.1.v20140206-1334'>
+      <properties size='1'>
+        <property name='download.size' value='18483'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.client.dataitem.details.chart' version='0.2.0.v20141015-0801'>
+      <properties size='1'>
+        <property name='download.size' value='17080'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.commons.collections' version='3.2.0.v2013030210310'>
+      <properties size='1'>
+        <property name='download.size' value='612532'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.core.commands' version='0.10.2.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='23904'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.server' version='0.2.0.v20140724-1516'>
+      <properties size='1'>
+        <property name='download.size' value='12296'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.poi' version='3.9.0.v201405241750'>
+      <properties size='1'>
+        <property name='download.size' value='1961554'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.change' version='2.9.0.v20131212-0545'>
+      <properties size='1'>
+        <property name='download.size' value='85880'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.filesystem' version='1.4.0.v20130514-1240'>
+      <properties size='1'>
+        <property name='download.size' value='58051'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.p2.garbagecollector' version='1.0.200.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='25053'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui.connection.creator' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='13349'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.batik.util.gui' version='1.6.0.v201011041432'>
+      <properties size='1'>
+        <property name='download.size' value='164253'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.ui.testing' version='0.2.0.v20140827-0907'>
+      <properties size='1'>
+        <property name='download.size' value='69414'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.app' version='1.3.100.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='86244'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.ui' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='11363'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.net' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='17185'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.commons.logging' version='1.1.1.v201101211721'>
+      <properties size='1'>
+        <property name='download.size' value='68107'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.lucene.core' version='3.5.0.v20120725-1805'>
+      <properties size='1'>
+        <property name='download.size' value='1550773'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.concurrent' version='1.1.0.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='25493'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='33843'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.common' version='3.6.200.v20130402-1505'>
+      <properties size='1'>
+        <property name='download.size' value='106701'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi' version='0.1.0.v20141015-0801'>
+      <properties size='1'>
+        <property name='download.size' value='21975'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.protocol.common' version='0.2.0.v20140513-1552'>
+      <properties size='1'>
+        <property name='download.size' value='18860'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ecf' version='3.2.0.v20130604-1622'>
+      <properties size='1'>
+        <property name='download.size' value='94160'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.client.ngp' version='0.2.0.v20140825-1559'>
+      <properties size='1'>
+        <property name='download.size' value='22407'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.batik.css' version='1.6.0.v201011041432'>
+      <properties size='1'>
+        <property name='download.size' value='265409'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.google.gson' version='2.2.4.v201311231704'>
+      <properties size='1'>
+        <property name='download.size' value='211790'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.workbench3' version='0.12.0.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='10248'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.jface.databinding' version='1.6.200.v20130515-1857'>
+      <properties size='1'>
+        <property name='download.size' value='278295'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.common.ngp' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='10250'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.security.win32.x86_64' version='1.0.100.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='35334'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.vi.details.swt' version='0.2.0.v20141016-1046'>
+      <properties size='1'>
+        <property name='download.size' value='204345'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.da.ui.client.dataitem.details' version='0.2.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='69208'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.rcp' version='4.3.2.v20140221-1700'>
+      <properties size='1'>
+        <property name='download.size' value='17737'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='javax.el' version='2.2.0.v201303151357'>
+      <properties size='1'>
+        <property name='download.size' value='56002'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.osgi.services' version='3.3.100.v20130513-1956'>
+      <properties size='1'>
+        <property name='download.size' value='82934'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui.editor.forms.arduino' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='11059'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.hd.net' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='15007'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.common.ui' version='2.8.0.v20140203-1126'>
+      <properties size='1'>
+        <property name='download.size' value='155019'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.core.client.connection.service' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='13975'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.simpleconfigurator.manipulator' version='2.0.0.v20130327-2119'>
+      <properties size='1'>
+        <property name='download.size' value='25285'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ca.ui.editor.forms.common' version='0.1.0.v20140527-1242'>
+      <properties size='1'>
+        <property name='download.size' value='35216'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ui.chart.view' version='0.2.0.v20141112-1131'>
+      <properties size='1'>
+        <property name='download.size' value='74354'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.e4.core.di' version='1.3.0.v20130514-1256'>
+      <properties size='1'>
+        <property name='download.size' value='52219'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.scada.ae.protocol.ngp.codec' version='0.1.0.v20140527-1240'>
+      <properties size='1'>
+        <property name='download.size' value='52470'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

@@ -1,0 +1,183 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: l0aLiH1lEaqX0wggEc+jz4YPLkQ=
+Created-By: 1.6.0 (IBM Corporation)
+SHA1-Digest-Manifest-Main-Attributes: lrO8y3kiLy7urMKptVLqg0bz/Qw=
+
+Name: intro/css/graphics/obj_48/migratehov_obj.gif
+SHA1-Digest: NAmlSd1L21S+2wBE2kpVb/+N1fc=
+
+Name: icons/app/icon.xpm
+SHA1-Digest: xd/KIhdtgP4YNtoXKpujM93NdiI=
+
+Name: about.ini
+SHA1-Digest: TGFjeTCiRtrWpfO3CQGgR0EbCWI=
+
+Name: intro/css/graphics/obj_48/sampleredhov_obj.gif
+SHA1-Digest: WkO0mCkFh+TQatLs9gsLquffC54=
+
+Name: org/eclipse/scada/hmi/app/adminclient/app/ApplicationWorkbenchAd
+ visor.class
+SHA1-Digest: ZrrFC8eYPzFu8S4iQ7Ta/kxjLko=
+
+Name: icons/app/icon_16px.png
+SHA1-Digest: UWCkoYIbwb0WtsJBas0LqzhgLr4=
+
+Name: org/eclipse/scada/hmi/app/adminclient/app/ApplicationActionBarAd
+ visor.class
+SHA1-Digest: WBIrBrNNyq9yz8ymp1oPY1AZRHE=
+
+Name: org/eclipse/scada/hmi/app/adminclient/app/pers/DefaultPerspectiv
+ e.class
+SHA1-Digest: JYR9qxHQ5ZU1sWTKhsSioXoeBHU=
+
+Name: intro/css/migrate.css
+SHA1-Digest: SPreOHVL7tdSKjO+AeuermxygNU=
+
+Name: icons/app/icon.icns
+SHA1-Digest: QHwQvwiyXV/Ju3x1nWia0ARRb3o=
+
+Name: intro/css/graphics/obj_48/featureshov_obj.gif
+SHA1-Digest: qGFihJHuWoAWuo3JzXI2xIpEAt0=
+
+Name: org/eclipse/scada/hmi/app/adminclient/app/Perspective.class
+SHA1-Digest: R67z4Wp691H4Gh9mr3cQyQTRUN8=
+
+Name: intro/css/graphics/obj_48/rcpapp_obj.gif
+SHA1-Digest: j5G8SHQ8UIodhAks3Zd5bAZYAYo=
+
+Name: intro/css/graphics/obj_48/samplepurphov_obj.gif
+SHA1-Digest: 7T6Uhd1zZ/0gvjDXej+PcEz67Gk=
+
+Name: icons/app/icon.ico
+SHA1-Digest: nIRLsm3gHGqNqRA8KyJiUlsHCY8=
+
+Name: icons/nav_home.gif
+SHA1-Digest: JTsEr710vCI+0/Duduo9oca66No=
+
+Name: about.mappings
+SHA1-Digest: evmYMDIBfhNXk4iItRO3Nr1cTHw=
+
+Name: icons/app/icon_48px.png
+SHA1-Digest: abFRsKYp3vtvW41y7a9tGjd3W1s=
+
+Name: org/eclipse/scada/hmi/app/adminclient/app/Application.class
+SHA1-Digest: 2zivL7ENG6FWJbqEwfmlPKdXSNY=
+
+Name: org/eclipse/scada/hmi/app/adminclient/app/Activator.class
+SHA1-Digest: 5bd/P1rHjxiwPMxG8aNRSC0PUcY=
+
+Name: intro/migrate.xml
+SHA1-Digest: EgLIAbz1erktIi55GaacwnAAZ90=
+
+Name: about.properties
+SHA1-Digest: TrulQBlsTkUJcZAVERiC4OBoIzM=
+
+Name: branding/about.png
+SHA1-Digest: g0GaSwFrRKQ3tz3wjB0X7eaPH+c=
+
+Name: icons/app/icon_128px.png
+SHA1-Digest: KsZ7QRZVYDcntfE57gpz+J7VuP8=
+
+Name: org/eclipse/scada/hmi/app/adminclient/app/ApplicationWorkbenchWi
+ ndowAdvisor.class
+SHA1-Digest: UewQTqw0SFfNwspwc5rUuYOUySQ=
+
+Name: icons/feature.png
+SHA1-Digest: F8n/ZxOpoPM+MPYrH+Sv5cJHAek=
+
+Name: plugin_customization.ini
+SHA1-Digest: 6oEH9Ilod9MXB1eqvnLpjXq8WzI=
+
+Name: intro/html/migrate.xhtml
+SHA1-Digest: OE9TkOeGid03zN7jT2cge9+rLRA=
+
+Name: META-INF/maven/org.eclipse.scada.hmi/org.eclipse.scada.hmi.admin
+ client.app/pom.xml
+SHA1-Digest: R9qsMhE876okf1EEQI1alQuE/7w=
+
+Name: icons/app/icon_32px.png
+SHA1-Digest: OwpKL+/N68uP4194wP0B62E1EBY=
+
+Name: icons/ca_perspective.gif
+SHA1-Digest: Drz4dsS7SAPhzvVFQurB1PzEmG4=
+
+Name: intro/css/graphics/obj_48/samplered_obj.gif
+SHA1-Digest: g+LlMl2FMkp+SnzWwd8/SOwInmc=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA1-Digest: u0XZuTrtlogM0O5adIRh4JHsVKA=
+
+Name: intro/css/graphics/obj_48/migrate_obj.gif
+SHA1-Digest: i7twocx9bCfjlmibMRZ/4KuQ2y8=
+
+Name: intro/css/graphics/obj_48/rcpapphov_obj.gif
+SHA1-Digest: h/mDaOSiThYEzScXnR0fm0jLoPo=
+
+Name: icons/releng_gears.gif
+SHA1-Digest: QQTkluZLcWGAgMWTx7jmev7iCLo=
+
+Name: plugin.xml
+SHA1-Digest: AzffWm1i6Swpa2ua2a0Qg+eGmTA=
+
+Name: intro/css/graphics/obj_48/pluginhov_obj.gif
+SHA1-Digest: UlcX5JtEVJDAmi708njYEpg0gDA=
+
+Name: intro/css/overview.css
+SHA1-Digest: 9xuI1NNF8UZodho1LWas1flpn0Q=
+
+Name: introData.xml
+SHA1-Digest: xVCM4ZECrTiAEjFEotDn0L3K5HI=
+
+Name: org/eclipse/scada/hmi/app/adminclient/app/pers/CAPerspectiveFact
+ ory.class
+SHA1-Digest: 4VneevU+tyeBs60VGyysceQVKR4=
+
+Name: intro/css/swt.properties
+SHA1-Digest: sBYzota5Ul+Pc04gffYmFjEX9w0=
+
+Name: icons/app/icon_64px.png
+SHA1-Digest: QJWsflR+4XCkPAlr9GuQ7r0HuB4=
+
+Name: intro/overview.xml
+SHA1-Digest: 1PQt3m7VFfDGebXr5hY0hbKOGH8=
+
+Name: icons/da_perspective.gif
+SHA1-Digest: +ULk0UP/xkSxD/wI9p5ogAM4IMw=
+
+Name: META-INF/maven/org.eclipse.scada.hmi/org.eclipse.scada.hmi.admin
+ client.app/pom.properties
+SHA1-Digest: 0u0DN9XPskw/yzqkml4MP+4AG7I=
+
+Name: intro/css/graphics/obj_48/samplepurp_obj.gif
+SHA1-Digest: orG2kgqlk/pwD4+31Jr0MQHDj5w=
+
+Name: intro/html/connections.xhtml
+SHA1-Digest: l7t5Xfr9VDi0F1Ey9YEphPxFuC4=
+
+Name: about.html
+SHA1-Digest: 5RsTUO5F+wY3sxgIALpSABolrNQ=
+
+Name: intro/css/graphics/obj_48/plugin_obj.gif
+SHA1-Digest: buULygxX/Tt+zpFg/SIRoiB/SVA=
+
+Name: intro/css/whatsnew.css
+SHA1-Digest: LJSx2Iv/yRrhxm5/W7LoHLkzVu0=
+
+Name: org/eclipse/scada/hmi/app/adminclient/app/Application$1.class
+SHA1-Digest: S2/dyvldgjZtwl7v2szCMRI6nww=
+
+Name: intro/css/graphics/obj_48/features_obj.gif
+SHA1-Digest: g/PtTxBdyzvXBlSrE0TQ7pdL8cg=
+
+Name: icons/chart_perspective.gif
+SHA1-Digest: u5JSAY7M4qXbrgWCvfiDqtY3puo=
+
+Name: intro/whatsnew.xml
+SHA1-Digest: sk0qC/oqygpovoHvWeS4UO2w0sE=
+
+Name: splash.bmp
+SHA1-Digest: g8GRMr5PmuwVlBagUKgZ+godrLk=
+
+Name: book.css
+SHA1-Digest: vw5Qz830LzORMjxJw26lrDQ7G88=
+

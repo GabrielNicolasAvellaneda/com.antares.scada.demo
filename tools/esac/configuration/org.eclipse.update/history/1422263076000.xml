@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config transient="false" date="1422273875308">
+	<site enabled="true" updateable="true" policy="USER-EXCLUDE" url="platform:/base/">
+		<feature id="org.eclipse.scada.hmi.adminclient.app" url="features/org.eclipse.scada.hmi.adminclient.app_0.2.0.v20141112-1534/" version="0.2.0.v20141112-1534">
+		</feature>
+		<feature id="org.eclipse.emf.ecore" url="features/org.eclipse.emf.ecore_2.9.2.v20131212-0545/" version="2.9.2.v20131212-0545">
+		</feature>
+		<feature id="org.eclipse.help" plugin-identifier="org.eclipse.help.base" url="features/org.eclipse.help_2.0.2.v20140221-1700/" version="2.0.2.v20140221-1700">
+		</feature>
+		<feature id="org.eclipse.rcp" url="features/org.eclipse.rcp_4.3.2.v20140221-1700/" version="4.3.2.v20140221-1700">
+		</feature>
+		<feature id="org.eclipse.emf.common" url="features/org.eclipse.emf.common_2.9.2.v20131212-0545/" version="2.9.2.v20131212-0545">
+		</feature>
+		<feature id="org.eclipse.e4.rcp" url="features/org.eclipse.e4.rcp_1.2.2.v20140206-1358/" version="1.2.2.v20140206-1358">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.core.feature" url="features/org.eclipse.equinox.p2.core.feature_1.2.1.v20140221-1852/" version="1.2.1.v20140221-1852">
+		</feature>
+		<feature id="org.eclipse.scada.license" url="features/org.eclipse.scada.license_0.1.0.v20131202-1030/" version="0.1.0.v20131202-1030">
+		</feature>
+		<feature id="org.eclipse.scada.hmi" url="features/org.eclipse.scada.hmi_0.2.0.v20141112-1534/" version="0.2.0.v20141112-1534">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.rcp.feature" url="features/org.eclipse.equinox.p2.rcp.feature_1.2.0.v20140221-1852/" version="1.2.0.v20140221-1852">
+		</feature>
+	</site>
+</config>

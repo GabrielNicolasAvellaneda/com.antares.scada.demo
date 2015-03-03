@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.scada.hmi"
+      label="%featureName"
+      version="0.2.0.v20141112-1534"
+      provider-name="%providerName"
+      plugin="org.eclipse.scada.hmi">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.scada.license" version="0.1.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.scada.swt"
+         download-size="21"
+         install-size="35"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.hmi"
+         download-size="13"
+         install-size="17"
+         version="0.2.0.v20140507-1319"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ui.databinding.item"
+         download-size="18"
+         install-size="29"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi"
+         download-size="21"
+         install-size="39"
+         version="0.1.0.v20141015-0801"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.chart.model"
+         download-size="25"
+         install-size="42"
+         version="0.1.0.v20140617-1211"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.chart.model.edit"
+         download-size="21"
+         install-size="34"
+         version="0.2.0.v20140722-1529"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.chart.model.tests"
+         download-size="13"
+         install-size="20"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.details"
+         download-size="23"
+         install-size="41"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.details.model"
+         download-size="167"
+         install-size="762"
+         version="0.2.0.v20141016-1046"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.details.model.edit"
+         download-size="155"
+         install-size="284"
+         version="0.2.0.v20141016-1046"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.details.model.editor"
+         download-size="74"
+         install-size="151"
+         version="0.2.0.v20141016-1046"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.details.model.tests"
+         download-size="46"
+         install-size="79"
+         version="0.2.0.v20141016-1046"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.details.swt"
+         download-size="199"
+         install-size="417"
+         version="0.2.0.v20141016-1046"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.model"
+         download-size="136"
+         install-size="443"
+         version="0.2.0.v20141020-1516"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.model.edit"
+         download-size="121"
+         install-size="222"
+         version="0.2.0.v20141020-1516"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.model.editor"
+         download-size="76"
+         install-size="151"
+         version="0.2.0.v20140723-0754"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.model.tests"
+         download-size="37"
+         install-size="61"
+         version="0.2.0.v20140723-0754"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.ui"
+         download-size="8"
+         install-size="11"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.ui.chart.draw2d"
+         download-size="27"
+         install-size="53"
+         version="0.2.0.v20141010-0950"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.ui.draw2d"
+         download-size="105"
+         install-size="218"
+         version="0.2.0.v20141020-1516"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.ui.user"
+         download-size="84"
+         install-size="170"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.vi.ui.viewer.ext"
+         download-size="26"
+         install-size="39"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ae.ui"
+         download-size="8"
+         install-size="13"
+         version="0.2.0.v20140711-1235"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ae.ui.connection"
+         download-size="28"
+         install-size="47"
+         version="0.2.0.v20140827-0938"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ae.ui.connection.creator.net"
+         download-size="11"
+         install-size="15"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ae.ui.connection.creator.ngp"
+         download-size="10"
+         install-size="14"
+         version="0.2.0.v20140528-0906"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ae.ui.testing"
+         download-size="67"
+         install-size="130"
+         version="0.2.0.v20140827-0907"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ae.ui.views"
+         download-size="241"
+         install-size="489"
+         version="0.2.0.v20140827-0904"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ae.ui.views.export.excel"
+         download-size="33"
+         install-size="57"
+         version="0.2.0.v20140804-0927"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui"
+         download-size="11"
+         install-size="15"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui.connection"
+         download-size="95"
+         install-size="197"
+         version="0.2.0.v20141112-1514"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui.connection.creator"
+         download-size="13"
+         install-size="19"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui.connection.discoverer.file"
+         download-size="18"
+         install-size="26"
+         version="0.1.0.v20140702-0924"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui.connection.discoverer.osgi"
+         download-size="13"
+         install-size="20"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui.connection.discoverer.prefs"
+         download-size="19"
+         install-size="27"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui.connection.information"
+         download-size="48"
+         install-size="90"
+         version="0.1.0.v20140617-0741"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui.connection.login"
+         download-size="72"
+         install-size="141"
+         version="0.2.0.v20140901-1207"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui.connection.provider"
+         download-size="13"
+         install-size="22"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.core.ui.styles"
+         download-size="64"
+         install-size="121"
+         version="0.2.0.v20141016-0735"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.chart.ui"
+         download-size="8"
+         install-size="11"
+         version="0.2.0.v20140711-1235"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui"
+         download-size="8"
+         install-size="12"
+         version="0.2.0.v20140711-1238"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.connection"
+         download-size="50"
+         install-size="96"
+         version="0.2.0.v20141112-0859"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.connection.creator.net"
+         download-size="11"
+         install-size="15"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.connection.creator.ngp"
+         download-size="10"
+         install-size="14"
+         version="0.2.0.v20140528-0906"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.connection.creator.sfp"
+         download-size="10"
+         install-size="14"
+         version="0.1.0.v20140317-1426"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.styles"
+         download-size="10"
+         install-size="15"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.summary.explorer"
+         download-size="26"
+         install-size="48"
+         version="0.2.0.v20140825-0939"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.widgets"
+         download-size="53"
+         install-size="102"
+         version="0.2.0.v20141112-1534"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.sec.ui"
+         download-size="27"
+         install-size="49"
+         version="0.2.0.v20140604-1228"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.sec.ui.providers"
+         download-size="56"
+         install-size="105"
+         version="0.2.0.v20140604-1228"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.sec.ui.providers.pkcs12"
+         download-size="19"
+         install-size="32"
+         version="0.2.0.v20140604-1228"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ui.chart.model"
+         download-size="111"
+         install-size="318"
+         version="0.2.0.v20141112-1030"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ui.chart.model.edit"
+         download-size="94"
+         install-size="182"
+         version="0.2.0.v20140604-1544"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ui.chart.model.editor"
+         download-size="78"
+         install-size="156"
+         version="0.2.0.v20140603-1345"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ui.chart.model.tests"
+         download-size="34"
+         install-size="57"
+         version="0.2.0.v20140604-1335"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ui.chart.view"
+         download-size="72"
+         install-size="140"
+         version="0.2.0.v20141112-1131"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.client.dataitem.details"
+         download-size="67"
+         install-size="128"
+         version="0.2.0.v20140527-1242"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.client.dataitem.details.chart"
+         download-size="16"
+         install-size="25"
+         version="0.2.0.v20141015-0801"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.client.dataitem.details.chart.nl1"
+         download-size="8"
+         install-size="11"
+         version="0.1.0.v20131011-1228"
+         fragment="true"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.client.dataitem.details.extra"
+         download-size="68"
+         install-size="134"
+         version="0.2.0.v20140721-1255"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.client.signalgenerator"
+         download-size="47"
+         install-size="84"
+         version="0.2.0.v20140527-1242"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.client.test"
+         download-size="76"
+         install-size="155"
+         version="0.2.0.v20141112-1534"/>
+
+   <plugin
+         id="org.eclipse.scada.da.ui.common"
+         download-size="20"
+         install-size="32"
+         version="0.1.0.v20140317-1426"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.hd.ui"
+         download-size="48"
+         install-size="92"
+         version="0.1.0.v20141112-1049"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.hd.ui.connection"
+         download-size="49"
+         install-size="91"
+         version="0.2.0.v20140602-1131"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.hd.ui.connection.creator.net"
+         download-size="11"
+         install-size="15"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.hd.ui.connection.creator.ngp"
+         download-size="10"
+         install-size="14"
+         version="0.2.0.v20140528-0906"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.hd.ui.printing"
+         download-size="14"
+         install-size="23"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ui.chart"
+         download-size="185"
+         install-size="396"
+         version="0.2.0.v20141112-1107"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.sec.ui.providers.windows"
+         os="win32"
+         download-size="13"
+         install-size="18"
+         version="0.2.0.v20140604-1228"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui"
+         download-size="26"
+         install-size="50"
+         version="0.2.0.v20140804-1410"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui.connection"
+         download-size="28"
+         install-size="51"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui.connection.creator.jaxws"
+         download-size="14"
+         install-size="22"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui.connection.creator.ngp"
+         download-size="10"
+         install-size="14"
+         version="0.2.0.v20140528-0906"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui.editor"
+         download-size="59"
+         install-size="115"
+         version="0.2.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui.editor.forms.arduino"
+         download-size="10"
+         install-size="14"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui.editor.forms.common"
+         download-size="34"
+         install-size="66"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui.editor.wizard"
+         download-size="20"
+         install-size="33"
+         version="0.1.0.v20140527-1242"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui.exporter"
+         download-size="20"
+         install-size="32"
+         version="0.2.0.v20140804-1400"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.scada.ca.ui.importer"
+         download-size="56"
+         install-size="106"
+         version="0.2.0.v20140804-1410"
+         unpack="false"/>
+
+</feature>

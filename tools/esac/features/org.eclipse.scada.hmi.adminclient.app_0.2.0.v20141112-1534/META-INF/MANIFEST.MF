@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_51
+Built-By: genie.iot.eclipsescada
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+
+Name: epl-v10.html
+SHA1-Digest: jYDaDJLBJpthCwPMgGFVYASJjIU=
+
+Name: license.html
+SHA1-Digest: XJJo9U+FVc/GJoKZO/R9pUKJbXE=
+
+Name: feature.properties
+SHA1-Digest: Mij1WYo6KSzXo3DIHthd3289DpE=
+
+Name: META-INF/maven/org.eclipse.scada.hmi.features/org.eclipse.scada.
+ hmi.adminclient.app/pom.properties
+SHA1-Digest: GJqxwktSuHx06VCFejp2vzt39os=
+
+Name: META-INF/maven/org.eclipse.scada.hmi.features/org.eclipse.scada.
+ hmi.adminclient.app/pom.xml
+SHA1-Digest: wrU581UUokwIsRDTpuOB7EJZJQk=
+
+Name: feature.xml
+SHA1-Digest: uyeiUQa9bQb60oJu4yNqFrhre80=
+

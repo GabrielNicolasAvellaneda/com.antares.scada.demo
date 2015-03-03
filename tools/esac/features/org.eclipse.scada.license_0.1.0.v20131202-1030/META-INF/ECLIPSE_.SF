@@ -1,0 +1,28 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: KNRgz6qAiuKcsFmo2PhrSyoCNjk=
+Created-By: 1.6.0 (IBM Corporation)
+SHA1-Digest-Manifest-Main-Attributes: HCDN6Ph8o+5UpWJraUDj3YN20Ws=
+
+Name: epl-v10.html
+SHA1-Digest: /iY8aEvT0IMpNnSjB0FpTUhvUGc=
+
+Name: build.properties
+SHA1-Digest: 6k5mvPQqeVPruXplZR86uSJBb+A=
+
+Name: license.html
+SHA1-Digest: rRqh7epQHwshDH/Vz5CByOF7Pjg=
+
+Name: feature.properties
+SHA1-Digest: KPALYPw1BqPb5V0JtkxlTv2XCpM=
+
+Name: META-INF/maven/org.eclipse.scada.utils.features/org.eclipse.scad
+ a.license/pom.properties
+SHA1-Digest: NX95x0yLgV2nNkdyOyasLU9Bfz4=
+
+Name: META-INF/maven/org.eclipse.scada.utils.features/org.eclipse.scad
+ a.license/pom.xml
+SHA1-Digest: Qnm+Hyk5GlcG9E+f5j3yoKAdfwU=
+
+Name: feature.xml
+SHA1-Digest: 6T7eu6u7yVpv/Zyk4EbTPzAw/qk=
+
