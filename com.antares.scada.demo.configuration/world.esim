@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_DgZh8MHdEeS1psWssi2O_A">
-  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_DgZh8cHdEeS1psWssi2O_A" hostName="node2">
-    <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_DgZh8sHdEeS1psWssi2O_A" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
-    <valueArchives xmi:id="_DgZh88HdEeS1psWssi2O_A" name="hdserver" instanceNumber="2"/>
-    <masters xmi:id="_DgZh9MHdEeS1psWssi2O_A" name="master" driver="_DgZh8sHdEeS1psWssi2O_A" archiveTo="_DgZh88HdEeS1psWssi2O_A">
-      <authoratives xmi:id="_DgaJAMHdEeS1psWssi2O_A">
-        <hierarchy>REGION1</hierarchy>
-        <hierarchy>SITE2</hierarchy>
-      </authoratives>
-    </masters>
-  </nodes>
-  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_DgaJAcHdEeS1psWssi2O_A" hostName="node1">
+  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_DgaJAcHdEeS1psWssi2O_A" hostName="localhost">
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_DgaJAsHdEeS1psWssi2O_A" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
     <valueArchives xmi:id="_DgaJA8HdEeS1psWssi2O_A" name="hdserver" instanceNumber="2"/>
     <masters xmi:id="_DgaJBMHdEeS1psWssi2O_A" name="master" driver="_DgaJAsHdEeS1psWssi2O_A" archiveTo="_DgaJA8HdEeS1psWssi2O_A">

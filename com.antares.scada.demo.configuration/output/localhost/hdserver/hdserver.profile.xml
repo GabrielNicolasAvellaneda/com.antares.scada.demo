@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile:profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:profile="http://eclipse.org/SCADA/Configuration/World/OSGi/Profile" xsi:schemaLocation="http://eclipse.org/SCADA/Configuration/World/OSGi/Profile http://eclipse.org/SCADA/Configuration/World#//osgi/profile" name="Custom profile for hdserver on node localhost">
+  <start>org.eclipse.scada.hd.server.storage.master.hds</start>
+  <start>org.eclipse.scada.ca.server.exporter.ngp</start>
+  <start>org.eclipse.scada.ca.server.osgi</start>
+  <start>org.eclipse.scada.ca.servlet</start>
+  <start>org.eclipse.scada.ca.console</start>
+  <start>org.eclipse.scada.ca.file</start>
+  <start>org.eclipse.equinox.ds</start>
+  <start>org.eclipse.scada.sec.osgi.manager</start>
+  <start>org.eclipse.scada.sec.auth.logon</start>
+  <start>org.eclipse.scada.sec.authn.osgi.cfg.priority</start>
+  <start>org.eclipse.scada.sec.authz.signature</start>
+  <start>org.eclipse.scada.sec.provider.script</start>
+  <start>org.eclipse.scada.sec.provider.jdbc</start>
+  <start>org.eclipse.scada.sec.audit.log.slf4j</start>
+  <start>org.eclipse.scada.da.server.osgi.exporter.net</start>
+  <start>org.eclipse.scada.da.client.net</start>
+  <start>org.eclipse.scada.da.client.ngp</start>
+  <start>org.eclipse.scada.da.server.common.osgi</start>
+  <start>org.eclipse.scada.da.connection.provider</start>
+  <start>org.eclipse.scada.da.client.connection.service</start>
+  <start>org.eclipse.scada.da.master.analyzer</start>
+  <start>org.eclipse.scada.da.datasource.item</start>
+  <start>org.eclipse.scada.da.datasource.proxy</start>
+  <start>org.eclipse.scada.ds.storage.file</start>
+  <start>org.eclipse.scada.hd.server.common</start>
+  <start>org.eclipse.scada.hd.server.common.item</start>
+  <start>org.eclipse.scada.hd.server.exporter.ngp</start>
+  <start>org.eclipse.scada.hd.exporter.http.server</start>
+  <start>org.eclipse.scada.hd.server.proxy</start>
+  <start>org.eclipse.scada.hd.server.storage.hds</start>
+  <start>org.eclipse.scada.ca.server.exporter.ngp</start>
+  <start>org.eclipse.scada.ca.server.osgi</start>
+  <start>org.eclipse.scada.ca.servlet</start>
+  <start>org.eclipse.scada.ca.console</start>
+  <start>org.eclipse.scada.ca.file</start>
+  <start>org.eclipse.equinox.ds</start>
+  <start>org.eclipse.scada.sec.osgi.manager</start>
+  <start>org.eclipse.scada.sec.auth.logon</start>
+  <start>org.eclipse.scada.sec.authn.osgi.cfg.priority</start>
+  <start>org.eclipse.scada.sec.authz.signature</start>
+  <start>org.eclipse.scada.sec.provider.script</start>
+  <start>org.eclipse.scada.sec.provider.jdbc</start>
+  <start>org.eclipse.scada.sec.provider.plain.property</start>
+  <start>org.eclipse.scada.ca.file</start>
+  <property key="osgi.console.ssh">2502</property>
+  <property key="org.eclipse.scada.hd.server.storage.hds.useNaNs">true</property>
+  <property key="org.eclipse.scada.hd.server.storage.hds.basePath">${user.home}/hds.master</property>
+  <property key="logback.configurationFile" eval="true">TARGET_DIR + &quot;/logback.xml&quot;</property>
+  <property key="osgi.console.enable.builtin">false</property>
+  <property key="osgi.console.ssh.useDefaultSecureStorage">true</property>
+  <property key="ssh.server.keystore">configuration/hostkey.ser</property>
+  <property key="org.eclipse.equinox.console.jaas.file">configuration/store</property>
+  <property key="java.security.auth.login.config">configuration/org.eclipse.equinox.console.authentication.config</property>
+  <property key="org.eclipse.scada.sec.callback.defaultTimeout">60000</property>
+  <property key="logback.configurationFile" eval="true">TARGET_DIR + &quot;/logback.xml&quot;</property>
+  <property key="osgi.console.enable.builtin">false</property>
+  <property key="osgi.console.ssh.useDefaultSecureStorage">true</property>
+  <property key="ssh.server.keystore">configuration/hostkey.ser</property>
+  <property key="org.eclipse.equinox.console.jaas.file">configuration/store</property>
+  <property key="java.security.auth.login.config">configuration/org.eclipse.equinox.console.authentication.config</property>
+  <property key="org.eclipse.scada.sec.callback.defaultTimeout">60000</property>
+  <property key="org.eclipse.scada.sec.provider.plain.property.data">admin:admin12:ADMIN|interconnect:interconnect12:INTERCONNECT</property>
+  <property key="org.eclipse.scada.hd.exporter.http.server.user">interconnect</property>
+  <property key="org.eclipse.scada.hd.exporter.http.server.password">interconnect12</property>
+  <property key="org.eclipse.scada.hd.server.exporter.ngp.exportUri">hd:ngp://0.0.0.0:2302</property>
+  <property key="org.eclipse.scada.ca.server.exporter.ngp.exportUri">ca:ngp://0.0.0.0:2402</property>
+  <property key="org.eclipse.scada.ca.file.root">${user.home}/.eclipse.scada/ca.hdserver</property>
+  <feature>org.eclipse.scada.external.feature.group</feature>
+  <feature>org.eclipse.scada.utils.feature.group</feature>
+  <feature>org.eclipse.scada.base.feature.group</feature>
+  <feature>org.eclipse.scada.protocols.feature.group</feature>
+  <feature>org.eclipse.equinox.server.core.feature.group</feature>
+  <feature>org.eclipse.equinox.server.jetty.feature.group</feature>
+  <feature>org.eclipse.equinox.server.p2.feature.group</feature>
+  <feature>ch.qos.logback.classic</feature>
+  <feature>ch.qos.logback.core</feature>
+  <feature>ch.qos.logback.slf4j</feature>
+  <feature>org.eclipse.scada.deploy.console.feature.group</feature>
+  <feature>org.eclipse.scada.core.protocols.feature.group</feature>
+  <feature>org.eclipse.scada.core.server.feature.group</feature>
+  <feature>org.eclipse.scada.core.client.feature.group</feature>
+  <feature>org.eclipse.scada.core.common.feature.group</feature>
+  <setbsl level="1">org.eclipse.equinox.ds</setbsl>
+  <setbsl level="1">org.eclipse.equinox.ds</setbsl>
+  <note>If you move the installation directory also remember to fix the property &quot;logback.configurationFile&quot;</note>
+  <arg>-consoleLog</arg>
+</profile:profile>

@@ -1,0 +1,55 @@
+{
+  "org.eclipse.scada.sec.osgi.manager": {
+    "reject.all.session": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "PRIV",
+      "priority": "1200",
+      "properties.script": "false;",
+      "for.type": "SESSION"
+    },
+    "allow.admin.session": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "PRIV",
+      "priority": "1300",
+      "properties.script": "user !\u003d null \u0026\u0026 user.hasRole ( \"ADMIN\" );",
+      "for.type": "SESSION",
+      "for.id": "admin"
+    },
+    "allow.logon": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "CONNECT",
+      "priority": "1500",
+      "properties.script": "true;",
+      "for.type": "SESSION"
+    },
+    "logon": {
+      "serviceType": "logon",
+      "for.action": "CONNECT",
+      "priority": "1600",
+      "for.type": "SESSION"
+    },
+    "allow.all": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "priority": "1100",
+      "properties.script": "user !\u003d null;"
+    },
+    "allow.operator.session": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "PRIV",
+      "priority": "1400",
+      "properties.script": "user !\u003d null;",
+      "for.type": "SESSION",
+      "for.id": "operator"
+    }
+  },
+  "da.connection": {
+    "master.localhost": {
+      "connection.uri": "da:ngp://interconnect:interconnect12@localhost:2101"
+    }
+  }
+}

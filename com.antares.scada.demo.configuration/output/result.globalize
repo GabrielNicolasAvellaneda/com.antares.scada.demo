@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<globalization:Globalization xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:globalization="http://eclipse.org/SCADA/Configuration/Globalization">
+  <world href="result.eswm#/"/>
+</globalization:Globalization>

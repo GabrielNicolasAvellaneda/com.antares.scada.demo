@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="ASCII"?>
+<world:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:world="http://eclipse.org/SCADA/Configuration/World">
+  <nodes xsi:type="world:ApplicationNode" hostName="localhost">
+    <endpoints name="Exporter Endpoint: ca - null" portNumber="2401">
+      <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.0/@exporter.0"/>
+    </endpoints>
+    <endpoints name="Exporter Endpoint: ae - null" portNumber="2201">
+      <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.0/@exporter.1"/>
+    </endpoints>
+    <endpoints name="Exporter Endpoint: da - null" portNumber="2101">
+      <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.0/@exporter.2"/>
+    </endpoints>
+    <endpoints name="Exporter Endpoint: hd - null" portNumber="2302">
+      <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.1/@exporter.0"/>
+    </endpoints>
+    <endpoints name="Exporter Endpoint: ca - null" portNumber="2402">
+      <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.1/@exporter.1"/>
+    </endpoints>
+    <endpoints name="CommonDriver Endpoint: null" portNumber="2107">
+      <boundService xsi:type="world:ReferencedServiceBinding" service="//@nodes.0/@applications.2"/>
+    </endpoints>
+    <applications xsi:type="osgi:DefaultMasterServer" name="master">
+      <connections xsi:type="osgi:DataAccessConnection" shortDescription="Connection to ourself" name="self" endpoint="//@nodes.0/@endpoints.2">
+        <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
+      </connections>
+      <connections xsi:type="osgi:DataAccessConnection" name="driver.exec.on.localhost" endpoint="//@nodes.0/@endpoints.5">
+        <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
+      </connections>
+      <exporter xsi:type="osgi:ConfigurationAdministratorExporter" name="master/exporter" endpoints="//@nodes.0/@endpoints.0"/>
+      <exporter xsi:type="osgi:AlarmsEventsExporter" name="master/exporter" endpoints="//@nodes.0/@endpoints.1"/>
+      <exporter xsi:type="osgi:DataAccessExporter" name="master/exporter" endpoints="//@nodes.0/@endpoints.2">
+        <exports item="//@nodes.0/@applications.0/@items.0" exportName="REGION1.SITE1.SYS.LAVG1.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.1" exportName="REGION1.SITE1.SYS.LAVG5.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.2" exportName="REGION1.SITE1.SYS.LAVG15.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.3" exportName="REGION1.SITE1.SYS.DRV.EXEC.CON.M"/>
+        <exports item="//@nodes.0/@applications.0/@items.4" exportName="REGION1.SITE1.SYS.DRV.EXEC.STATE.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.5" exportName="REGION1.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.6" exportName="REGION1.SITE1.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.7" exportName="REGION1.SITE1.SYS.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.8" exportName="REGION1.SITE1.SYS.DRV.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.9" exportName="REGION1.SITE1.SYS.DRV.EXEC.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.10" exportName="ae.server.info.ALERT_ACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.11" exportName="ae.server.info.ALERT_DISABLED"/>
+        <exports item="//@nodes.0/@applications.0/@items.12" exportName="ae.server.info.OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.13" exportName="ae.server.info.NOT_OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.14" exportName="ae.server.info.UNSAFE"/>
+        <exports item="//@nodes.0/@applications.0/@items.15" exportName="ae.server.info.INACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.16" exportName="ae.server.info.INIT"/>
+        <exports item="//@nodes.0/@applications.0/@items.17" exportName="ae.server.info.NOT_OK_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.18" exportName="ae.server.info.NOT_OK_NOT_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.19" exportName="ae.server.info.NOT_AKN"/>
+      </exporter>
+      <customizationProfile name="Local customization profile">
+        <start name="org.eclipse.scada.sec.provider.plain.property"/>
+        <property key="org.eclipse.scada.sec.provider.plain.property.data" value="admin:admin12:ADMIN|interconnect:interconnect12:INTERCONNECT"/>
+        <property key="org.eclipse.scada.ca.server.exporter.ngp.exportUri" value="ca:ngp://0.0.0.0:2401"/>
+        <property key="org.eclipse.scada.ae.server.exporter.ngp.exportUri" value="ae:ngp://0.0.0.0:2201"/>
+        <property key="org.eclipse.scada.da.server.exporter.ngp.exportUri" value="da:ngp://0.0.0.0:2101"/>
+        <includes href="../global/master.customization.profile.xml#/"/>
+      </customizationProfile>
+      <securityConfiguration href="../global/global.security#/"/>
+      <summaryGroups name="REGION1" items="//@nodes.0/@applications.0/@items.6">
+        <subGroups name="SITE1" items="//@nodes.0/@applications.0/@items.7">
+          <subGroups name="SYS" items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.8">
+            <subGroups name="DRV" items="//@nodes.0/@applications.0/@items.9">
+              <subGroups name="EXEC" items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4"/>
+            </subGroups>
+          </subGroups>
+        </subGroups>
+      </summaryGroups>
+      <items xsi:type="osgi:SourceItem" name="REGION1.SITE1.SYS.LAVG1.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg1">
+        <information description="Load Average 1m" dataType="FLOAT">
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>SYS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:ManualOverride" name="local.manual"/>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="REGION1.SITE1.SYS.LAVG5.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg5">
+        <information description="Load Average 5m" dataType="FLOAT">
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>SYS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:ManualOverride" name="local.manual"/>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="REGION1.SITE1.SYS.LAVG15.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg15">
+        <information description="Load Average 15m" dataType="FLOAT">
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>SYS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:ManualOverride" name="local.manual"/>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="REGION1.SITE1.SYS.DRV.EXEC.CON.M" connection="//@nodes.0/@applications.0/@connections.0" sourceName="org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.connected">
+        <information dataType="BOOLEAN">
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>SYS</hierarchy>
+          <hierarchy>DRV</hierarchy>
+          <hierarchy>EXEC</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:ManualOverride" name="local.manual"/>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="REGION1.SITE1.SYS.DRV.EXEC.STATE.V" connection="//@nodes.0/@applications.0/@connections.0" sourceName="org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.state">
+        <information dataType="STRING">
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>SYS</hierarchy>
+          <hierarchy>DRV</hierarchy>
+          <hierarchy>EXEC</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:ManualOverride" name="local.manual"/>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SummaryItem" name="REGION1.SUM.V" group="//@nodes.0/@applications.0/@summaryGroups.0">
+        <information>
+          <hierarchy>REGION1</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SummaryItem" name="REGION1.SITE1.SUM.V" group="//@nodes.0/@applications.0/@summaryGroups.0/@subGroups.0">
+        <information>
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SummaryItem" name="REGION1.SITE1.SYS.SUM.V" group="//@nodes.0/@applications.0/@summaryGroups.0/@subGroups.0/@subGroups.0">
+        <information>
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>SYS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SummaryItem" name="REGION1.SITE1.SYS.DRV.SUM.V" group="//@nodes.0/@applications.0/@summaryGroups.0/@subGroups.0/@subGroups.0/@subGroups.0">
+        <information>
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>SYS</hierarchy>
+          <hierarchy>DRV</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SummaryItem" name="REGION1.SITE1.SYS.DRV.EXEC.SUM.V" group="//@nodes.0/@applications.0/@summaryGroups.0/@subGroups.0/@subGroups.0/@subGroups.0/@subGroups.0">
+        <information>
+          <hierarchy>REGION1</hierarchy>
+          <hierarchy>SITE1</hierarchy>
+          <hierarchy>SYS</hierarchy>
+          <hierarchy>DRV</hierarchy>
+          <hierarchy>EXEC</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.ALERT_ACTIVE" dataSourceId="ae.server.info.ALERT_ACTIVE">
+        <information description="Alert active" system="SCADA"/>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.ALERT_DISABLED" dataSourceId="ae.server.info.ALERT_DISABLED">
+        <information description="Alert disabled" system="SCADA"/>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.OK" dataSourceId="ae.server.info.OK">
+        <information description="Summarized state OK" system="SCADA"/>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.NOT_OK" dataSourceId="ae.server.info.NOT_OK">
+        <information description="Summarized state NOT_OK_AKN" system="SCADA"/>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.UNSAFE" dataSourceId="ae.server.info.UNSAFE">
+        <information description="Summarized state UNSAFE" system="SCADA"/>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.INACTIVE" dataSourceId="ae.server.info.INACTIVE">
+        <information description="Summarized state INACTIVE" system="SCADA"/>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.INIT" dataSourceId="ae.server.info.INIT">
+        <information description="Summarized state INIT" system="SCADA"/>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.NOT_OK_AKN" dataSourceId="ae.server.info.NOT_OK_AKN">
+        <information description="Summarized state NOT_OK_AKN" system="SCADA"/>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.NOT_OK_NOT_AKN" dataSourceId="ae.server.info.NOT_OK_NOT_AKN">
+        <information description="Summarized state NOT_OK_NOT_AKN" system="SCADA"/>
+      </items>
+      <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.NOT_AKN" dataSourceId="ae.server.info.NOT_AKN">
+        <information description="Summarized state NOT_OK_AKN" system="SCADA"/>
+      </items>
+      <markers>
+        <markerGroups items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.9" name="REGION1_SITE1_SYS_DRV_EXEC">
+          <markers name="maintenance.warning"/>
+          <markers name="maintenance.ack"/>
+        </markerGroups>
+        <markerGroups items="//@nodes.0/@applications.0/@items.5" name="REGION1">
+          <markers name="maintenance.warning"/>
+          <markers name="maintenance.ack"/>
+        </markerGroups>
+        <markerGroups items="//@nodes.0/@applications.0/@items.8" name="REGION1_SITE1_SYS_DRV">
+          <markers name="maintenance.warning"/>
+          <markers name="maintenance.ack"/>
+        </markerGroups>
+        <markerGroups items="//@nodes.0/@applications.0/@items.6" name="REGION1_SITE1">
+          <markers name="maintenance.warning"/>
+          <markers name="maintenance.ack"/>
+        </markerGroups>
+        <markerGroups items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.7" name="REGION1_SITE1_SYS">
+          <markers name="maintenance.warning"/>
+          <markers name="maintenance.ack"/>
+        </markerGroups>
+      </markers>
+      <monitorPools name="monitors.unsafe" filter="(status=UNSAFE)"/>
+      <monitorPools name="monitors.inactive" filter="(status=INACTIVE)"/>
+      <monitorPools name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
+      <monitorPools name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
+      <monitorPools name="monitors.init" filter="(status=INIT)"/>
+      <monitorPools name="monitors.all" filter="(status=*)"/>
+      <eventPools name="events.all" filter="(eventType=*)" size="10000"/>
+    </applications>
+    <applications xsi:type="osgi:DefaultValueArchiveServer" name="hdserver">
+      <connections xsi:type="osgi:DataAccessConnection" shortDescription="Connection to master master on localhost" name="master.localhost" endpoint="//@nodes.0/@endpoints.2">
+        <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
+      </connections>
+      <exporter xsi:type="osgi:HistoricalDataExporter" name="hdserver/exporter" endpoints="//@nodes.0/@endpoints.3"/>
+      <exporter xsi:type="osgi:ConfigurationAdministratorExporter" name="hdserver/exporter" endpoints="//@nodes.0/@endpoints.4"/>
+      <customizationProfile name="Local customization profile">
+        <start name="org.eclipse.scada.sec.provider.plain.property"/>
+        <property key="org.eclipse.scada.sec.provider.plain.property.data" value="admin:admin12:ADMIN|interconnect:interconnect12:INTERCONNECT"/>
+        <property key="org.eclipse.scada.hd.exporter.http.server.user" value="interconnect"/>
+        <property key="org.eclipse.scada.hd.exporter.http.server.password" value="interconnect12"/>
+        <property key="org.eclipse.scada.hd.server.exporter.ngp.exportUri" value="hd:ngp://0.0.0.0:2302"/>
+        <property key="org.eclipse.scada.ca.server.exporter.ngp.exportUri" value="ca:ngp://0.0.0.0:2402"/>
+        <includes href="../global/hdserver.customization.profile.xml#/"/>
+      </customizationProfile>
+      <securityConfiguration href="../global/global.security#/"/>
+    </applications>
+    <applications xsi:type="world:ExecDriver" name="exec" endpoints="//@nodes.0/@endpoints.5">
+      <password password="driver12"/>
+    </applications>
+  </nodes>
+  <options>
+    <masterHandlerPriorities href="platform:/plugin/org.eclipse.scada.configuration.lib/model/defaultPriorities.eswm#_sLVwoN_iEeKP_IG4d7_Nqg"/>
+  </options>
+</world:World>

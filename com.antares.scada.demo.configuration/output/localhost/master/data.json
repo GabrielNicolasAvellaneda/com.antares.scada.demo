@@ -1,0 +1,681 @@
+{
+  "da.datasource.dataitem": {
+    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.source": {
+      "connection.id": "self",
+      "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.connected"
+    },
+    "REGION1.SITE1.SYS.LAVG1.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg1"
+    },
+    "REGION1.SITE1.SYS.LAVG5.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg5"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.source": {
+      "connection.id": "self",
+      "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.state"
+    },
+    "REGION1.SITE1.SYS.LAVG15.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg15"
+    }
+  },
+  "org.eclipse.scada.da.datasource.sum": {
+    "REGION1.SUM.V.sum": {
+      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
+      "subDatasource.0": "REGION1.SITE1.SUM.V.master"
+    },
+    "REGION1.SITE1.SYS.DRV.SUM.V.sum": {
+      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
+      "subDatasource.0": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master"
+    },
+    "REGION1.SITE1.SYS.SUM.V.sum": {
+      "datasource.1": "REGION1.SITE1.SYS.LAVG15.V.master",
+      "datasource.2": "REGION1.SITE1.SYS.LAVG5.V.master",
+      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
+      "subDatasource.0": "REGION1.SITE1.SYS.DRV.SUM.V.master",
+      "datasource.0": "REGION1.SITE1.SYS.LAVG1.V.master"
+    },
+    "REGION1.SITE1.SUM.V.sum": {
+      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
+      "subDatasource.0": "REGION1.SITE1.SYS.SUM.V.master"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.sum": {
+      "datasource.1": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
+      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
+      "datasource.0": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master"
+    }
+  },
+  "da.dataitem.datasource": {
+    "master/exporter/ae.server.info.ALERT_DISABLED": {
+      "datasource.id": "ae.server.info.ALERT_DISABLED.master",
+      "item.id": "ae.server.info.ALERT_DISABLED",
+      "description": "Alert disabled"
+    },
+    "master/exporter/REGION1.SUM.V": {
+      "datasource.id": "REGION1.SUM.V.master",
+      "item.id": "REGION1.SUM.V"
+    },
+    "master/exporter/REGION1.SITE1.SYS.LAVG1.V": {
+      "datasource.id": "REGION1.SITE1.SYS.LAVG1.V.master",
+      "item.id": "REGION1.SITE1.SYS.LAVG1.V",
+      "description": "Load Average 1m"
+    },
+    "master/exporter/ae.server.info.NOT_AKN": {
+      "datasource.id": "ae.server.info.NOT_AKN.master",
+      "item.id": "ae.server.info.NOT_AKN",
+      "description": "Summarized state NOT_OK_AKN"
+    },
+    "master/exporter/ae.server.info.NOT_OK_AKN": {
+      "datasource.id": "ae.server.info.NOT_OK_AKN.master",
+      "item.id": "ae.server.info.NOT_OK_AKN",
+      "description": "Summarized state NOT_OK_AKN"
+    },
+    "master/exporter/REGION1.SITE1.SYS.LAVG15.V": {
+      "datasource.id": "REGION1.SITE1.SYS.LAVG15.V.master",
+      "item.id": "REGION1.SITE1.SYS.LAVG15.V",
+      "description": "Load Average 15m"
+    },
+    "master/exporter/ae.server.info.NOT_OK": {
+      "datasource.id": "ae.server.info.NOT_OK.master",
+      "item.id": "ae.server.info.NOT_OK",
+      "description": "Summarized state NOT_OK_AKN"
+    },
+    "master/exporter/ae.server.info.UNSAFE": {
+      "datasource.id": "ae.server.info.UNSAFE.master",
+      "item.id": "ae.server.info.UNSAFE",
+      "description": "Summarized state UNSAFE"
+    },
+    "master/exporter/ae.server.info.INIT": {
+      "datasource.id": "ae.server.info.INIT.master",
+      "item.id": "ae.server.info.INIT",
+      "description": "Summarized state INIT"
+    },
+    "master/exporter/REGION1.SITE1.SYS.DRV.EXEC.STATE.V": {
+      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
+      "item.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V"
+    },
+    "master/exporter/REGION1.SITE1.SYS.DRV.SUM.V": {
+      "datasource.id": "REGION1.SITE1.SYS.DRV.SUM.V.master",
+      "item.id": "REGION1.SITE1.SYS.DRV.SUM.V"
+    },
+    "master/exporter/ae.server.info.ALERT_ACTIVE": {
+      "datasource.id": "ae.server.info.ALERT_ACTIVE.master",
+      "item.id": "ae.server.info.ALERT_ACTIVE",
+      "description": "Alert active"
+    },
+    "master/exporter/REGION1.SITE1.SYS.DRV.EXEC.SUM.V": {
+      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master",
+      "item.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V"
+    },
+    "master/exporter/ae.server.info.NOT_OK_NOT_AKN": {
+      "datasource.id": "ae.server.info.NOT_OK_NOT_AKN.master",
+      "item.id": "ae.server.info.NOT_OK_NOT_AKN",
+      "description": "Summarized state NOT_OK_NOT_AKN"
+    },
+    "master/exporter/REGION1.SITE1.SUM.V": {
+      "datasource.id": "REGION1.SITE1.SUM.V.master",
+      "item.id": "REGION1.SITE1.SUM.V"
+    },
+    "master/exporter/ae.server.info.OK": {
+      "datasource.id": "ae.server.info.OK.master",
+      "item.id": "ae.server.info.OK",
+      "description": "Summarized state OK"
+    },
+    "master/exporter/ae.server.info.INACTIVE": {
+      "datasource.id": "ae.server.info.INACTIVE.master",
+      "item.id": "ae.server.info.INACTIVE",
+      "description": "Summarized state INACTIVE"
+    },
+    "master/exporter/REGION1.SITE1.SYS.LAVG5.V": {
+      "datasource.id": "REGION1.SITE1.SYS.LAVG5.V.master",
+      "item.id": "REGION1.SITE1.SYS.LAVG5.V",
+      "description": "Load Average 5m"
+    },
+    "master/exporter/REGION1.SITE1.SYS.SUM.V": {
+      "datasource.id": "REGION1.SITE1.SYS.SUM.V.master",
+      "item.id": "REGION1.SITE1.SYS.SUM.V"
+    },
+    "master/exporter/REGION1.SITE1.SYS.DRV.EXEC.CON.M": {
+      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
+      "item.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M"
+    }
+  },
+  "ae.monitor.query": {
+    "monitors.all": {
+      "filter": "(status\u003d*)"
+    },
+    "monitors.inactive": {
+      "filter": "(status\u003dINACTIVE)"
+    },
+    "monitors.ack_required": {
+      "filter": "(|(status\u003dNOT_AKN)(status\u003dNOT_OK_NOT_AKN))"
+    },
+    "monitors.init": {
+      "filter": "(status\u003dINIT)"
+    },
+    "monitors.unsafe": {
+      "filter": "(status\u003dUNSAFE)"
+    },
+    "monitors.not_ok": {
+      "filter": "(|(status\u003dNOT_OK)(status\u003dNOT_OK_NOT_AKN)(status\u003dNOT_OK_AKN))"
+    }
+  },
+  "org.eclipse.scada.sec.osgi.manager": {
+    "reject.all.session": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "PRIV",
+      "priority": "1200",
+      "properties.script": "false;",
+      "for.type": "SESSION"
+    },
+    "allow.admin.session": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "PRIV",
+      "priority": "1300",
+      "properties.script": "user !\u003d null \u0026\u0026 user.hasRole ( \"ADMIN\" );",
+      "for.type": "SESSION",
+      "for.id": "admin"
+    },
+    "allow.logon": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "CONNECT",
+      "priority": "1500",
+      "properties.script": "true;",
+      "for.type": "SESSION"
+    },
+    "logon": {
+      "serviceType": "logon",
+      "for.action": "CONNECT",
+      "priority": "1600",
+      "for.type": "SESSION"
+    },
+    "allow.all": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "priority": "1100",
+      "properties.script": "user !\u003d null;"
+    },
+    "allow.operator.session": {
+      "serviceType": "script",
+      "properties.script.engine": "JavaScript",
+      "for.action": "PRIV",
+      "priority": "1400",
+      "properties.script": "user !\u003d null;",
+      "for.type": "SESSION",
+      "for.id": "operator"
+    }
+  },
+  "da.connection": {
+    "driver.exec.on.localhost": {
+      "connection.uri": "da:ngp://interconnect:interconnect12@localhost:2107"
+    },
+    "self": {
+      "connection.uri": "da:ngp://interconnect:interconnect12@localhost:2101"
+    }
+  },
+  "org.eclipse.scada.da.manual": {
+    "REGION1.SITE1.SYS.LAVG5.V.local.manual": {
+      "master.id": "REGION1.SITE1.SYS.LAVG5.V.master",
+      "info.item": "REGION1.SITE1.SYS.LAVG5.V",
+      "handlerPriority": "500",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "info.itemDescription": "Load Average 5m"
+    },
+    "REGION1.SITE1.SYS.LAVG15.V.local.manual": {
+      "master.id": "REGION1.SITE1.SYS.LAVG15.V.master",
+      "info.item": "REGION1.SITE1.SYS.LAVG15.V",
+      "handlerPriority": "500",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "info.itemDescription": "Load Average 15m"
+    },
+    "REGION1.SITE1.SYS.LAVG1.V.local.manual": {
+      "master.id": "REGION1.SITE1.SYS.LAVG1.V.master",
+      "info.item": "REGION1.SITE1.SYS.LAVG1.V",
+      "handlerPriority": "500",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "info.itemDescription": "Load Average 1m"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.local.manual": {
+      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
+      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V",
+      "handlerPriority": "500",
+      "info.level.4": "EXEC",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.local.manual": {
+      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
+      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.CON.M",
+      "handlerPriority": "500",
+      "info.level.4": "EXEC",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1"
+    }
+  },
+  "ae.server.info": {
+    "ae.server.info": {
+      "prefix": "ae.server.info"
+    }
+  },
+  "org.eclipse.scada.da.master.common.marker": {
+    "REGION1_SITE1_SYS_DRV_EXEC": {
+      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master, REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master, REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master",
+      "handlerPriority": "10",
+      "exportAttribute": "true",
+      "alwaysExport": "true",
+      "marker.maintenance.ack": "",
+      "marker.maintenance.warning": ""
+    },
+    "REGION1": {
+      "master.id": "REGION1.SUM.V.master",
+      "handlerPriority": "10",
+      "exportAttribute": "true",
+      "alwaysExport": "true",
+      "marker.maintenance.ack": "",
+      "marker.maintenance.warning": ""
+    },
+    "REGION1_SITE1_SYS_DRV": {
+      "master.id": "REGION1.SITE1.SYS.DRV.SUM.V.master",
+      "handlerPriority": "10",
+      "exportAttribute": "true",
+      "alwaysExport": "true",
+      "marker.maintenance.ack": "",
+      "marker.maintenance.warning": ""
+    },
+    "REGION1_SITE1": {
+      "master.id": "REGION1.SITE1.SUM.V.master",
+      "handlerPriority": "10",
+      "exportAttribute": "true",
+      "alwaysExport": "true",
+      "marker.maintenance.ack": "",
+      "marker.maintenance.warning": ""
+    },
+    "REGION1_SITE1_SYS": {
+      "master.id": "REGION1.SITE1.SYS.LAVG1.V.master, REGION1.SITE1.SYS.LAVG15.V.master, REGION1.SITE1.SYS.LAVG5.V.master, REGION1.SITE1.SYS.SUM.V.master",
+      "handlerPriority": "10",
+      "exportAttribute": "true",
+      "alwaysExport": "true",
+      "marker.maintenance.ack": "",
+      "marker.maintenance.warning": ""
+    }
+  },
+  "org.eclipse.scada.ae.server.common.event.pool": {
+    "events.all": {
+      "filter": "(eventType\u003d*)",
+      "size": "10000"
+    }
+  },
+  "master.item": {
+    "ae.server.info.NOT_OK.master": {
+      "datasource.id": "ae.server.info.NOT_OK"
+    },
+    "REGION1.SITE1.SYS.LAVG5.V.master": {
+      "datasource.id": "REGION1.SITE1.SYS.LAVG5.V.source"
+    },
+    "ae.server.info.INIT.master": {
+      "datasource.id": "ae.server.info.INIT"
+    },
+    "REGION1.SITE1.SYS.LAVG15.V.master": {
+      "datasource.id": "REGION1.SITE1.SYS.LAVG15.V.source"
+    },
+    "ae.server.info.NOT_AKN.master": {
+      "datasource.id": "ae.server.info.NOT_AKN"
+    },
+    "REGION1.SITE1.SYS.DRV.SUM.V.master": {
+      "datasource.id": "REGION1.SITE1.SYS.DRV.SUM.V.sum"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master": {
+      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.source"
+    },
+    "REGION1.SUM.V.master": {
+      "datasource.id": "REGION1.SUM.V.sum"
+    },
+    "REGION1.SITE1.SUM.V.master": {
+      "datasource.id": "REGION1.SITE1.SUM.V.sum"
+    },
+    "REGION1.SITE1.SYS.SUM.V.master": {
+      "datasource.id": "REGION1.SITE1.SYS.SUM.V.sum"
+    },
+    "REGION1.SITE1.SYS.LAVG1.V.master": {
+      "datasource.id": "REGION1.SITE1.SYS.LAVG1.V.source"
+    },
+    "ae.server.info.ALERT_ACTIVE.master": {
+      "datasource.id": "ae.server.info.ALERT_ACTIVE"
+    },
+    "ae.server.info.UNSAFE.master": {
+      "datasource.id": "ae.server.info.UNSAFE"
+    },
+    "ae.server.info.INACTIVE.master": {
+      "datasource.id": "ae.server.info.INACTIVE"
+    },
+    "ae.server.info.NOT_OK_NOT_AKN.master": {
+      "datasource.id": "ae.server.info.NOT_OK_NOT_AKN"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master": {
+      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.source"
+    },
+    "ae.server.info.OK.master": {
+      "datasource.id": "ae.server.info.OK"
+    },
+    "ae.server.info.ALERT_DISABLED.master": {
+      "datasource.id": "ae.server.info.ALERT_DISABLED"
+    },
+    "ae.server.info.NOT_OK_AKN.master": {
+      "datasource.id": "ae.server.info.NOT_OK_AKN"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master": {
+      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.sum"
+    }
+  },
+  "da.master.handler.sum": {
+    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "DRV",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.sum.phase1": {
+      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master",
+      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V",
+      "handlerPriority": "100",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error"
+    },
+    "REGION1.SITE1.SYS.LAVG15.V.sum.phase1": {
+      "master.id": "REGION1.SITE1.SYS.LAVG15.V.master",
+      "info.item": "REGION1.SITE1.SYS.LAVG15.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error",
+      "info.itemDescription": "Load Average 15m"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "DRV",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SITE1.SYS.LAVG15.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.SYS.LAVG15.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 15m",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.SYS.LAVG15.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SUM.V.sum.phase1": {
+      "master.id": "REGION1.SUM.V.master",
+      "info.item": "REGION1.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "REGION1",
+      "tag": "error"
+    },
+    "REGION1.SITE1.SYS.DRV.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.SYS.DRV.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "DRV",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.SYS.DRV.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.sum.phase1": {
+      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
+      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.CON.M",
+      "handlerPriority": "100",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error"
+    },
+    "REGION1.SITE1.SYS.DRV.SUM.V.sum.phase1": {
+      "master.id": "REGION1.SITE1.SYS.DRV.SUM.V.master",
+      "info.item": "REGION1.SITE1.SYS.DRV.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error"
+    },
+    "REGION1.SITE1.SYS.LAVG5.V.sum.phase1": {
+      "master.id": "REGION1.SITE1.SYS.LAVG5.V.master",
+      "info.item": "REGION1.SITE1.SYS.LAVG5.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error",
+      "info.itemDescription": "Load Average 5m"
+    },
+    "REGION1.SITE1.SYS.LAVG5.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.SYS.LAVG5.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 5m",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.SYS.LAVG5.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.sum.phase1": {
+      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
+      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V",
+      "handlerPriority": "100",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error"
+    },
+    "REGION1.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SITE1.SYS.LAVG1.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.SYS.LAVG1.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 1m",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.SYS.LAVG1.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SITE1.SYS.LAVG1.V.sum.phase1": {
+      "master.id": "REGION1.SITE1.SYS.LAVG1.V.master",
+      "info.item": "REGION1.SITE1.SYS.LAVG1.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error",
+      "info.itemDescription": "Load Average 1m"
+    },
+    "REGION1.SITE1.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SITE1.SUM.V.sum.phase1": {
+      "master.id": "REGION1.SITE1.SUM.V.master",
+      "info.item": "REGION1.SITE1.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error"
+    },
+    "REGION1.SITE1.SYS.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.SYS.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.SYS.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "REGION1.SITE1.SYS.SUM.V.sum.phase1": {
+      "master.id": "REGION1.SITE1.SYS.SUM.V.master",
+      "info.item": "REGION1.SITE1.SYS.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "SYS",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag": "error"
+    },
+    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.CON.M",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "DRV",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "SITE1",
+      "info.level.0": "REGION1",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    }
+  }
+}

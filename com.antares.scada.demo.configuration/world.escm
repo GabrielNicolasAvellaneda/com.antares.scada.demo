@@ -17,22 +17,6 @@
         </levels>
       </levels>
     </levels>
-    <levels xmi:id="_Dgj6BMHdEeS1psWssi2O_A" name="SITE2">
-      <levels xmi:id="_Dgj6BcHdEeS1psWssi2O_A" name="SYS">
-        <components xsi:type="exec:LoadAverage" xmi:id="_Dgj6BsHdEeS1psWssi2O_A" name="LAVG">
-          <masterOn href="world.esim#_DgZh9MHdEeS1psWssi2O_A"/>
-          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_DgZh8sHdEeS1psWssi2O_A"/>
-        </components>
-        <levels xmi:id="_Dgj6B8HdEeS1psWssi2O_A" name="DRV">
-          <levels xmi:id="_Dgj6CMHdEeS1psWssi2O_A" name="EXEC">
-            <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_Dgj6CcHdEeS1psWssi2O_A">
-              <masterOn href="world.esim#_DgZh9MHdEeS1psWssi2O_A"/>
-              <driver xsi:type="infrastructure:CommonDriver" href="world.esim#_DgZh8sHdEeS1psWssi2O_A"/>
-            </components>
-          </levels>
-        </levels>
-      </levels>
-    </levels>
   </levels>
   <configurations xsi:type="component:MarkerConfiguration" xmi:id="_Dgj6CsHdEeS1psWssi2O_A">
     <markers xmi:id="_Dgj6C8HdEeS1psWssi2O_A" name="maintenance.warning"/>

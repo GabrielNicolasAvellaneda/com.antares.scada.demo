@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile:profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:profile="http://eclipse.org/SCADA/Configuration/World/OSGi/Profile" xsi:schemaLocation="http://eclipse.org/SCADA/Configuration/World/OSGi/Profile http://eclipse.org/SCADA/Configuration/World#//osgi/profile" name="Custom profile for master on node localhost">
+  <start>org.eclipse.scada.sec.audit.log.ae</start>
+  <start>org.eclipse.scada.da.buffer</start>
+  <start>org.eclipse.scada.da.server.exporter.ngp</start>
+  <start>org.eclipse.scada.da.client.ngp</start>
+  <start>org.eclipse.scada.da.client.sfp</start>
+  <start>org.eclipse.scada.da.server.common.osgi</start>
+  <start>org.eclipse.scada.da.connection.provider</start>
+  <start>org.eclipse.scada.da.client.connection.service</start>
+  <start>org.eclipse.scada.da.master.analyzer</start>
+  <start>org.eclipse.scada.da.master.common</start>
+  <start>org.eclipse.scada.da.datasource.script</start>
+  <start>org.eclipse.scada.da.datasource.formula</start>
+  <start>org.eclipse.scada.da.datasource.memory</start>
+  <start>org.eclipse.scada.da.datasource.proxy</start>
+  <start>org.eclipse.scada.da.datasource.item</start>
+  <start>org.eclipse.scada.da.datasource.sum</start>
+  <start>org.eclipse.scada.da.datasource.delta</start>
+  <start>org.eclipse.scada.da.datasource.ds</start>
+  <start>org.eclipse.scada.da.datasource.constant</start>
+  <start>org.eclipse.scada.da.datasource.average</start>
+  <start>org.eclipse.scada.da.datasource.changecounter</start>
+  <start>org.eclipse.scada.da.datasource.totalizer</start>
+  <start>org.eclipse.scada.da.datasource.movingaverage</start>
+  <start>org.eclipse.scada.da.mapper.osgi</start>
+  <start>org.eclipse.scada.da.master.mapper</start>
+  <start>org.eclipse.scada.da.server.osgi</start>
+  <start>org.eclipse.scada.da.server.osgi.summary</start>
+  <start>org.eclipse.scada.ae.client.ngp</start>
+  <start>org.eclipse.scada.ae.client.connection.service</start>
+  <start>org.eclipse.scada.ae.event.logger</start>
+  <start>org.eclipse.scada.ae.server.storage</start>
+  <start>org.eclipse.scada.ae.event</start>
+  <start>org.eclipse.scada.ae.monitor.datasource</start>
+  <start>org.eclipse.scada.ae.monitor.datasource.common</start>
+  <start>org.eclipse.scada.ae.server.exporter</start>
+  <start>org.eclipse.scada.ae.connection.provider</start>
+  <start>org.eclipse.scada.ae.server.common</start>
+  <start>org.eclipse.scada.ae.monitor.common</start>
+  <start>org.eclipse.scada.ae.server.common.monitor</start>
+  <start>org.eclipse.scada.ae.monitor.common</start>
+  <start>org.eclipse.scada.ae.monitor.script</start>
+  <start>org.eclipse.scada.ae.server.common.event</start>
+  <start>org.eclipse.scada.ae.server.info</start>
+  <start>org.eclipse.scada.ae.server.event.proxy</start>
+  <start>org.eclipse.scada.ae.server.monitor.proxy</start>
+  <start>org.eclipse.scada.ae.server.akn.proxy</start>
+  <start>org.eclipse.scada.ae.server.exporter.ngp</start>
+  <start>org.eclipse.scada.ca.server.exporter.ngp</start>
+  <start>org.eclipse.scada.ca.server.osgi</start>
+  <start>org.eclipse.scada.ca.servlet</start>
+  <start>org.eclipse.scada.ca.console</start>
+  <start>org.eclipse.scada.ca.file</start>
+  <start>org.eclipse.equinox.ds</start>
+  <start>org.eclipse.scada.sec.osgi.manager</start>
+  <start>org.eclipse.scada.sec.auth.logon</start>
+  <start>org.eclipse.scada.sec.authn.osgi.cfg.priority</start>
+  <start>org.eclipse.scada.sec.authz.signature</start>
+  <start>org.eclipse.scada.sec.provider.script</start>
+  <start>org.eclipse.scada.sec.provider.jdbc</start>
+  <start>org.eclipse.scada.sec.provider.plain.property</start>
+  <start>org.eclipse.scada.ca.file</start>
+  <start>org.eclipse.scada.ds.storage.file</start>
+  <property key="osgi.console.ssh">2501</property>
+  <property key="org.eclipse.scada.ae.server.storage.jdbc.archiveDays">15</property>
+  <property key="logback.configurationFile" eval="true">TARGET_DIR + &quot;/logback.xml&quot;</property>
+  <property key="osgi.console.enable.builtin">false</property>
+  <property key="osgi.console.ssh.useDefaultSecureStorage">true</property>
+  <property key="ssh.server.keystore">configuration/hostkey.ser</property>
+  <property key="org.eclipse.equinox.console.jaas.file">configuration/store</property>
+  <property key="java.security.auth.login.config">configuration/org.eclipse.equinox.console.authentication.config</property>
+  <property key="org.eclipse.scada.sec.callback.defaultTimeout">60000</property>
+  <property key="org.eclipse.scada.sec.provider.plain.property.data">admin:admin12:ADMIN|interconnect:interconnect12:INTERCONNECT</property>
+  <property key="org.eclipse.scada.ca.server.exporter.ngp.exportUri">ca:ngp://0.0.0.0:2401</property>
+  <property key="org.eclipse.scada.ae.server.exporter.ngp.exportUri">ae:ngp://0.0.0.0:2201</property>
+  <property key="org.eclipse.scada.da.server.exporter.ngp.exportUri">da:ngp://0.0.0.0:2101</property>
+  <property key="org.eclipse.scada.ca.file.root">${user.home}/.eclipse.scada/ca.master</property>
+  <property key="org.eclipse.scada.ds.storage.file.root">${user.home}/.eclipse.scada/ds.master</property>
+  <feature>org.eclipse.scada.core.protocols.feature.group</feature>
+  <feature>org.eclipse.scada.core.server.feature.group</feature>
+  <feature>org.eclipse.scada.core.client.feature.group</feature>
+  <feature>org.eclipse.scada.core.common.feature.group</feature>
+  <feature>org.eclipse.scada.external.feature.group</feature>
+  <feature>org.eclipse.scada.utils.feature.group</feature>
+  <feature>org.eclipse.scada.base.feature.group</feature>
+  <feature>org.eclipse.scada.protocols.feature.group</feature>
+  <feature>org.eclipse.equinox.server.core.feature.group</feature>
+  <feature>org.eclipse.equinox.server.jetty.feature.group</feature>
+  <feature>org.eclipse.equinox.server.p2.feature.group</feature>
+  <feature>ch.qos.logback.classic</feature>
+  <feature>ch.qos.logback.core</feature>
+  <feature>ch.qos.logback.slf4j</feature>
+  <feature>org.eclipse.scada.deploy.console.feature.group</feature>
+  <setbsl level="1">org.eclipse.equinox.ds</setbsl>
+  <note>If you move the installation directory also remember to fix the property &quot;logback.configurationFile&quot;</note>
+  <arg>-consoleLog</arg>
+</profile:profile>
