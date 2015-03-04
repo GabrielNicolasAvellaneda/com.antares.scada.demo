@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_1DA8QMHlEeSt_YDd5zSHwg">
-  <levels xmi:id="_1DA8QcHlEeSt_YDd5zSHwg" name="REGION1">
-    <levels xmi:id="_1DA8QsHlEeSt_YDd5zSHwg" name="SITE1">
+  <levels xmi:id="_1DA8QcHlEeSt_YDd5zSHwg" name="ES">
+    <levels xmi:id="_1DA8QsHlEeSt_YDd5zSHwg" name="DEMO">
       <levels xmi:id="_1DA8Q8HlEeSt_YDd5zSHwg" name="SYS">
         <components xsi:type="exec:LoadAverage" xmi:id="_1DA8RMHlEeSt_YDd5zSHwg" name="LAVG">
           <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
@@ -15,9 +15,15 @@
             </components>
           </levels>
         </levels>
+        <levels xmi:id="_RsA30MH4EeSt_YDd5zSHwg" name="SRV001">
+          <components xsi:type="exec:LoadAverage" xmi:id="_Up2h8MH4EeSt_YDd5zSHwg" name="LAVG1">
+            <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
+            <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_1C9498HlEeSt_YDd5zSHwg"/>
+          </components>
+        </levels>
       </levels>
-      <levels xmi:id="_1C9JgMHzEeSt_YDd5zSHwg" name="Modbus">
-        <components xsi:type="component:ExternalValue" xmi:id="_32r1YMHzEeSt_YDd5zSHwg" shortDescription="This is the Variable V1" name="VariableV1" dataType="INT32" sourceName="modbus.data.S1.B1.V1">
+      <levels xmi:id="_1C9JgMHzEeSt_YDd5zSHwg" name="MODBUS">
+        <components xsi:type="component:ExternalValue" xmi:id="_32r1YMHzEeSt_YDd5zSHwg" shortDescription="This is the Variable V1" name="V1" dataType="INT32" sourceName="modbus.data.S1.B1.V1">
           <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
           <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
         </components>

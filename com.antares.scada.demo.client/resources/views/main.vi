@@ -9,6 +9,14 @@
       <position x="10.0" y="10.0"/>
       <dimension width="200.0" height="-1.0"/>
     </children>
+    <children>
+      <element xsi:type="visualInterface:SymbolReference" uri="../symbols/node/node.vi">
+        <properties key="title" value="V1"/>
+        <properties key="prefix" value="ES.DEMO.MODBUS"/>
+      </element>
+      <position x="220.0" y="10.0"/>
+      <dimension width="200.0" height="-1.0"/>
+    </children>
   </root>
   <properties key="connection" value="connection.da.main"/>
   <properties key="hdConnection" value="connection.hd.main"/>

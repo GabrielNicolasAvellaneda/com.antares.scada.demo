@@ -4,10 +4,10 @@
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_1C9498HlEeSt_YDd5zSHwg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
     <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_xyApEMHmEeSt_YDd5zSHwg" name="modbus" driverTypeId="org.eclipse.scada.da.server.modbus" devices="_Nw3WEMHmEeSt_YDd5zSHwg" instanceNumber="14"/>
     <valueArchives xmi:id="_1C94-MHlEeSt_YDd5zSHwg" name="hdserver" instanceNumber="2"/>
-    <masters xmi:id="_1C94-cHlEeSt_YDd5zSHwg" name="master" driver="_1C9498HlEeSt_YDd5zSHwg _xyApEMHmEeSt_YDd5zSHwg" archiveTo="_1C94-MHlEeSt_YDd5zSHwg">
+    <masters xmi:id="_1C94-cHlEeSt_YDd5zSHwg" name="master" configuration="_3YgZsMH1EeSt_YDd5zSHwg" driver="_1C9498HlEeSt_YDd5zSHwg _xyApEMHmEeSt_YDd5zSHwg" archiveTo="_1C94-MHlEeSt_YDd5zSHwg">
       <authoratives xmi:id="_1C94-sHlEeSt_YDd5zSHwg">
-        <hierarchy>REGION1</hierarchy>
-        <hierarchy>SITE1</hierarchy>
+        <hierarchy>ES</hierarchy>
+        <hierarchy>DEMO</hierarchy>
       </authoratives>
     </masters>
   </nodes>

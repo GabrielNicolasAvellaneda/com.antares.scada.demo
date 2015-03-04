@@ -2,8 +2,23 @@
 <exporter:configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configuration="http://eclipse.org/SCADA/DA/Exec/Configuration" xmlns:exporter="http://eclipse.org/SCADA/DA/Server/Exporter">
   <exporter:hive ref="org.eclipse.scada.da.server.exec.Hive">
     <exporter:configuration><configuration:root>
-        <configuration:queue name="Q.REGION1.SITE1.SYS">
-          <configuration:command id="CMD.REGION1.SITE1.SYS.LAVG" period="1000">
+        <configuration:queue name="Q.ES.DEMO.SYS">
+          <configuration:command id="CMD.ES.DEMO.SYS.LAVG" period="1000">
+            <configuration:process exec="uptime">
+              <configuration:env name="LANG" value="en_US"/>
+            </configuration:process>
+            <configuration:extractor xsi:type="configuration:RegExExtractorType" name="A" requireFullMatch="false">
+              <configuration:field variantType="STRING"/>
+              <configuration:field name="users" variantType="INTEGER"/>
+              <configuration:field name="loadAvg1" variantType="DOUBLE"/>
+              <configuration:field name="loadAvg5" variantType="DOUBLE"/>
+              <configuration:field name="loadAvg15" variantType="DOUBLE"/>
+              <configuration:expression>([0-9]+) users?.*averages?: +([0-9]+[,\\.][0-9]*),? +([0-9]+[,\\.][0-9]*),? +([0-9]+[,\\.][0-9]*)</configuration:expression>
+            </configuration:extractor>
+          </configuration:command>
+        </configuration:queue>
+        <configuration:queue name="Q.ES.DEMO.SYS.SRV001">
+          <configuration:command id="CMD.ES.DEMO.SYS.SRV001.LAVG1" period="1000">
             <configuration:process exec="uptime">
               <configuration:env name="LANG" value="en_US"/>
             </configuration:process>

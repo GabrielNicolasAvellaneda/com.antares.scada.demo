@@ -23,7 +23,7 @@
           <children>
             <element
                 xsi:type="visualInterface:Text"
-                text="CPU Idle"/>
+                text="Variable 1"/>
           </children>
           <children
               horizontalAlignment="FILL"
@@ -31,7 +31,7 @@
             <element
                 xsi:type="visualInterface:SymbolReference"
                 uri="../textValue.vi"
-                onCreateProperties="properties.put ( &quot;item&quot;, prefixed (&quot;CPU.IDLE.V&quot;  ) );"/>
+                onCreateProperties="properties.put ( &quot;item&quot;, prefixed (&quot;V1.X&quot;  ) );"/>
           </children>
           <children>
             <element

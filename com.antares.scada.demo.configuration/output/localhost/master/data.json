@@ -1,100 +1,162 @@
 {
   "da.datasource.dataitem": {
-    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.source": {
-      "connection.id": "self",
-      "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.connected"
-    },
-    "REGION1.SITE1.SYS.LAVG1.V.source": {
+    "ES.DEMO.SYS.SRV001.LAVG5.V.source": {
       "connection.id": "driver.exec.on.localhost",
-      "item.id": "CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg1"
+      "item.id": "CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg5"
     },
-    "REGION1.SITE1.SYS.LAVG5.V.source": {
+    "ES.DEMO.SYS.LAVG5.V.source": {
       "connection.id": "driver.exec.on.localhost",
-      "item.id": "CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg5"
+      "item.id": "CMD.ES.DEMO.SYS.LAVG.A.loadAvg5"
     },
-    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.source": {
+    "ES.DEMO.SYS.DRV.EXEC.STATE.V.source": {
       "connection.id": "self",
       "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.state"
     },
-    "REGION1.SITE1.Modbus.VariableV1.X.source": {
+    "ES.DEMO.MODBUS.V1.X.source": {
       "connection.id": "driver.modbus.on.localhost",
       "item.id": "modbus.data.S1.B1.V1"
     },
-    "REGION1.SITE1.SYS.LAVG15.V.source": {
+    "ES.DEMO.SYS.LAVG1.V.source": {
       "connection.id": "driver.exec.on.localhost",
-      "item.id": "CMD.REGION1.SITE1.SYS.LAVG.A.loadAvg15"
+      "item.id": "CMD.ES.DEMO.SYS.LAVG.A.loadAvg1"
+    },
+    "ES.DEMO.SYS.LAVG15.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.ES.DEMO.SYS.LAVG.A.loadAvg15"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG15.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg15"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.CON.M.source": {
+      "connection.id": "self",
+      "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.connected"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG1.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg1"
     }
   },
   "org.eclipse.scada.da.datasource.sum": {
-    "REGION1.SUM.V.sum": {
+    "ES.DEMO.SYS.DRV.SUM.V.sum": {
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "subDatasource.0": "REGION1.SITE1.SUM.V.master"
+      "subDatasource.0": "ES.DEMO.SYS.DRV.EXEC.SUM.V.master"
     },
-    "REGION1.SITE1.SYS.DRV.SUM.V.sum": {
+    "ES.DEMO.SUM.V.sum": {
+      "subDatasource.1": "ES.DEMO.SYS.SUM.V.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "subDatasource.0": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master"
+      "subDatasource.0": "ES.DEMO.MODBUS.SUM.V.master"
     },
-    "REGION1.SITE1.Modbus.SUM.V.sum": {
+    "ES.DEMO.SYS.DRV.EXEC.SUM.V.sum": {
+      "datasource.1": "ES.DEMO.SYS.DRV.EXEC.STATE.V.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "datasource.0": "REGION1.SITE1.Modbus.VariableV1.X.master"
+      "datasource.0": "ES.DEMO.SYS.DRV.EXEC.CON.M.master"
     },
-    "REGION1.SITE1.SYS.SUM.V.sum": {
-      "datasource.1": "REGION1.SITE1.SYS.LAVG15.V.master",
-      "datasource.2": "REGION1.SITE1.SYS.LAVG5.V.master",
+    "ES.DEMO.SYS.SUM.V.sum": {
+      "datasource.1": "ES.DEMO.SYS.LAVG15.V.master",
+      "datasource.2": "ES.DEMO.SYS.LAVG5.V.master",
+      "subDatasource.1": "ES.DEMO.SYS.SRV001.SUM.V.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "subDatasource.0": "REGION1.SITE1.SYS.DRV.SUM.V.master",
-      "datasource.0": "REGION1.SITE1.SYS.LAVG1.V.master"
+      "subDatasource.0": "ES.DEMO.SYS.DRV.SUM.V.master",
+      "datasource.0": "ES.DEMO.SYS.LAVG1.V.master"
     },
-    "REGION1.SITE1.SUM.V.sum": {
-      "subDatasource.1": "REGION1.SITE1.SYS.SUM.V.master",
+    "ES.DEMO.SYS.SRV001.SUM.V.sum": {
+      "datasource.1": "ES.DEMO.SYS.SRV001.LAVG15.V.master",
+      "datasource.2": "ES.DEMO.SYS.SRV001.LAVG5.V.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "subDatasource.0": "REGION1.SITE1.Modbus.SUM.V.master"
+      "datasource.0": "ES.DEMO.SYS.SRV001.LAVG1.V.master"
     },
-    "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.sum": {
-      "datasource.1": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
+    "ES.DEMO.MODBUS.SUM.V.sum": {
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "datasource.0": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master"
+      "datasource.0": "ES.DEMO.MODBUS.V1.X.master"
+    },
+    "ES.SUM.V.sum": {
+      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
+      "subDatasource.0": "ES.DEMO.SUM.V.master"
     }
   },
   "da.dataitem.datasource": {
-    "master/exporter/ae.server.info.ALERT_DISABLED": {
-      "datasource.id": "ae.server.info.ALERT_DISABLED.master",
-      "item.id": "ae.server.info.ALERT_DISABLED",
-      "description": "Alert disabled"
+    "master/exporter/ES.DEMO.SYS.SUM.V": {
+      "datasource.id": "ES.DEMO.SYS.SUM.V.master",
+      "item.id": "ES.DEMO.SYS.SUM.V"
     },
-    "master/exporter/REGION1.SUM.V": {
-      "datasource.id": "REGION1.SUM.V.master",
-      "item.id": "REGION1.SUM.V"
-    },
-    "master/exporter/REGION1.SITE1.Modbus.VariableV1.X": {
-      "datasource.id": "REGION1.SITE1.Modbus.VariableV1.X.master",
-      "item.id": "REGION1.SITE1.Modbus.VariableV1.X",
-      "description": "This is the Variable V1"
-    },
-    "master/exporter/REGION1.SITE1.SYS.LAVG1.V": {
-      "datasource.id": "REGION1.SITE1.SYS.LAVG1.V.master",
-      "item.id": "REGION1.SITE1.SYS.LAVG1.V",
-      "description": "Load Average 1m"
+    "master/exporter/ES.DEMO.SYS.DRV.EXEC.CON.M": {
+      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.CON.M.master",
+      "item.id": "ES.DEMO.SYS.DRV.EXEC.CON.M"
     },
     "master/exporter/ae.server.info.NOT_AKN": {
       "datasource.id": "ae.server.info.NOT_AKN.master",
       "item.id": "ae.server.info.NOT_AKN",
       "description": "Summarized state NOT_OK_AKN"
     },
+    "master/exporter/ae.server.info.NOT_OK": {
+      "datasource.id": "ae.server.info.NOT_OK.master",
+      "item.id": "ae.server.info.NOT_OK",
+      "description": "Summarized state NOT_OK_AKN"
+    },
+    "master/exporter/ES.DEMO.SYS.SRV001.SUM.V": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.SUM.V.master",
+      "item.id": "ES.DEMO.SYS.SRV001.SUM.V"
+    },
+    "master/exporter/ae.server.info.ALERT_ACTIVE": {
+      "datasource.id": "ae.server.info.ALERT_ACTIVE.master",
+      "item.id": "ae.server.info.ALERT_ACTIVE",
+      "description": "Alert active"
+    },
+    "master/exporter/ES.DEMO.MODBUS.SUM.V": {
+      "datasource.id": "ES.DEMO.MODBUS.SUM.V.master",
+      "item.id": "ES.DEMO.MODBUS.SUM.V"
+    },
+    "master/exporter/ES.DEMO.SYS.DRV.SUM.V": {
+      "datasource.id": "ES.DEMO.SYS.DRV.SUM.V.master",
+      "item.id": "ES.DEMO.SYS.DRV.SUM.V"
+    },
+    "master/exporter/ae.server.info.INACTIVE": {
+      "datasource.id": "ae.server.info.INACTIVE.master",
+      "item.id": "ae.server.info.INACTIVE",
+      "description": "Summarized state INACTIVE"
+    },
+    "master/exporter/ES.DEMO.SUM.V": {
+      "datasource.id": "ES.DEMO.SUM.V.master",
+      "item.id": "ES.DEMO.SUM.V"
+    },
+    "master/exporter/ES.SUM.V": {
+      "datasource.id": "ES.SUM.V.master",
+      "item.id": "ES.SUM.V"
+    },
+    "master/exporter/ES.DEMO.SYS.DRV.EXEC.SUM.V": {
+      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.SUM.V.master",
+      "item.id": "ES.DEMO.SYS.DRV.EXEC.SUM.V"
+    },
+    "master/exporter/ae.server.info.ALERT_DISABLED": {
+      "datasource.id": "ae.server.info.ALERT_DISABLED.master",
+      "item.id": "ae.server.info.ALERT_DISABLED",
+      "description": "Alert disabled"
+    },
+    "master/exporter/ES.DEMO.SYS.LAVG1.V": {
+      "datasource.id": "ES.DEMO.SYS.LAVG1.V.master",
+      "item.id": "ES.DEMO.SYS.LAVG1.V",
+      "description": "Load Average 1m"
+    },
+    "master/exporter/ES.DEMO.SYS.LAVG15.V": {
+      "datasource.id": "ES.DEMO.SYS.LAVG15.V.master",
+      "item.id": "ES.DEMO.SYS.LAVG15.V",
+      "description": "Load Average 15m"
+    },
+    "master/exporter/ES.DEMO.SYS.SRV001.LAVG5.V": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG5.V.master",
+      "item.id": "ES.DEMO.SYS.SRV001.LAVG5.V",
+      "description": "Load Average 5m"
+    },
     "master/exporter/ae.server.info.NOT_OK_AKN": {
       "datasource.id": "ae.server.info.NOT_OK_AKN.master",
       "item.id": "ae.server.info.NOT_OK_AKN",
       "description": "Summarized state NOT_OK_AKN"
     },
-    "master/exporter/REGION1.SITE1.SYS.LAVG15.V": {
-      "datasource.id": "REGION1.SITE1.SYS.LAVG15.V.master",
-      "item.id": "REGION1.SITE1.SYS.LAVG15.V",
-      "description": "Load Average 15m"
-    },
-    "master/exporter/ae.server.info.NOT_OK": {
-      "datasource.id": "ae.server.info.NOT_OK.master",
-      "item.id": "ae.server.info.NOT_OK",
-      "description": "Summarized state NOT_OK_AKN"
+    "master/exporter/ES.DEMO.MODBUS.V1.X": {
+      "datasource.id": "ES.DEMO.MODBUS.V1.X.master",
+      "item.id": "ES.DEMO.MODBUS.V1.X",
+      "description": "This is the Variable V1"
     },
     "master/exporter/ae.server.info.UNSAFE": {
       "datasource.id": "ae.server.info.UNSAFE.master",
@@ -106,58 +168,34 @@
       "item.id": "ae.server.info.INIT",
       "description": "Summarized state INIT"
     },
-    "master/exporter/REGION1.SITE1.SYS.DRV.EXEC.STATE.V": {
-      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
-      "item.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V"
+    "master/exporter/ES.DEMO.SYS.LAVG5.V": {
+      "datasource.id": "ES.DEMO.SYS.LAVG5.V.master",
+      "item.id": "ES.DEMO.SYS.LAVG5.V",
+      "description": "Load Average 5m"
     },
-    "master/exporter/REGION1.SITE1.SYS.DRV.SUM.V": {
-      "datasource.id": "REGION1.SITE1.SYS.DRV.SUM.V.master",
-      "item.id": "REGION1.SITE1.SYS.DRV.SUM.V"
-    },
-    "master/exporter/ae.server.info.ALERT_ACTIVE": {
-      "datasource.id": "ae.server.info.ALERT_ACTIVE.master",
-      "item.id": "ae.server.info.ALERT_ACTIVE",
-      "description": "Alert active"
-    },
-    "master/exporter/REGION1.SITE1.SYS.DRV.EXEC.SUM.V": {
-      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master",
-      "item.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V"
+    "master/exporter/ES.DEMO.SYS.DRV.EXEC.STATE.V": {
+      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V.master",
+      "item.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V"
     },
     "master/exporter/ae.server.info.NOT_OK_NOT_AKN": {
       "datasource.id": "ae.server.info.NOT_OK_NOT_AKN.master",
       "item.id": "ae.server.info.NOT_OK_NOT_AKN",
       "description": "Summarized state NOT_OK_NOT_AKN"
     },
-    "master/exporter/REGION1.SITE1.SUM.V": {
-      "datasource.id": "REGION1.SITE1.SUM.V.master",
-      "item.id": "REGION1.SITE1.SUM.V"
+    "master/exporter/ES.DEMO.SYS.SRV001.LAVG1.V": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG1.V.master",
+      "item.id": "ES.DEMO.SYS.SRV001.LAVG1.V",
+      "description": "Load Average 1m"
+    },
+    "master/exporter/ES.DEMO.SYS.SRV001.LAVG15.V": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG15.V.master",
+      "item.id": "ES.DEMO.SYS.SRV001.LAVG15.V",
+      "description": "Load Average 15m"
     },
     "master/exporter/ae.server.info.OK": {
       "datasource.id": "ae.server.info.OK.master",
       "item.id": "ae.server.info.OK",
       "description": "Summarized state OK"
-    },
-    "master/exporter/ae.server.info.INACTIVE": {
-      "datasource.id": "ae.server.info.INACTIVE.master",
-      "item.id": "ae.server.info.INACTIVE",
-      "description": "Summarized state INACTIVE"
-    },
-    "master/exporter/REGION1.SITE1.SYS.LAVG5.V": {
-      "datasource.id": "REGION1.SITE1.SYS.LAVG5.V.master",
-      "item.id": "REGION1.SITE1.SYS.LAVG5.V",
-      "description": "Load Average 5m"
-    },
-    "master/exporter/REGION1.SITE1.SYS.SUM.V": {
-      "datasource.id": "REGION1.SITE1.SYS.SUM.V.master",
-      "item.id": "REGION1.SITE1.SYS.SUM.V"
-    },
-    "master/exporter/REGION1.SITE1.SYS.DRV.EXEC.CON.M": {
-      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
-      "item.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M"
-    },
-    "master/exporter/REGION1.SITE1.Modbus.SUM.V": {
-      "datasource.id": "REGION1.SITE1.Modbus.SUM.V.master",
-      "item.id": "REGION1.SITE1.Modbus.SUM.V"
     }
   },
   "ae.monitor.query": {
@@ -240,52 +278,82 @@
     }
   },
   "org.eclipse.scada.da.manual": {
-    "REGION1.SITE1.SYS.LAVG5.V.local.manual": {
-      "master.id": "REGION1.SITE1.SYS.LAVG5.V.master",
-      "info.item": "REGION1.SITE1.SYS.LAVG5.V",
+    "ES.DEMO.SYS.LAVG1.V.local.manual": {
+      "master.id": "ES.DEMO.SYS.LAVG1.V.master",
+      "info.item": "ES.DEMO.SYS.LAVG1.V",
       "handlerPriority": "500",
       "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "info.itemDescription": "Load Average 5m"
-    },
-    "REGION1.SITE1.SYS.LAVG15.V.local.manual": {
-      "master.id": "REGION1.SITE1.SYS.LAVG15.V.master",
-      "info.item": "REGION1.SITE1.SYS.LAVG15.V",
-      "handlerPriority": "500",
-      "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "info.itemDescription": "Load Average 15m"
-    },
-    "REGION1.SITE1.SYS.LAVG1.V.local.manual": {
-      "master.id": "REGION1.SITE1.SYS.LAVG1.V.master",
-      "info.item": "REGION1.SITE1.SYS.LAVG1.V",
-      "handlerPriority": "500",
-      "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
       "info.itemDescription": "Load Average 1m"
     },
-    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.local.manual": {
-      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
-      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V",
+    "ES.DEMO.SYS.SRV001.LAVG5.V.local.manual": {
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG5.V.master",
+      "info.item": "ES.DEMO.SYS.SRV001.LAVG5.V",
       "handlerPriority": "500",
-      "info.level.4": "EXEC",
-      "info.level.3": "DRV",
+      "info.level.3": "SRV001",
       "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1"
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "info.itemDescription": "Load Average 5m"
     },
-    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.local.manual": {
-      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
-      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.CON.M",
+    "ES.DEMO.SYS.SRV001.LAVG15.V.local.manual": {
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG15.V.master",
+      "info.item": "ES.DEMO.SYS.SRV001.LAVG15.V",
+      "handlerPriority": "500",
+      "info.level.3": "SRV001",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "info.itemDescription": "Load Average 15m"
+    },
+    "ES.DEMO.SYS.LAVG5.V.local.manual": {
+      "master.id": "ES.DEMO.SYS.LAVG5.V.master",
+      "info.item": "ES.DEMO.SYS.LAVG5.V",
+      "handlerPriority": "500",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "info.itemDescription": "Load Average 5m"
+    },
+    "ES.DEMO.SYS.LAVG15.V.local.manual": {
+      "master.id": "ES.DEMO.SYS.LAVG15.V.master",
+      "info.item": "ES.DEMO.SYS.LAVG15.V",
+      "handlerPriority": "500",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "info.itemDescription": "Load Average 15m"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.CON.M.local.manual": {
+      "master.id": "ES.DEMO.SYS.DRV.EXEC.CON.M.master",
+      "info.item": "ES.DEMO.SYS.DRV.EXEC.CON.M",
       "handlerPriority": "500",
       "info.level.4": "EXEC",
       "info.level.3": "DRV",
       "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1"
+      "info.level.1": "DEMO",
+      "info.level.0": "ES"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.STATE.V.local.manual": {
+      "master.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V.master",
+      "info.item": "ES.DEMO.SYS.DRV.EXEC.STATE.V",
+      "handlerPriority": "500",
+      "info.level.4": "EXEC",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG1.V.local.manual": {
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG1.V.master",
+      "info.item": "ES.DEMO.SYS.SRV001.LAVG1.V",
+      "handlerPriority": "500",
+      "info.level.3": "SRV001",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "info.itemDescription": "Load Average 1m"
     }
   },
   "ae.server.info": {
@@ -294,48 +362,56 @@
     }
   },
   "org.eclipse.scada.da.master.common.marker": {
-    "REGION1_SITE1_SYS_DRV_EXEC": {
-      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master, REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master, REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master",
+    "ES_DEMO_SYS": {
+      "master.id": "ES.DEMO.SYS.LAVG1.V.master, ES.DEMO.SYS.LAVG15.V.master, ES.DEMO.SYS.LAVG5.V.master, ES.DEMO.SYS.SUM.V.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
       "marker.maintenance.ack": "",
       "marker.maintenance.warning": ""
     },
-    "REGION1": {
-      "master.id": "REGION1.SUM.V.master",
+    "ES_DEMO_MODBUS": {
+      "master.id": "ES.DEMO.MODBUS.SUM.V.master, ES.DEMO.MODBUS.V1.X.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
       "marker.maintenance.ack": "",
       "marker.maintenance.warning": ""
     },
-    "REGION1_SITE1_SYS_DRV": {
-      "master.id": "REGION1.SITE1.SYS.DRV.SUM.V.master",
+    "ES_DEMO_SYS_DRV_EXEC": {
+      "master.id": "ES.DEMO.SYS.DRV.EXEC.CON.M.master, ES.DEMO.SYS.DRV.EXEC.STATE.V.master, ES.DEMO.SYS.DRV.EXEC.SUM.V.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
       "marker.maintenance.ack": "",
       "marker.maintenance.warning": ""
     },
-    "REGION1_SITE1_Modbus": {
-      "master.id": "REGION1.SITE1.Modbus.SUM.V.master, REGION1.SITE1.Modbus.VariableV1.X.master",
+    "ES_DEMO_SYS_DRV": {
+      "master.id": "ES.DEMO.SYS.DRV.SUM.V.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
       "marker.maintenance.ack": "",
       "marker.maintenance.warning": ""
     },
-    "REGION1_SITE1": {
-      "master.id": "REGION1.SITE1.SUM.V.master",
+    "ES": {
+      "master.id": "ES.SUM.V.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
       "marker.maintenance.ack": "",
       "marker.maintenance.warning": ""
     },
-    "REGION1_SITE1_SYS": {
-      "master.id": "REGION1.SITE1.SYS.LAVG1.V.master, REGION1.SITE1.SYS.LAVG15.V.master, REGION1.SITE1.SYS.LAVG5.V.master, REGION1.SITE1.SYS.SUM.V.master",
+    "ES_DEMO": {
+      "master.id": "ES.DEMO.SUM.V.master",
+      "handlerPriority": "10",
+      "exportAttribute": "true",
+      "alwaysExport": "true",
+      "marker.maintenance.ack": "",
+      "marker.maintenance.warning": ""
+    },
+    "ES_DEMO_SYS_SRV001": {
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG1.V.master, ES.DEMO.SYS.SRV001.LAVG15.V.master, ES.DEMO.SYS.SRV001.LAVG5.V.master, ES.DEMO.SYS.SRV001.SUM.V.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
@@ -350,47 +426,35 @@
     }
   },
   "master.item": {
-    "ae.server.info.NOT_OK.master": {
-      "datasource.id": "ae.server.info.NOT_OK"
-    },
-    "REGION1.SITE1.SYS.LAVG5.V.master": {
-      "datasource.id": "REGION1.SITE1.SYS.LAVG5.V.source"
-    },
-    "REGION1.SITE1.Modbus.SUM.V.master": {
-      "datasource.id": "REGION1.SITE1.Modbus.SUM.V.sum"
+    "ES.DEMO.SYS.DRV.EXEC.CON.M.master": {
+      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.CON.M.source"
     },
     "ae.server.info.INIT.master": {
       "datasource.id": "ae.server.info.INIT"
     },
-    "REGION1.SITE1.SYS.LAVG15.V.master": {
-      "datasource.id": "REGION1.SITE1.SYS.LAVG15.V.source"
+    "ES.DEMO.SYS.SRV001.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.SUM.V.sum"
     },
     "ae.server.info.NOT_AKN.master": {
       "datasource.id": "ae.server.info.NOT_AKN"
     },
-    "REGION1.SITE1.SYS.DRV.SUM.V.master": {
-      "datasource.id": "REGION1.SITE1.SYS.DRV.SUM.V.sum"
+    "ES.DEMO.SYS.LAVG1.V.master": {
+      "datasource.id": "ES.DEMO.SYS.LAVG1.V.source"
     },
-    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master": {
-      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.source"
+    "ES.DEMO.SYS.LAVG15.V.master": {
+      "datasource.id": "ES.DEMO.SYS.LAVG15.V.source"
     },
-    "REGION1.SUM.V.master": {
-      "datasource.id": "REGION1.SUM.V.sum"
+    "ES.DEMO.MODBUS.SUM.V.master": {
+      "datasource.id": "ES.DEMO.MODBUS.SUM.V.sum"
     },
-    "REGION1.SITE1.Modbus.VariableV1.X.master": {
-      "datasource.id": "REGION1.SITE1.Modbus.VariableV1.X.source"
+    "ES.SUM.V.master": {
+      "datasource.id": "ES.SUM.V.sum"
     },
-    "REGION1.SITE1.SUM.V.master": {
-      "datasource.id": "REGION1.SITE1.SUM.V.sum"
+    "ES.DEMO.MODBUS.V1.X.master": {
+      "datasource.id": "ES.DEMO.MODBUS.V1.X.source"
     },
-    "REGION1.SITE1.SYS.SUM.V.master": {
-      "datasource.id": "REGION1.SITE1.SYS.SUM.V.sum"
-    },
-    "REGION1.SITE1.SYS.LAVG1.V.master": {
-      "datasource.id": "REGION1.SITE1.SYS.LAVG1.V.source"
-    },
-    "ae.server.info.ALERT_ACTIVE.master": {
-      "datasource.id": "ae.server.info.ALERT_ACTIVE"
+    "ES.DEMO.SYS.SRV001.LAVG15.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG15.V.source"
     },
     "ae.server.info.UNSAFE.master": {
       "datasource.id": "ae.server.info.UNSAFE"
@@ -401,9 +465,6 @@
     "ae.server.info.NOT_OK_NOT_AKN.master": {
       "datasource.id": "ae.server.info.NOT_OK_NOT_AKN"
     },
-    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master": {
-      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.source"
-    },
     "ae.server.info.OK.master": {
       "datasource.id": "ae.server.info.OK"
     },
@@ -413,327 +474,119 @@
     "ae.server.info.NOT_OK_AKN.master": {
       "datasource.id": "ae.server.info.NOT_OK_AKN"
     },
-    "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master": {
-      "datasource.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.sum"
+    "ae.server.info.NOT_OK.master": {
+      "datasource.id": "ae.server.info.NOT_OK"
+    },
+    "ES.DEMO.SYS.DRV.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SYS.DRV.SUM.V.sum"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG5.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG5.V.source"
+    },
+    "ES.DEMO.SYS.LAVG5.V.master": {
+      "datasource.id": "ES.DEMO.SYS.LAVG5.V.source"
+    },
+    "ES.DEMO.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SUM.V.sum"
+    },
+    "ae.server.info.ALERT_ACTIVE.master": {
+      "datasource.id": "ae.server.info.ALERT_ACTIVE"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.STATE.V.master": {
+      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V.source"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG1.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG1.V.source"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.SUM.V.sum"
+    },
+    "ES.DEMO.SYS.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SUM.V.sum"
     }
   },
   "da.master.handler.sum": {
-    "REGION1.SITE1.Modbus.SUM.V.sum.phase1": {
-      "master.id": "REGION1.SITE1.Modbus.SUM.V.master",
-      "info.item": "REGION1.SITE1.Modbus.SUM.V",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.2": "Modbus",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag": "error"
-    },
-    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "info.level.4": "EXEC",
-      "tag.error.prefix": "phase2",
-      "info.level.3": "DRV",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "SYS",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag.alarm.prefix": "phase2",
-      "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.sum.phase1": {
-      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master",
-      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V",
-      "handlerPriority": "100",
-      "info.level.4": "EXEC",
-      "tag.error.prefix": "phase1",
-      "info.level.3": "DRV",
-      "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag": "error"
-    },
-    "REGION1.SITE1.SYS.LAVG15.V.sum.phase1": {
-      "master.id": "REGION1.SITE1.SYS.LAVG15.V.master",
-      "info.item": "REGION1.SITE1.SYS.LAVG15.V",
+    "ES.DEMO.SYS.LAVG1.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.LAVG1.V.master",
+      "info.item": "ES.DEMO.SYS.LAVG1.V",
       "handlerPriority": "100",
       "tag.error.prefix": "phase1",
       "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag": "error",
-      "info.itemDescription": "Load Average 15m"
-    },
-    "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "info.level.4": "EXEC",
-      "tag.error.prefix": "phase2",
-      "info.level.3": "DRV",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "SYS",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag.alarm.prefix": "phase2",
-      "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.SUM.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "REGION1.SITE1.SYS.LAVG15.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.SYS.LAVG15.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "SYS",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag.alarm.prefix": "phase2",
-      "info.itemDescription": "Load Average 15m",
-      "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.SYS.LAVG15.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "REGION1.SUM.V.sum.phase1": {
-      "master.id": "REGION1.SUM.V.master",
-      "info.item": "REGION1.SUM.V",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.0": "REGION1",
-      "tag": "error"
-    },
-    "REGION1.SITE1.SYS.DRV.SUM.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.SYS.DRV.SUM.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "info.level.3": "DRV",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "SYS",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag.alarm.prefix": "phase2",
-      "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.SYS.DRV.SUM.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.sum.phase1": {
-      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
-      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.CON.M",
-      "handlerPriority": "100",
-      "info.level.4": "EXEC",
-      "tag.error.prefix": "phase1",
-      "info.level.3": "DRV",
-      "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag": "error"
-    },
-    "REGION1.SITE1.SYS.DRV.SUM.V.sum.phase1": {
-      "master.id": "REGION1.SITE1.SYS.DRV.SUM.V.master",
-      "info.item": "REGION1.SITE1.SYS.DRV.SUM.V",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.3": "DRV",
-      "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag": "error"
-    },
-    "REGION1.SITE1.SYS.LAVG5.V.sum.phase1": {
-      "master.id": "REGION1.SITE1.SYS.LAVG5.V.master",
-      "info.item": "REGION1.SITE1.SYS.LAVG5.V",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag": "error",
-      "info.itemDescription": "Load Average 5m"
-    },
-    "REGION1.SITE1.SYS.LAVG5.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.SYS.LAVG5.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "SYS",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag.alarm.prefix": "phase2",
-      "info.itemDescription": "Load Average 5m",
-      "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.SYS.LAVG5.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.sum.phase1": {
-      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V.master",
-      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.STATE.V",
-      "handlerPriority": "100",
-      "info.level.4": "EXEC",
-      "tag.error.prefix": "phase1",
-      "info.level.3": "DRV",
-      "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag": "error"
-    },
-    "REGION1.SUM.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SUM.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "tag.manual.prefix": "phase2",
-      "info.level.0": "REGION1",
-      "tag.alarm.prefix": "phase2",
-      "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SUM.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "REGION1.SITE1.SYS.LAVG1.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.SYS.LAVG1.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "SYS",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag.alarm.prefix": "phase2",
-      "info.itemDescription": "Load Average 1m",
-      "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.SYS.LAVG1.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "REGION1.SITE1.Modbus.SUM.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.Modbus.SUM.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "Modbus",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag.alarm.prefix": "phase2",
-      "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.Modbus.SUM.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "REGION1.SITE1.SYS.LAVG1.V.sum.phase1": {
-      "master.id": "REGION1.SITE1.SYS.LAVG1.V.master",
-      "info.item": "REGION1.SITE1.SYS.LAVG1.V",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
       "tag": "error",
       "info.itemDescription": "Load Average 1m"
     },
-    "REGION1.SITE1.Modbus.VariableV1.X.sum.phase1": {
-      "master.id": "REGION1.SITE1.Modbus.VariableV1.X.master",
-      "info.item": "REGION1.SITE1.Modbus.VariableV1.X",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.2": "Modbus",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag": "error",
-      "info.itemDescription": "This is the Variable V1"
-    },
-    "REGION1.SITE1.SUM.V.sum.phase2": {
+    "ES.DEMO.SYS.LAVG1.V.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.SUM.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag.alarm.prefix": "phase2",
-      "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.SUM.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "REGION1.SITE1.SUM.V.sum.phase1": {
-      "master.id": "REGION1.SITE1.SUM.V.master",
-      "info.item": "REGION1.SITE1.SUM.V",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
-      "tag": "error"
-    },
-    "REGION1.SITE1.SYS.SUM.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.SYS.SUM.V",
+      "info.item": "ES.DEMO.SYS.LAVG1.V",
       "handlerPriority": "5000",
       "tag.error.ackRequired.prefix": "phase2",
       "tag.error.prefix": "phase2",
       "tag.warning.ackRequired.prefix": "phase2",
       "info.level.2": "SYS",
       "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
       "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 1m",
       "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.SYS.SUM.V.master",
+      "master.id": "ES.DEMO.SYS.LAVG1.V.master",
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
-    "REGION1.SITE1.SYS.SUM.V.sum.phase1": {
-      "master.id": "REGION1.SITE1.SYS.SUM.V.master",
-      "info.item": "REGION1.SITE1.SYS.SUM.V",
+    "ES.DEMO.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.STATE.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V.master",
+      "info.item": "ES.DEMO.SYS.DRV.EXEC.STATE.V",
       "handlerPriority": "100",
+      "info.level.4": "EXEC",
       "tag.error.prefix": "phase1",
+      "info.level.3": "DRV",
       "info.level.2": "SYS",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
       "tag": "error"
     },
-    "REGION1.SITE1.SYS.DRV.EXEC.CON.M.sum.phase2": {
+    "ES.DEMO.SYS.LAVG5.V.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.SYS.DRV.EXEC.CON.M",
+      "info.item": "ES.DEMO.SYS.LAVG5.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 5m",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.LAVG5.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.STATE.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SYS.DRV.EXEC.STATE.V",
       "handlerPriority": "5000",
       "tag.error.ackRequired.prefix": "phase2",
       "info.level.4": "EXEC",
@@ -742,33 +595,394 @@
       "tag.warning.ackRequired.prefix": "phase2",
       "info.level.2": "SYS",
       "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
       "tag.alarm.prefix": "phase2",
       "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.SYS.DRV.EXEC.CON.M.master",
+      "master.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V.master",
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
-    "REGION1.SITE1.Modbus.VariableV1.X.sum.phase2": {
+    "ES.DEMO.SYS.SRV001.SUM.V.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "REGION1.SITE1.Modbus.VariableV1.X",
+      "info.item": "ES.DEMO.SYS.SRV001.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "SRV001",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.SRV001.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.SYS.LAVG5.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.LAVG5.V.master",
+      "info.item": "ES.DEMO.SYS.LAVG5.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error",
+      "info.itemDescription": "Load Average 5m"
+    },
+    "ES.DEMO.SYS.SRV001.SUM.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.SRV001.SUM.V.master",
+      "info.item": "ES.DEMO.SYS.SRV001.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "SRV001",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG1.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SYS.SRV001.LAVG1.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "SRV001",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 1m",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG1.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.SYS.DRV.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SYS.DRV.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "DRV",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.DRV.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG1.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG1.V.master",
+      "info.item": "ES.DEMO.SYS.SRV001.LAVG1.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "SRV001",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error",
+      "info.itemDescription": "Load Average 1m"
+    },
+    "ES.DEMO.SYS.DRV.SUM.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.DRV.SUM.V.master",
+      "info.item": "ES.DEMO.SYS.DRV.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG15.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG15.V.master",
+      "info.item": "ES.DEMO.SYS.SRV001.LAVG15.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "SRV001",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error",
+      "info.itemDescription": "Load Average 15m"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG15.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SYS.SRV001.LAVG15.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "SRV001",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 15m",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG15.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.MODBUS.SUM.V.sum.phase1": {
+      "master.id": "ES.DEMO.MODBUS.SUM.V.master",
+      "info.item": "ES.DEMO.MODBUS.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "MODBUS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.SUM.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.DRV.EXEC.SUM.V.master",
+      "info.item": "ES.DEMO.SYS.DRV.EXEC.SUM.V",
+      "handlerPriority": "100",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG5.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG5.V.master",
+      "info.item": "ES.DEMO.SYS.SRV001.LAVG5.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "SRV001",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error",
+      "info.itemDescription": "Load Average 5m"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG5.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SYS.SRV001.LAVG5.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "SRV001",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 5m",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.SRV001.LAVG5.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.MODBUS.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.MODBUS.SUM.V",
       "handlerPriority": "5000",
       "tag.error.ackRequired.prefix": "phase2",
       "tag.error.prefix": "phase2",
       "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "Modbus",
+      "info.level.2": "MODBUS",
       "tag.manual.prefix": "phase2",
-      "info.level.1": "SITE1",
-      "info.level.0": "REGION1",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
       "tag.alarm.prefix": "phase2",
-      "info.itemDescription": "This is the Variable V1",
       "tag.info.prefix": "phase2",
-      "master.id": "REGION1.SITE1.Modbus.VariableV1.X.master",
+      "master.id": "ES.DEMO.MODBUS.SUM.V.master",
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.SYS.LAVG15.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.LAVG15.V.master",
+      "info.item": "ES.DEMO.SYS.LAVG15.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error",
+      "info.itemDescription": "Load Average 15m"
+    },
+    "ES.DEMO.MODBUS.V1.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.MODBUS.V1.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "MODBUS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "This is the Variable V1",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.MODBUS.V1.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.MODBUS.V1.X.sum.phase1": {
+      "master.id": "ES.DEMO.MODBUS.V1.X.master",
+      "info.item": "ES.DEMO.MODBUS.V1.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "MODBUS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error",
+      "info.itemDescription": "This is the Variable V1"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SYS.DRV.EXEC.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "DRV",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.DRV.EXEC.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.SYS.LAVG15.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SYS.LAVG15.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 15m",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.LAVG15.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.SUM.V.sum.phase1": {
+      "master.id": "ES.SUM.V.master",
+      "info.item": "ES.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.CON.M.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SYS.DRV.EXEC.CON.M",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase2",
+      "info.level.3": "DRV",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.DRV.EXEC.CON.M.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.CON.M.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.DRV.EXEC.CON.M.master",
+      "info.item": "ES.DEMO.SYS.DRV.EXEC.CON.M",
+      "handlerPriority": "100",
+      "info.level.4": "EXEC",
+      "tag.error.prefix": "phase1",
+      "info.level.3": "DRV",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
+    "ES.DEMO.SYS.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.SYS.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "SYS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.SYS.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.SYS.SUM.V.sum.phase1": {
+      "master.id": "ES.DEMO.SYS.SUM.V.master",
+      "info.item": "ES.DEMO.SYS.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "SYS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
+    "ES.DEMO.SUM.V.sum.phase1": {
+      "master.id": "ES.DEMO.SUM.V.master",
+      "info.item": "ES.DEMO.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
     }
   }
 }
