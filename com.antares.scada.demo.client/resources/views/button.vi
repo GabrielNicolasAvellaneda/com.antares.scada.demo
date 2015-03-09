@@ -9,7 +9,7 @@ onUpdate="update()"
         	<element xsi:type="visualInterface:Text" name="text" text="[Button]" backgroundColor="#ff0000"/>
       	</children>
       	<children alignment="TOP">
-        	<element xsi:type="visualInterface:Text" name="console" text="-----" backgroundColor="#ff0000"/>
+        	<element xsi:type="visualInterface:Text" name="console" text="-----" backgroundColor="#ff0000" visible="false"/>
       	</children>
     </content>
   </root>

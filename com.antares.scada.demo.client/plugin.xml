@@ -618,7 +618,7 @@
             </parameter>
             <parameter
                   name="itemId"
-                  value="ES.DEMO.SCADA.SYSMSG.V">
+                  value="ES.DEMO.MODBUS.V11.X">
             </parameter>
          </class>
       </viewerExtension>
@@ -660,13 +660,69 @@
          </visibility>
       </viewInstance>
       <viewInstance
+            defaultInstance="false"
+            name="Operação Bobinador Desbob."
+            zooming="false"
+            mainView="true"
+            resource="resources/views/desbob_bob.vi"
+            factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
+            id="com.antares.scada.demo.client.desbobBob">
+         <visibility>
+            <reference
+                  definitionId="com.antares.scada.demo.client.hassession">
+            </reference>
+         </visibility>
+      </viewInstance>
+      <viewInstance
             defaultInstance="true"
-            name="Main"
+            name="Operação Principal"
             zooming="false"
             mainView="true"
             resource="resources/views/main.vi"
             factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
             id="com.antares.scada.demo.client.main">
+         <visibility>
+            <reference
+                  definitionId="com.antares.scada.demo.client.hassession">
+            </reference>
+         </visibility>
+      </viewInstance>
+      <viewInstance
+            defaultInstance="true"
+            name="Operação da Linha"
+            zooming="false"
+            mainView="true"
+            resource="resources/views/op_linha.vi"
+            factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
+            id="com.antares.scada.demo.client.opLinha">
+         <visibility>
+            <reference
+                  definitionId="com.antares.scada.demo.client.hassession">
+            </reference>
+         </visibility>
+      </viewInstance>
+      <viewInstance
+            defaultInstance="true"
+            name="Shapes"
+            zooming="false"
+            mainView="true"
+            resource="resources/views/shapes.vi"
+            factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
+            id="com.antares.scada.demo.client.shapes">
+         <visibility>
+            <reference
+                  definitionId="com.antares.scada.demo.client.hassession">
+            </reference>
+         </visibility>
+      </viewInstance>
+      <viewInstance
+            defaultInstance="true"
+            name="Borders"
+            zooming="false"
+            mainView="true"
+            resource="resources/views/borders.vi"
+            factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
+            id="com.antares.scada.demo.client.borders">
          <visibility>
             <reference
                   definitionId="com.antares.scada.demo.client.hassession">

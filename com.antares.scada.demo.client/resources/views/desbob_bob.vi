@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface">
+  <root xsi:type="visualInterface:BorderContainer">
+    <children alignment="TOP">
+      <element xsi:type="visualInterface:GridContainer" columns="2" horizontalSpacing="30">
+        <children verticalAlignment="FILL">
+          <element xsi:type="visualInterface:Text" text="Operação Bobinador/Desbobinador" fontSize="15" fontBold="true"/>
+        </children>
+      </element>
+    </children>
+  </root>
+</visualInterface:Symbol>

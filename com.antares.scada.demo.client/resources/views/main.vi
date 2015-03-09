@@ -9,6 +9,13 @@
       <position x="10.0" y="10.0"/>
       <dimension width="200.0" height="-1.0"/>
     </children> -->
+    
+    <children>
+    	<element xsi:type="visualInterface:Text" text="Velocidade Canahao A (RPM)" ></element>
+    	<position x="100.0" y="10.0"/>
+       <dimension width="-1.0" height="-1.0"/>
+    </children>
+    
     <children>
        <element xsi:type="visualInterface:SymbolReference" uri="button.vi">
          <properties key="prefix" value="ES.DEMO.MODBUS" />
