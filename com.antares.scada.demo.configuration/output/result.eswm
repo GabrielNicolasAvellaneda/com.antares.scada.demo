@@ -29,10 +29,10 @@
       <connections xsi:type="osgi:DataAccessConnection" shortDescription="Connection to ourself" name="self" endpoint="//@nodes.0/@endpoints.2">
         <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
       </connections>
-      <connections xsi:type="osgi:DataAccessConnection" name="driver.modbus.on.localhost" endpoint="//@nodes.0/@endpoints.6">
+      <connections xsi:type="osgi:DataAccessConnection" name="driver.exec.on.localhost" endpoint="//@nodes.0/@endpoints.5">
         <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
       </connections>
-      <connections xsi:type="osgi:DataAccessConnection" name="driver.exec.on.localhost" endpoint="//@nodes.0/@endpoints.5">
+      <connections xsi:type="osgi:DataAccessConnection" name="driver.modbus.on.localhost" endpoint="//@nodes.0/@endpoints.6">
         <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
       </connections>
       <exporter xsi:type="osgi:ConfigurationAdministratorExporter" name="master/exporter" endpoints="//@nodes.0/@endpoints.0"/>
@@ -46,24 +46,29 @@
         <exports item="//@nodes.0/@applications.0/@items.5" exportName="ES.DEMO.SYS.SRV001.LAVG1.V"/>
         <exports item="//@nodes.0/@applications.0/@items.6" exportName="ES.DEMO.SYS.SRV001.LAVG5.V"/>
         <exports item="//@nodes.0/@applications.0/@items.7" exportName="ES.DEMO.SYS.SRV001.LAVG15.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.8" exportName="ES.DEMO.MODBUS.V1.X"/>
-        <exports item="//@nodes.0/@applications.0/@items.9" exportName="ES.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.10" exportName="ES.DEMO.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.11" exportName="ES.DEMO.SYS.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.12" exportName="ES.DEMO.SYS.DRV.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.13" exportName="ES.DEMO.SYS.DRV.EXEC.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.14" exportName="ES.DEMO.SYS.SRV001.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.15" exportName="ES.DEMO.MODBUS.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.16" exportName="ae.server.info.ALERT_ACTIVE"/>
-        <exports item="//@nodes.0/@applications.0/@items.17" exportName="ae.server.info.ALERT_DISABLED"/>
-        <exports item="//@nodes.0/@applications.0/@items.18" exportName="ae.server.info.OK"/>
-        <exports item="//@nodes.0/@applications.0/@items.19" exportName="ae.server.info.NOT_OK"/>
-        <exports item="//@nodes.0/@applications.0/@items.20" exportName="ae.server.info.UNSAFE"/>
-        <exports item="//@nodes.0/@applications.0/@items.21" exportName="ae.server.info.INACTIVE"/>
-        <exports item="//@nodes.0/@applications.0/@items.22" exportName="ae.server.info.INIT"/>
-        <exports item="//@nodes.0/@applications.0/@items.23" exportName="ae.server.info.NOT_OK_AKN"/>
-        <exports item="//@nodes.0/@applications.0/@items.24" exportName="ae.server.info.NOT_OK_NOT_AKN"/>
-        <exports item="//@nodes.0/@applications.0/@items.25" exportName="ae.server.info.NOT_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.8" exportName="ES.DEMO.MODBUS.V11.X"/>
+        <exports item="//@nodes.0/@applications.0/@items.9" exportName="ES.DEMO.MODBUS.ST_LG_A.X"/>
+        <exports item="//@nodes.0/@applications.0/@items.10" exportName="ES.DEMO.MODBUS.BT_LG_A.X"/>
+        <exports item="//@nodes.0/@applications.0/@items.11" exportName="ES.DEMO.MODBUS.V2.X"/>
+        <exports item="//@nodes.0/@applications.0/@items.12" exportName="ES.DEMO.TEST.V2Command.C"/>
+        <exports item="//@nodes.0/@applications.0/@items.13" exportName="ES.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.14" exportName="ES.DEMO.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.15" exportName="ES.DEMO.SYS.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.16" exportName="ES.DEMO.SYS.DRV.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.17" exportName="ES.DEMO.SYS.DRV.EXEC.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.18" exportName="ES.DEMO.SYS.SRV001.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.19" exportName="ES.DEMO.MODBUS.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.20" exportName="ES.DEMO.TEST.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.21" exportName="ae.server.info.ALERT_ACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.22" exportName="ae.server.info.ALERT_DISABLED"/>
+        <exports item="//@nodes.0/@applications.0/@items.23" exportName="ae.server.info.OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.24" exportName="ae.server.info.NOT_OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.25" exportName="ae.server.info.UNSAFE"/>
+        <exports item="//@nodes.0/@applications.0/@items.26" exportName="ae.server.info.INACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.27" exportName="ae.server.info.INIT"/>
+        <exports item="//@nodes.0/@applications.0/@items.28" exportName="ae.server.info.NOT_OK_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.29" exportName="ae.server.info.NOT_OK_NOT_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.30" exportName="ae.server.info.NOT_AKN"/>
       </exporter>
       <customizationProfile name="Local customization profile">
         <start name="org.eclipse.scada.sec.provider.plain.property"/>
@@ -74,18 +79,19 @@
         <includes href="../global/master.customization.profile.xml#/"/>
       </customizationProfile>
       <securityConfiguration href="../global/global.security#/"/>
-      <summaryGroups name="ES" items="//@nodes.0/@applications.0/@items.10">
-        <subGroups name="DEMO" items="//@nodes.0/@applications.0/@items.11 //@nodes.0/@applications.0/@items.15">
-          <subGroups name="SYS" items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.12 //@nodes.0/@applications.0/@items.14">
-            <subGroups name="DRV" items="//@nodes.0/@applications.0/@items.13">
+      <summaryGroups name="ES" items="//@nodes.0/@applications.0/@items.14">
+        <subGroups name="DEMO" items="//@nodes.0/@applications.0/@items.15 //@nodes.0/@applications.0/@items.19 //@nodes.0/@applications.0/@items.20">
+          <subGroups name="SYS" items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.16 //@nodes.0/@applications.0/@items.18">
+            <subGroups name="DRV" items="//@nodes.0/@applications.0/@items.17">
               <subGroups name="EXEC" items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4"/>
             </subGroups>
             <subGroups name="SRV001" items="//@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.6 //@nodes.0/@applications.0/@items.7"/>
           </subGroups>
-          <subGroups name="MODBUS" items="//@nodes.0/@applications.0/@items.8"/>
+          <subGroups name="MODBUS" items="//@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.9 //@nodes.0/@applications.0/@items.10 //@nodes.0/@applications.0/@items.11"/>
+          <subGroups name="TEST" items="//@nodes.0/@applications.0/@items.12"/>
         </subGroups>
       </summaryGroups>
-      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.LAVG1.V" connection="//@nodes.0/@applications.0/@connections.2" sourceName="CMD.ES.DEMO.SYS.LAVG.A.loadAvg1">
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.LAVG1.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.ES.DEMO.SYS.LAVG.A.loadAvg1">
         <information description="Load Average 1m" dataType="FLOAT">
           <hierarchy>ES</hierarchy>
           <hierarchy>DEMO</hierarchy>
@@ -107,7 +113,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.LAVG5.V" connection="//@nodes.0/@applications.0/@connections.2" sourceName="CMD.ES.DEMO.SYS.LAVG.A.loadAvg5">
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.LAVG5.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.ES.DEMO.SYS.LAVG.A.loadAvg5">
         <information description="Load Average 5m" dataType="FLOAT">
           <hierarchy>ES</hierarchy>
           <hierarchy>DEMO</hierarchy>
@@ -129,7 +135,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.LAVG15.V" connection="//@nodes.0/@applications.0/@connections.2" sourceName="CMD.ES.DEMO.SYS.LAVG.A.loadAvg15">
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.LAVG15.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.ES.DEMO.SYS.LAVG.A.loadAvg15">
         <information description="Load Average 15m" dataType="FLOAT">
           <hierarchy>ES</hierarchy>
           <hierarchy>DEMO</hierarchy>
@@ -199,7 +205,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.SRV001.LAVG1.V" connection="//@nodes.0/@applications.0/@connections.2" sourceName="CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg1">
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.SRV001.LAVG1.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg1">
         <information description="Load Average 1m" dataType="FLOAT">
           <hierarchy>ES</hierarchy>
           <hierarchy>DEMO</hierarchy>
@@ -222,7 +228,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.SRV001.LAVG5.V" connection="//@nodes.0/@applications.0/@connections.2" sourceName="CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg5">
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.SRV001.LAVG5.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg5">
         <information description="Load Average 5m" dataType="FLOAT">
           <hierarchy>ES</hierarchy>
           <hierarchy>DEMO</hierarchy>
@@ -245,7 +251,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.SRV001.LAVG15.V" connection="//@nodes.0/@applications.0/@connections.2" sourceName="CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg15">
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.SRV001.LAVG15.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg15">
         <information description="Load Average 15m" dataType="FLOAT">
           <hierarchy>ES</hierarchy>
           <hierarchy>DEMO</hierarchy>
@@ -268,12 +274,97 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="ES.DEMO.MODBUS.V1.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.B1.V1">
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.MODBUS.V11.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.B1.V1">
         <information description="This is the Variable V1" dataType="INT32">
           <hierarchy>ES</hierarchy>
           <hierarchy>DEMO</hierarchy>
           <hierarchy>MODBUS</hierarchy>
         </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.MODBUS.ST_LG_A.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.B1.ST_LG_A">
+        <information dataType="BOOLEAN">
+          <hierarchy>ES</hierarchy>
+          <hierarchy>DEMO</hierarchy>
+          <hierarchy>MODBUS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.MODBUS.BT_LG_A.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.B1.BT_LG_A">
+        <information description="Description" dataType="BOOLEAN">
+          <hierarchy>ES</hierarchy>
+          <hierarchy>DEMO</hierarchy>
+          <hierarchy>MODBUS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.MODBUS.V2.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.B1.V2">
+        <information dataType="INT32">
+          <hierarchy>ES</hierarchy>
+          <hierarchy>DEMO</hierarchy>
+          <hierarchy>MODBUS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:PersistentItem" name="ES.DEMO.TEST.V2Command.C">
+        <information dataType="BOOLEAN">
+          <hierarchy>ES</hierarchy>
+          <hierarchy>DEMO</hierarchy>
+          <hierarchy>TEST</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:Block" name="local.block"/>
         <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
           <attributes>error</attributes>
         </itemFeatures>
@@ -437,6 +528,27 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
+      <items xsi:type="osgi:SummaryItem" name="ES.DEMO.TEST.SUM.V" group="//@nodes.0/@applications.0/@summaryGroups.0/@subGroups.0/@subGroups.2">
+        <information>
+          <hierarchy>ES</hierarchy>
+          <hierarchy>DEMO</hierarchy>
+          <hierarchy>TEST</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
       <items xsi:type="osgi:WeakReferenceDataSourceItem" name="ae.server.info.ALERT_ACTIVE" dataSourceId="ae.server.info.ALERT_ACTIVE">
         <information description="Alert active" system="SCADA"/>
       </items>
@@ -468,31 +580,35 @@
         <information description="Summarized state NOT_OK_AKN" system="SCADA"/>
       </items>
       <markers>
-        <markerGroups items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.11" name="ES_DEMO_SYS">
+        <markerGroups items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.15" name="ES_DEMO_SYS">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.15" name="ES_DEMO_MODBUS">
+        <markerGroups items="//@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.9 //@nodes.0/@applications.0/@items.10 //@nodes.0/@applications.0/@items.11 //@nodes.0/@applications.0/@items.19" name="ES_DEMO_MODBUS">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.13" name="ES_DEMO_SYS_DRV_EXEC">
+        <markerGroups items="//@nodes.0/@applications.0/@items.12 //@nodes.0/@applications.0/@items.20" name="ES_DEMO_TEST">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.12" name="ES_DEMO_SYS_DRV">
+        <markerGroups items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.17" name="ES_DEMO_SYS_DRV_EXEC">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.9" name="ES">
+        <markerGroups items="//@nodes.0/@applications.0/@items.16" name="ES_DEMO_SYS_DRV">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.10" name="ES_DEMO">
+        <markerGroups items="//@nodes.0/@applications.0/@items.13" name="ES">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.6 //@nodes.0/@applications.0/@items.7 //@nodes.0/@applications.0/@items.14" name="ES_DEMO_SYS_SRV001">
+        <markerGroups items="//@nodes.0/@applications.0/@items.14" name="ES_DEMO">
+          <markers name="maintenance.warning"/>
+          <markers name="maintenance.ack"/>
+        </markerGroups>
+        <markerGroups items="//@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.6 //@nodes.0/@applications.0/@items.7 //@nodes.0/@applications.0/@items.18" name="ES_DEMO_SYS_SRV001">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>

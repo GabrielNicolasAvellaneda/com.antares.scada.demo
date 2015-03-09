@@ -7,5 +7,11 @@
     <variables name="V2">
       <type xsi:type="memory:UnsignedInteger16Type" index="2"/>
     </variables>
+    <variables name="ST_LG_A">
+      <type xsi:type="memory:UnsignedInteger16Type" index="4"/>
+    </variables>
+    <variables name="BT_LG_A">
+      <type xsi:type="memory:UnsignedInteger16Type" index="6"/>
+    </variables>
   </types>
 </memory:TypeSystem>

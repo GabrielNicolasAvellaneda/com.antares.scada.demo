@@ -64,8 +64,10 @@
   },
   "org.eclipse.scada.da.server.common.memory.types": {
     "T1": {
+      "variable.ST_LG_A": "UINT16:4:0:BIG_ENDIAN",
       "variable.V2": "UINT16:2:0:BIG_ENDIAN",
-      "variable.V1": "UINT16:0:0:BIG_ENDIAN"
+      "variable.V1": "UINT16:0:0:BIG_ENDIAN",
+      "variable.BT_LG_A": "UINT16:6:0:BIG_ENDIAN"
     }
   }
 }

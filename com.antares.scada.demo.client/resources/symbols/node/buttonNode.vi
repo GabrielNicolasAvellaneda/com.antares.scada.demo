@@ -20,29 +20,6 @@
         <content
             xsi:type="visualInterface:GridContainer"
             columns="3">
-          <children>
-            <element
-                xsi:type="visualInterface:Text"
-                text="Variable 1"/>
-          </children>
-          <children
-              horizontalAlignment="FILL"
-              grabHorizontalSpace="true">
-            <element
-                xsi:type="visualInterface:SymbolReference"
-                uri="../textValue.vi"
-                onCreateProperties="properties.put('item', prefixed ('V1.X'));"/>
-          </children>
-          <children>
-            <element
-                xsi:type="visualInterface:Text"
-                text="%"/>
-          </children>
-          <children>
-            <element
-                xsi:type="visualInterface:Text"
-                text="Load Average"/>
-          </children>
           <children
               horizontalAlignment="FILL"
               grabHorizontalSpace="true">

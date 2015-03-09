@@ -140,7 +140,7 @@
    <extension
          point="org.eclipse.scada.core.ui.connection.login.context">
       <context
-            label="Sample Context (localhost)"
+            label="Default Context (localhost)"
             id="com.antares.scada.demo.client.localhost">
          <factory
                class="org.eclipse.scada.core.ui.connection.login.factory.ConnectionLoginFactory">

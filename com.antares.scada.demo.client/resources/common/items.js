@@ -8,6 +8,7 @@
  * Contributors:
  *     IBH SYSTEMS GmbH - initial API and implementation
  *******************************************************************************/
+
 function prefixed ( localPart ) {
 	if ( localPart === undefined || localPart == null )
 		return controller.getProperty("prefix");

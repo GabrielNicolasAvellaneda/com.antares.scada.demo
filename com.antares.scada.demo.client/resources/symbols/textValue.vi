@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface"
     onInit="initTextValue();"
-    onUpdate="updateValue ( &quot;A&quot;);">
+    onUpdate="updateValue ('A');">
   <root xsi:type="visualInterface:FigureContainer"
       onDoubleClick="onClick();"
       border="LINE:[lineSize=1,color=#F0F0F0]">

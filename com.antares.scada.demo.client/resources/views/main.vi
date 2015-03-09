@@ -3,7 +3,7 @@
   <root xsi:type="visualInterface:XYContainer">
     <children>
       <element xsi:type="visualInterface:SymbolReference" uri="../symbols/node/node.vi">
-        <properties key="title" value="SRV001"/>
+        <properties key="title" value="TEST"/>
         <properties key="prefix" value="ES.DEMO.SYS.SRV001"/>
       </element>
       <position x="10.0" y="10.0"/>
@@ -17,7 +17,31 @@
       <position x="220.0" y="10.0"/>
       <dimension width="200.0" height="-1.0"/>
     </children>
+    <children>
+      <element xsi:type="visualInterface:SymbolReference" uri="../symbols/node/buttonNode.vi">
+        <properties key="title" value="V1"/>
+        <properties key="prefix" value="ES.DEMO.MODBUS"/>
+      </element>
+      <position x="10.0" y="220.0"/>
+      <dimension width="200.0" height="-1.0"/>
+    </children>
+    
+    <children>
+          <element xsi:type="visualInterface:SymbolReference" uri="button.vi">
+            <properties key="prefix" value="ES.DEMO.MODBUS" />
+            <properties key="offLens" value="LIGA CANHAO A" />
+            <properties key="onLens" value="CANAHO A LIGADO" />
+            <properties key="switchInput" value="BT_LG_A.X" />
+            <properties key="lensOutput" value="ST_LG_A.X" />
+            <properties key="border" value="LINE:[lineWidth=3,color=#FF0000]"/>
+            <properties key="description" value="This is a sample button."/>
+          </element>
+          <position x="760.0" y="20.0"/>
+          <dimension width="-1.0" height="500.0"/>
+      </children>
+    
   </root>
   <properties key="connection" value="connection.da.main"/>
   <properties key="hdConnection" value="connection.hd.main"/>
+  <properties key="nullString" value="?" />
 </visualInterface:Symbol>

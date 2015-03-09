@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface" 
+onInit="init()"
+onUpdate="update()"
+>
+  <root xsi:type="visualInterface:FigureContainer" name="figure" border="LINE:[lineWidth=3,color=#FF0000]" onClick="click()">
+    <content xsi:type="visualInterface:BorderContainer">
+      <children alignment="CENTER">
+        	<element xsi:type="visualInterface:Text" name="text" text="[Button]" backgroundColor="#ff0000"/>
+      	</children>
+      	<children alignment="TOP">
+        	<element xsi:type="visualInterface:Text" name="console" text="-----" backgroundColor="#ff0000"/>
+      	</children>
+    </content>
+  </root>
+  <scriptModules>../symbols/button.js</scriptModules>
+</visualInterface:Symbol>

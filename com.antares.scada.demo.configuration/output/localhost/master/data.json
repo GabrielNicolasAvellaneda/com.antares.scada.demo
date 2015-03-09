@@ -1,8 +1,16 @@
 {
   "da.datasource.dataitem": {
+    "ES.DEMO.MODBUS.ST_LG_A.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.B1.ST_LG_A"
+    },
     "ES.DEMO.SYS.SRV001.LAVG5.V.source": {
       "connection.id": "driver.exec.on.localhost",
       "item.id": "CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg5"
+    },
+    "ES.DEMO.MODBUS.BT_LG_A.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.B1.BT_LG_A"
     },
     "ES.DEMO.SYS.LAVG5.V.source": {
       "connection.id": "driver.exec.on.localhost",
@@ -11,10 +19,6 @@
     "ES.DEMO.SYS.DRV.EXEC.STATE.V.source": {
       "connection.id": "self",
       "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.state"
-    },
-    "ES.DEMO.MODBUS.V1.X.source": {
-      "connection.id": "driver.modbus.on.localhost",
-      "item.id": "modbus.data.S1.B1.V1"
     },
     "ES.DEMO.SYS.LAVG1.V.source": {
       "connection.id": "driver.exec.on.localhost",
@@ -28,6 +32,10 @@
       "connection.id": "driver.exec.on.localhost",
       "item.id": "CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg15"
     },
+    "ES.DEMO.MODBUS.V11.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.B1.V1"
+    },
     "ES.DEMO.SYS.DRV.EXEC.CON.M.source": {
       "connection.id": "self",
       "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.connected"
@@ -35,6 +43,121 @@
     "ES.DEMO.SYS.SRV001.LAVG1.V.source": {
       "connection.id": "driver.exec.on.localhost",
       "item.id": "CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg1"
+    },
+    "ES.DEMO.MODBUS.V2.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.B1.V2"
+    }
+  },
+  "org.eclipse.scada.da.master.common.block": {
+    "ES.DEMO.TEST.V2Command.C.local.block": {
+      "master.id": "ES.DEMO.TEST.V2Command.C.master",
+      "info.item": "ES.DEMO.TEST.V2Command.C",
+      "handlerPriority": "50",
+      "info.level.2": "TEST",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES"
+    }
+  },
+  "org.eclipse.scada.ae.server.common.event.pool": {
+    "events.all": {
+      "filter": "(eventType\u003d*)",
+      "size": "10000"
+    }
+  },
+  "master.item": {
+    "ES.DEMO.SYS.DRV.EXEC.CON.M.master": {
+      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.CON.M.source"
+    },
+    "ae.server.info.INIT.master": {
+      "datasource.id": "ae.server.info.INIT"
+    },
+    "ES.DEMO.SYS.SRV001.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.SUM.V.sum"
+    },
+    "ES.DEMO.MODBUS.ST_LG_A.X.master": {
+      "datasource.id": "ES.DEMO.MODBUS.ST_LG_A.X.source"
+    },
+    "ae.server.info.NOT_AKN.master": {
+      "datasource.id": "ae.server.info.NOT_AKN"
+    },
+    "ES.DEMO.SYS.LAVG1.V.master": {
+      "datasource.id": "ES.DEMO.SYS.LAVG1.V.source"
+    },
+    "ES.DEMO.SYS.LAVG15.V.master": {
+      "datasource.id": "ES.DEMO.SYS.LAVG15.V.source"
+    },
+    "ES.DEMO.TEST.SUM.V.master": {
+      "datasource.id": "ES.DEMO.TEST.SUM.V.sum"
+    },
+    "ES.DEMO.MODBUS.SUM.V.master": {
+      "datasource.id": "ES.DEMO.MODBUS.SUM.V.sum"
+    },
+    "ES.SUM.V.master": {
+      "datasource.id": "ES.SUM.V.sum"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG15.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG15.V.source"
+    },
+    "ae.server.info.UNSAFE.master": {
+      "datasource.id": "ae.server.info.UNSAFE"
+    },
+    "ae.server.info.INACTIVE.master": {
+      "datasource.id": "ae.server.info.INACTIVE"
+    },
+    "ae.server.info.NOT_OK_NOT_AKN.master": {
+      "datasource.id": "ae.server.info.NOT_OK_NOT_AKN"
+    },
+    "ae.server.info.OK.master": {
+      "datasource.id": "ae.server.info.OK"
+    },
+    "ae.server.info.ALERT_DISABLED.master": {
+      "datasource.id": "ae.server.info.ALERT_DISABLED"
+    },
+    "ae.server.info.NOT_OK_AKN.master": {
+      "datasource.id": "ae.server.info.NOT_OK_AKN"
+    },
+    "ae.server.info.NOT_OK.master": {
+      "datasource.id": "ae.server.info.NOT_OK"
+    },
+    "ES.DEMO.MODBUS.V11.X.master": {
+      "datasource.id": "ES.DEMO.MODBUS.V11.X.source"
+    },
+    "ES.DEMO.SYS.DRV.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SYS.DRV.SUM.V.sum"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG5.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG5.V.source"
+    },
+    "ES.DEMO.MODBUS.BT_LG_A.X.master": {
+      "datasource.id": "ES.DEMO.MODBUS.BT_LG_A.X.source"
+    },
+    "ES.DEMO.SYS.LAVG5.V.master": {
+      "datasource.id": "ES.DEMO.SYS.LAVG5.V.source"
+    },
+    "ES.DEMO.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SUM.V.sum"
+    },
+    "ae.server.info.ALERT_ACTIVE.master": {
+      "datasource.id": "ae.server.info.ALERT_ACTIVE"
+    },
+    "ES.DEMO.TEST.V2Command.C.master": {
+      "datasource.id": "ES.DEMO.TEST.V2Command.C.ds"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.STATE.V.master": {
+      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V.source"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG1.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG1.V.source"
+    },
+    "ES.DEMO.MODBUS.V2.X.master": {
+      "datasource.id": "ES.DEMO.MODBUS.V2.X.source"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.SUM.V.sum"
+    },
+    "ES.DEMO.SYS.SUM.V.master": {
+      "datasource.id": "ES.DEMO.SYS.SUM.V.sum"
     }
   },
   "org.eclipse.scada.da.datasource.sum": {
@@ -44,6 +167,7 @@
     },
     "ES.DEMO.SUM.V.sum": {
       "subDatasource.1": "ES.DEMO.SYS.SUM.V.master",
+      "subDatasource.2": "ES.DEMO.TEST.SUM.V.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
       "subDatasource.0": "ES.DEMO.MODBUS.SUM.V.master"
     },
@@ -67,8 +191,15 @@
       "datasource.0": "ES.DEMO.SYS.SRV001.LAVG1.V.master"
     },
     "ES.DEMO.MODBUS.SUM.V.sum": {
+      "datasource.1": "ES.DEMO.MODBUS.ST_LG_A.X.master",
+      "datasource.2": "ES.DEMO.MODBUS.V11.X.master",
+      "datasource.3": "ES.DEMO.MODBUS.V2.X.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "datasource.0": "ES.DEMO.MODBUS.V1.X.master"
+      "datasource.0": "ES.DEMO.MODBUS.BT_LG_A.X.master"
+    },
+    "ES.DEMO.TEST.SUM.V.sum": {
+      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
+      "datasource.0": "ES.DEMO.TEST.V2Command.C.master"
     },
     "ES.SUM.V.sum": {
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
@@ -138,24 +269,41 @@
       "item.id": "ES.DEMO.SYS.LAVG1.V",
       "description": "Load Average 1m"
     },
+    "master/exporter/ES.DEMO.MODBUS.ST_LG_A.X": {
+      "datasource.id": "ES.DEMO.MODBUS.ST_LG_A.X.master",
+      "item.id": "ES.DEMO.MODBUS.ST_LG_A.X"
+    },
     "master/exporter/ES.DEMO.SYS.LAVG15.V": {
       "datasource.id": "ES.DEMO.SYS.LAVG15.V.master",
       "item.id": "ES.DEMO.SYS.LAVG15.V",
       "description": "Load Average 15m"
+    },
+    "master/exporter/ES.DEMO.MODBUS.BT_LG_A.X": {
+      "datasource.id": "ES.DEMO.MODBUS.BT_LG_A.X.master",
+      "item.id": "ES.DEMO.MODBUS.BT_LG_A.X",
+      "description": "Description"
     },
     "master/exporter/ES.DEMO.SYS.SRV001.LAVG5.V": {
       "datasource.id": "ES.DEMO.SYS.SRV001.LAVG5.V.master",
       "item.id": "ES.DEMO.SYS.SRV001.LAVG5.V",
       "description": "Load Average 5m"
     },
+    "master/exporter/ES.DEMO.MODBUS.V2.X": {
+      "datasource.id": "ES.DEMO.MODBUS.V2.X.master",
+      "item.id": "ES.DEMO.MODBUS.V2.X"
+    },
+    "master/exporter/ES.DEMO.TEST.V2Command.C": {
+      "datasource.id": "ES.DEMO.TEST.V2Command.C.master",
+      "item.id": "ES.DEMO.TEST.V2Command.C"
+    },
     "master/exporter/ae.server.info.NOT_OK_AKN": {
       "datasource.id": "ae.server.info.NOT_OK_AKN.master",
       "item.id": "ae.server.info.NOT_OK_AKN",
       "description": "Summarized state NOT_OK_AKN"
     },
-    "master/exporter/ES.DEMO.MODBUS.V1.X": {
-      "datasource.id": "ES.DEMO.MODBUS.V1.X.master",
-      "item.id": "ES.DEMO.MODBUS.V1.X",
+    "master/exporter/ES.DEMO.MODBUS.V11.X": {
+      "datasource.id": "ES.DEMO.MODBUS.V11.X.master",
+      "item.id": "ES.DEMO.MODBUS.V11.X",
       "description": "This is the Variable V1"
     },
     "master/exporter/ae.server.info.UNSAFE": {
@@ -196,7 +344,14 @@
       "datasource.id": "ae.server.info.OK.master",
       "item.id": "ae.server.info.OK",
       "description": "Summarized state OK"
+    },
+    "master/exporter/ES.DEMO.TEST.SUM.V": {
+      "datasource.id": "ES.DEMO.TEST.SUM.V.master",
+      "item.id": "ES.DEMO.TEST.SUM.V"
     }
+  },
+  "org.eclipse.scada.da.datasource.ds": {
+    "ES.DEMO.TEST.V2Command.C.ds": {}
   },
   "ae.monitor.query": {
     "monitors.all": {
@@ -371,7 +526,15 @@
       "marker.maintenance.warning": ""
     },
     "ES_DEMO_MODBUS": {
-      "master.id": "ES.DEMO.MODBUS.SUM.V.master, ES.DEMO.MODBUS.V1.X.master",
+      "master.id": "ES.DEMO.MODBUS.BT_LG_A.X.master, ES.DEMO.MODBUS.ST_LG_A.X.master, ES.DEMO.MODBUS.SUM.V.master, ES.DEMO.MODBUS.V11.X.master, ES.DEMO.MODBUS.V2.X.master",
+      "handlerPriority": "10",
+      "exportAttribute": "true",
+      "alwaysExport": "true",
+      "marker.maintenance.ack": "",
+      "marker.maintenance.warning": ""
+    },
+    "ES_DEMO_TEST": {
+      "master.id": "ES.DEMO.TEST.SUM.V.master, ES.DEMO.TEST.V2Command.C.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
@@ -417,92 +580,6 @@
       "alwaysExport": "true",
       "marker.maintenance.ack": "",
       "marker.maintenance.warning": ""
-    }
-  },
-  "org.eclipse.scada.ae.server.common.event.pool": {
-    "events.all": {
-      "filter": "(eventType\u003d*)",
-      "size": "10000"
-    }
-  },
-  "master.item": {
-    "ES.DEMO.SYS.DRV.EXEC.CON.M.master": {
-      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.CON.M.source"
-    },
-    "ae.server.info.INIT.master": {
-      "datasource.id": "ae.server.info.INIT"
-    },
-    "ES.DEMO.SYS.SRV001.SUM.V.master": {
-      "datasource.id": "ES.DEMO.SYS.SRV001.SUM.V.sum"
-    },
-    "ae.server.info.NOT_AKN.master": {
-      "datasource.id": "ae.server.info.NOT_AKN"
-    },
-    "ES.DEMO.SYS.LAVG1.V.master": {
-      "datasource.id": "ES.DEMO.SYS.LAVG1.V.source"
-    },
-    "ES.DEMO.SYS.LAVG15.V.master": {
-      "datasource.id": "ES.DEMO.SYS.LAVG15.V.source"
-    },
-    "ES.DEMO.MODBUS.SUM.V.master": {
-      "datasource.id": "ES.DEMO.MODBUS.SUM.V.sum"
-    },
-    "ES.SUM.V.master": {
-      "datasource.id": "ES.SUM.V.sum"
-    },
-    "ES.DEMO.MODBUS.V1.X.master": {
-      "datasource.id": "ES.DEMO.MODBUS.V1.X.source"
-    },
-    "ES.DEMO.SYS.SRV001.LAVG15.V.master": {
-      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG15.V.source"
-    },
-    "ae.server.info.UNSAFE.master": {
-      "datasource.id": "ae.server.info.UNSAFE"
-    },
-    "ae.server.info.INACTIVE.master": {
-      "datasource.id": "ae.server.info.INACTIVE"
-    },
-    "ae.server.info.NOT_OK_NOT_AKN.master": {
-      "datasource.id": "ae.server.info.NOT_OK_NOT_AKN"
-    },
-    "ae.server.info.OK.master": {
-      "datasource.id": "ae.server.info.OK"
-    },
-    "ae.server.info.ALERT_DISABLED.master": {
-      "datasource.id": "ae.server.info.ALERT_DISABLED"
-    },
-    "ae.server.info.NOT_OK_AKN.master": {
-      "datasource.id": "ae.server.info.NOT_OK_AKN"
-    },
-    "ae.server.info.NOT_OK.master": {
-      "datasource.id": "ae.server.info.NOT_OK"
-    },
-    "ES.DEMO.SYS.DRV.SUM.V.master": {
-      "datasource.id": "ES.DEMO.SYS.DRV.SUM.V.sum"
-    },
-    "ES.DEMO.SYS.SRV001.LAVG5.V.master": {
-      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG5.V.source"
-    },
-    "ES.DEMO.SYS.LAVG5.V.master": {
-      "datasource.id": "ES.DEMO.SYS.LAVG5.V.source"
-    },
-    "ES.DEMO.SUM.V.master": {
-      "datasource.id": "ES.DEMO.SUM.V.sum"
-    },
-    "ae.server.info.ALERT_ACTIVE.master": {
-      "datasource.id": "ae.server.info.ALERT_ACTIVE"
-    },
-    "ES.DEMO.SYS.DRV.EXEC.STATE.V.master": {
-      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V.source"
-    },
-    "ES.DEMO.SYS.SRV001.LAVG1.V.master": {
-      "datasource.id": "ES.DEMO.SYS.SRV001.LAVG1.V.source"
-    },
-    "ES.DEMO.SYS.DRV.EXEC.SUM.V.master": {
-      "datasource.id": "ES.DEMO.SYS.DRV.EXEC.SUM.V.sum"
-    },
-    "ES.DEMO.SYS.SUM.V.master": {
-      "datasource.id": "ES.DEMO.SYS.SUM.V.sum"
     }
   },
   "da.master.handler.sum": {
@@ -552,6 +629,34 @@
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.MODBUS.ST_LG_A.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.MODBUS.ST_LG_A.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "MODBUS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.MODBUS.ST_LG_A.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.MODBUS.ST_LG_A.X.sum.phase1": {
+      "master.id": "ES.DEMO.MODBUS.ST_LG_A.X.master",
+      "info.item": "ES.DEMO.MODBUS.ST_LG_A.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "MODBUS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
     },
     "ES.DEMO.SYS.DRV.EXEC.STATE.V.sum.phase1": {
       "master.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V.master",
@@ -822,9 +927,19 @@
       "tag": "error",
       "info.itemDescription": "Load Average 15m"
     },
-    "ES.DEMO.MODBUS.V1.X.sum.phase2": {
+    "ES.DEMO.MODBUS.V2.X.sum.phase1": {
+      "master.id": "ES.DEMO.MODBUS.V2.X.master",
+      "info.item": "ES.DEMO.MODBUS.V2.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "MODBUS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
+    "ES.DEMO.MODBUS.V2.X.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "ES.DEMO.MODBUS.V1.X",
+      "info.item": "ES.DEMO.MODBUS.V2.X",
       "handlerPriority": "5000",
       "tag.error.ackRequired.prefix": "phase2",
       "tag.error.prefix": "phase2",
@@ -834,23 +949,11 @@
       "info.level.1": "DEMO",
       "info.level.0": "ES",
       "tag.alarm.prefix": "phase2",
-      "info.itemDescription": "This is the Variable V1",
       "tag.info.prefix": "phase2",
-      "master.id": "ES.DEMO.MODBUS.V1.X.master",
+      "master.id": "ES.DEMO.MODBUS.V2.X.master",
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
-    },
-    "ES.DEMO.MODBUS.V1.X.sum.phase1": {
-      "master.id": "ES.DEMO.MODBUS.V1.X.master",
-      "info.item": "ES.DEMO.MODBUS.V1.X",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.2": "MODBUS",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag": "error",
-      "info.itemDescription": "This is the Variable V1"
     },
     "ES.DEMO.SYS.DRV.EXEC.SUM.V.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
@@ -935,6 +1038,36 @@
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
+    "ES.DEMO.MODBUS.V11.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.MODBUS.V11.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "MODBUS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "This is the Variable V1",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.MODBUS.V11.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.MODBUS.V11.X.sum.phase1": {
+      "master.id": "ES.DEMO.MODBUS.V11.X.master",
+      "info.item": "ES.DEMO.MODBUS.V11.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "MODBUS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error",
+      "info.itemDescription": "This is the Variable V1"
+    },
     "ES.DEMO.SYS.DRV.EXEC.CON.M.sum.phase1": {
       "master.id": "ES.DEMO.SYS.DRV.EXEC.CON.M.master",
       "info.item": "ES.DEMO.SYS.DRV.EXEC.CON.M",
@@ -946,6 +1079,24 @@
       "info.level.1": "DEMO",
       "info.level.0": "ES",
       "tag": "error"
+    },
+    "ES.DEMO.TEST.V2Command.C.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.TEST.V2Command.C",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "TEST",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.TEST.V2Command.C.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
     },
     "ES.DEMO.SYS.SUM.V.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
@@ -965,6 +1116,16 @@
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
+    "ES.DEMO.TEST.V2Command.C.sum.phase1": {
+      "master.id": "ES.DEMO.TEST.V2Command.C.master",
+      "info.item": "ES.DEMO.TEST.V2Command.C",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "TEST",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
     "ES.DEMO.SYS.SUM.V.sum.phase1": {
       "master.id": "ES.DEMO.SYS.SUM.V.master",
       "info.item": "ES.DEMO.SYS.SUM.V",
@@ -974,6 +1135,64 @@
       "info.level.1": "DEMO",
       "info.level.0": "ES",
       "tag": "error"
+    },
+    "ES.DEMO.TEST.SUM.V.sum.phase1": {
+      "master.id": "ES.DEMO.TEST.SUM.V.master",
+      "info.item": "ES.DEMO.TEST.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "TEST",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
+    "ES.DEMO.MODBUS.BT_LG_A.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.MODBUS.BT_LG_A.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "MODBUS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Description",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.MODBUS.BT_LG_A.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "ES.DEMO.MODBUS.BT_LG_A.X.sum.phase1": {
+      "master.id": "ES.DEMO.MODBUS.BT_LG_A.X.master",
+      "info.item": "ES.DEMO.MODBUS.BT_LG_A.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "MODBUS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error",
+      "info.itemDescription": "Description"
+    },
+    "ES.DEMO.TEST.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.TEST.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "TEST",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.TEST.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
     },
     "ES.DEMO.SUM.V.sum.phase1": {
       "master.id": "ES.DEMO.SUM.V.master",

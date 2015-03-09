@@ -23,9 +23,27 @@
         </levels>
       </levels>
       <levels xmi:id="_1C9JgMHzEeSt_YDd5zSHwg" name="MODBUS">
-        <components xsi:type="component:ExternalValue" xmi:id="_32r1YMHzEeSt_YDd5zSHwg" shortDescription="This is the Variable V1" name="V1" dataType="INT32" sourceName="modbus.data.S1.B1.V1">
+        <components xsi:type="component:ExternalValue" xmi:id="_32r1YMHzEeSt_YDd5zSHwg" shortDescription="This is the Variable V1" name="V11" dataType="INT32" sourceName="modbus.data.S1.B1.V1">
           <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
           <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
+        </components>
+        <components xsi:type="component:ExternalValue" xmi:id="_AOefAMaPEeSt_YDd5zSHwg" name="ST_LG_A" dataType="BOOLEAN" sourceName="modbus.data.S1.B1.ST_LG_A">
+          <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
+        </components>
+        <components xsi:type="component:ExternalValue" xmi:id="_fCSKcMaPEeSt_YDd5zSHwg" shortDescription="Description" name="BT_LG_A" dataType="BOOLEAN" sourceName="modbus.data.S1.B1.BT_LG_A">
+          <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
+        </components>
+        <components xsi:type="component:ExternalValue" xmi:id="_3BBwoMaREeSt_YDd5zSHwg" name="V2" dataType="INT32" sourceName="modbus.data.S1.B1.V2">
+          <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
+        </components>
+      </levels>
+      <levels xmi:id="_WA1dkMKpEeSt_YDd5zSHwg" name="TEST">
+        <components xsi:type="component:PersistentValue" xmi:id="_e-swcMKpEeSt_YDd5zSHwg" name="V2Command" dataType="BOOLEAN">
+          <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
+          <customizationTags>command</customizationTags>
         </components>
       </levels>
     </levels>
