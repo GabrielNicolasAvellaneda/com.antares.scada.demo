@@ -50,25 +50,26 @@
         <exports item="//@nodes.0/@applications.0/@items.9" exportName="ES.DEMO.MODBUS.ST_LG_A.X"/>
         <exports item="//@nodes.0/@applications.0/@items.10" exportName="ES.DEMO.MODBUS.BT_LG_A.X"/>
         <exports item="//@nodes.0/@applications.0/@items.11" exportName="ES.DEMO.MODBUS.V2.X"/>
-        <exports item="//@nodes.0/@applications.0/@items.12" exportName="ES.DEMO.TEST.V2Command.C"/>
-        <exports item="//@nodes.0/@applications.0/@items.13" exportName="ES.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.14" exportName="ES.DEMO.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.15" exportName="ES.DEMO.SYS.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.16" exportName="ES.DEMO.SYS.DRV.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.17" exportName="ES.DEMO.SYS.DRV.EXEC.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.18" exportName="ES.DEMO.SYS.SRV001.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.19" exportName="ES.DEMO.MODBUS.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.20" exportName="ES.DEMO.TEST.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.21" exportName="ae.server.info.ALERT_ACTIVE"/>
-        <exports item="//@nodes.0/@applications.0/@items.22" exportName="ae.server.info.ALERT_DISABLED"/>
-        <exports item="//@nodes.0/@applications.0/@items.23" exportName="ae.server.info.OK"/>
-        <exports item="//@nodes.0/@applications.0/@items.24" exportName="ae.server.info.NOT_OK"/>
-        <exports item="//@nodes.0/@applications.0/@items.25" exportName="ae.server.info.UNSAFE"/>
-        <exports item="//@nodes.0/@applications.0/@items.26" exportName="ae.server.info.INACTIVE"/>
-        <exports item="//@nodes.0/@applications.0/@items.27" exportName="ae.server.info.INIT"/>
-        <exports item="//@nodes.0/@applications.0/@items.28" exportName="ae.server.info.NOT_OK_AKN"/>
-        <exports item="//@nodes.0/@applications.0/@items.29" exportName="ae.server.info.NOT_OK_NOT_AKN"/>
-        <exports item="//@nodes.0/@applications.0/@items.30" exportName="ae.server.info.NOT_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.12" exportName="ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X"/>
+        <exports item="//@nodes.0/@applications.0/@items.13" exportName="ES.DEMO.TEST.V2Command.C"/>
+        <exports item="//@nodes.0/@applications.0/@items.14" exportName="ES.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.15" exportName="ES.DEMO.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.16" exportName="ES.DEMO.SYS.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.17" exportName="ES.DEMO.SYS.DRV.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.18" exportName="ES.DEMO.SYS.DRV.EXEC.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.19" exportName="ES.DEMO.SYS.SRV001.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.20" exportName="ES.DEMO.MODBUS.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.21" exportName="ES.DEMO.TEST.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.22" exportName="ae.server.info.ALERT_ACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.23" exportName="ae.server.info.ALERT_DISABLED"/>
+        <exports item="//@nodes.0/@applications.0/@items.24" exportName="ae.server.info.OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.25" exportName="ae.server.info.NOT_OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.26" exportName="ae.server.info.UNSAFE"/>
+        <exports item="//@nodes.0/@applications.0/@items.27" exportName="ae.server.info.INACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.28" exportName="ae.server.info.INIT"/>
+        <exports item="//@nodes.0/@applications.0/@items.29" exportName="ae.server.info.NOT_OK_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.30" exportName="ae.server.info.NOT_OK_NOT_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.31" exportName="ae.server.info.NOT_AKN"/>
       </exporter>
       <customizationProfile name="Local customization profile">
         <start name="org.eclipse.scada.sec.provider.plain.property"/>
@@ -79,16 +80,16 @@
         <includes href="../global/master.customization.profile.xml#/"/>
       </customizationProfile>
       <securityConfiguration href="../global/global.security#/"/>
-      <summaryGroups name="ES" items="//@nodes.0/@applications.0/@items.14">
-        <subGroups name="DEMO" items="//@nodes.0/@applications.0/@items.15 //@nodes.0/@applications.0/@items.19 //@nodes.0/@applications.0/@items.20">
-          <subGroups name="SYS" items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.16 //@nodes.0/@applications.0/@items.18">
-            <subGroups name="DRV" items="//@nodes.0/@applications.0/@items.17">
+      <summaryGroups name="ES" items="//@nodes.0/@applications.0/@items.15">
+        <subGroups name="DEMO" items="//@nodes.0/@applications.0/@items.16 //@nodes.0/@applications.0/@items.20 //@nodes.0/@applications.0/@items.21">
+          <subGroups name="SYS" items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.17 //@nodes.0/@applications.0/@items.19">
+            <subGroups name="DRV" items="//@nodes.0/@applications.0/@items.18">
               <subGroups name="EXEC" items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4"/>
             </subGroups>
             <subGroups name="SRV001" items="//@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.6 //@nodes.0/@applications.0/@items.7"/>
           </subGroups>
-          <subGroups name="MODBUS" items="//@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.9 //@nodes.0/@applications.0/@items.10 //@nodes.0/@applications.0/@items.11"/>
-          <subGroups name="TEST" items="//@nodes.0/@applications.0/@items.12"/>
+          <subGroups name="MODBUS" items="//@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.9 //@nodes.0/@applications.0/@items.10 //@nodes.0/@applications.0/@items.11 //@nodes.0/@applications.0/@items.12"/>
+          <subGroups name="TEST" items="//@nodes.0/@applications.0/@items.13"/>
         </subGroups>
       </summaryGroups>
       <items xsi:type="osgi:SourceItem" name="ES.DEMO.SYS.LAVG1.V" connection="//@nodes.0/@applications.0/@connections.1" sourceName="CMD.ES.DEMO.SYS.LAVG.A.loadAvg1">
@@ -358,6 +359,27 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
+      <items xsi:type="osgi:SourceItem" name="ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.B1.ST_L_BK_ROSCA_A">
+        <information dataType="BOOLEAN">
+          <hierarchy>ES</hierarchy>
+          <hierarchy>DEMO</hierarchy>
+          <hierarchy>MODBUS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
       <items xsi:type="osgi:PersistentItem" name="ES.DEMO.TEST.V2Command.C">
         <information dataType="BOOLEAN">
           <hierarchy>ES</hierarchy>
@@ -580,35 +602,35 @@
         <information description="Summarized state NOT_OK_AKN" system="SCADA"/>
       </items>
       <markers>
-        <markerGroups items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.15" name="ES_DEMO_SYS">
+        <markerGroups items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.16" name="ES_DEMO_SYS">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.9 //@nodes.0/@applications.0/@items.10 //@nodes.0/@applications.0/@items.11 //@nodes.0/@applications.0/@items.19" name="ES_DEMO_MODBUS">
+        <markerGroups items="//@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.9 //@nodes.0/@applications.0/@items.10 //@nodes.0/@applications.0/@items.11 //@nodes.0/@applications.0/@items.12 //@nodes.0/@applications.0/@items.20" name="ES_DEMO_MODBUS">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.12 //@nodes.0/@applications.0/@items.20" name="ES_DEMO_TEST">
+        <markerGroups items="//@nodes.0/@applications.0/@items.13 //@nodes.0/@applications.0/@items.21" name="ES_DEMO_TEST">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.17" name="ES_DEMO_SYS_DRV_EXEC">
+        <markerGroups items="//@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.18" name="ES_DEMO_SYS_DRV_EXEC">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.16" name="ES_DEMO_SYS_DRV">
+        <markerGroups items="//@nodes.0/@applications.0/@items.17" name="ES_DEMO_SYS_DRV">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.13" name="ES">
+        <markerGroups items="//@nodes.0/@applications.0/@items.14" name="ES">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.14" name="ES_DEMO">
+        <markerGroups items="//@nodes.0/@applications.0/@items.15" name="ES_DEMO">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.6 //@nodes.0/@applications.0/@items.7 //@nodes.0/@applications.0/@items.18" name="ES_DEMO_SYS_SRV001">
+        <markerGroups items="//@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.6 //@nodes.0/@applications.0/@items.7 //@nodes.0/@applications.0/@items.19" name="ES_DEMO_SYS_SRV001">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
@@ -656,7 +678,7 @@
       </modules>
       <masters endpoint="//@nodes.1/@endpoints.0" id="modbus">
         <slaves id="S1">
-          <blocks id="B1" name="" blockType="HOLDING" count="10" period="250" timeout="10000">
+          <blocks id="B1" name="" blockType="HOLDING" count="64" period="250" timeout="10000">
             <type href="../modbusTypes.mtd#T1"/>
           </blocks>
         </slaves>

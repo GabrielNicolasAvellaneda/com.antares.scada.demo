@@ -59,7 +59,7 @@ function setText(text) {
 function update() {
 	
 	var lensOutputValue = data.getPrimaryValue(LENS_OUTPUT_NAME).asBoolean();
-	log(lensOutputValue);
+	//log(lensOutputValue);
 	
 	updateText(lensOutputValue);
 }

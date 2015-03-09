@@ -39,6 +39,10 @@
           <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
           <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
         </components>
+        <components xsi:type="component:ExternalValue" xmi:id="_Pv0SsMafEeSt_YDd5zSHwg" name="ST_L_BK_ROSCA_A" dataType="BOOLEAN" sourceName="modbus.data.S1.B1.ST_L_BK_ROSCA_A">
+          <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
+        </components>
       </levels>
       <levels xmi:id="_WA1dkMKpEeSt_YDd5zSHwg" name="TEST">
         <components xsi:type="component:PersistentValue" xmi:id="_e-swcMKpEeSt_YDd5zSHwg" name="V2Command" dataType="BOOLEAN">

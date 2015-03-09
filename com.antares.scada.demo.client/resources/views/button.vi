@@ -3,7 +3,7 @@
 onInit="init()"
 onUpdate="update()"
 >
-  <root xsi:type="visualInterface:FigureContainer" name="figure" border="LINE:[lineWidth=3,color=#FF0000]" onClick="click()">
+  <root xsi:type="visualInterface:FigureContainer" name="figure" border="LINE:[lineWidth=3,color=#FF0000]" onClick="click()" cursor="//@cursors">
     <content xsi:type="visualInterface:BorderContainer">
       <children alignment="CENTER">
         	<element xsi:type="visualInterface:Text" name="text" text="[Button]" backgroundColor="#ff0000"/>
@@ -14,4 +14,6 @@ onUpdate="update()"
     </content>
   </root>
   <scriptModules>../symbols/button.js</scriptModules>
+  <cursors xsi:type="visualInterface:SystemCursor"
+      type="HAND"/>
 </visualInterface:Symbol>

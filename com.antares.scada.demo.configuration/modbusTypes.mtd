@@ -13,5 +13,8 @@
     <variables name="BT_LG_A">
       <type xsi:type="memory:UnsignedInteger16Type" index="6"/>
     </variables>
+    <variables name="ST_L_BK_ROSCA_A">
+      <type xsi:type="memory:UnsignedInteger16Type" index="8"/>
+    </variables>
   </types>
 </memory:TypeSystem>

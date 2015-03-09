@@ -1,5 +1,21 @@
 {
   "da.datasource.dataitem": {
+    "ES.DEMO.SYS.DRV.EXEC.STATE.V.source": {
+      "connection.id": "self",
+      "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.state"
+    },
+    "ES.DEMO.SYS.LAVG1.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.ES.DEMO.SYS.LAVG.A.loadAvg1"
+    },
+    "ES.DEMO.SYS.SRV001.LAVG15.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg15"
+    },
+    "ES.DEMO.SYS.DRV.EXEC.CON.M.source": {
+      "connection.id": "self",
+      "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.connected"
+    },
     "ES.DEMO.MODBUS.ST_LG_A.X.source": {
       "connection.id": "driver.modbus.on.localhost",
       "item.id": "modbus.data.S1.B1.ST_LG_A"
@@ -16,29 +32,17 @@
       "connection.id": "driver.exec.on.localhost",
       "item.id": "CMD.ES.DEMO.SYS.LAVG.A.loadAvg5"
     },
-    "ES.DEMO.SYS.DRV.EXEC.STATE.V.source": {
-      "connection.id": "self",
-      "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.state"
-    },
-    "ES.DEMO.SYS.LAVG1.V.source": {
-      "connection.id": "driver.exec.on.localhost",
-      "item.id": "CMD.ES.DEMO.SYS.LAVG.A.loadAvg1"
+    "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.B1.ST_L_BK_ROSCA_A"
     },
     "ES.DEMO.SYS.LAVG15.V.source": {
       "connection.id": "driver.exec.on.localhost",
       "item.id": "CMD.ES.DEMO.SYS.LAVG.A.loadAvg15"
     },
-    "ES.DEMO.SYS.SRV001.LAVG15.V.source": {
-      "connection.id": "driver.exec.on.localhost",
-      "item.id": "CMD.ES.DEMO.SYS.SRV001.LAVG1.A.loadAvg15"
-    },
     "ES.DEMO.MODBUS.V11.X.source": {
       "connection.id": "driver.modbus.on.localhost",
       "item.id": "modbus.data.S1.B1.V1"
-    },
-    "ES.DEMO.SYS.DRV.EXEC.CON.M.source": {
-      "connection.id": "self",
-      "item.id": "org.eclipse.scada.da.master.analyzer.connectionService.driver.exec.on.localhost.state.connected"
     },
     "ES.DEMO.SYS.SRV001.LAVG1.V.source": {
       "connection.id": "driver.exec.on.localhost",
@@ -153,6 +157,9 @@
     "ES.DEMO.MODBUS.V2.X.master": {
       "datasource.id": "ES.DEMO.MODBUS.V2.X.source"
     },
+    "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master": {
+      "datasource.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.source"
+    },
     "ES.DEMO.SYS.DRV.EXEC.SUM.V.master": {
       "datasource.id": "ES.DEMO.SYS.DRV.EXEC.SUM.V.sum"
     },
@@ -192,8 +199,9 @@
     },
     "ES.DEMO.MODBUS.SUM.V.sum": {
       "datasource.1": "ES.DEMO.MODBUS.ST_LG_A.X.master",
-      "datasource.2": "ES.DEMO.MODBUS.V11.X.master",
-      "datasource.3": "ES.DEMO.MODBUS.V2.X.master",
+      "datasource.2": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master",
+      "datasource.3": "ES.DEMO.MODBUS.V11.X.master",
+      "datasource.4": "ES.DEMO.MODBUS.V2.X.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
       "datasource.0": "ES.DEMO.MODBUS.BT_LG_A.X.master"
     },
@@ -324,6 +332,10 @@
     "master/exporter/ES.DEMO.SYS.DRV.EXEC.STATE.V": {
       "datasource.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V.master",
       "item.id": "ES.DEMO.SYS.DRV.EXEC.STATE.V"
+    },
+    "master/exporter/ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X": {
+      "datasource.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master",
+      "item.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X"
     },
     "master/exporter/ae.server.info.NOT_OK_NOT_AKN": {
       "datasource.id": "ae.server.info.NOT_OK_NOT_AKN.master",
@@ -526,7 +538,7 @@
       "marker.maintenance.warning": ""
     },
     "ES_DEMO_MODBUS": {
-      "master.id": "ES.DEMO.MODBUS.BT_LG_A.X.master, ES.DEMO.MODBUS.ST_LG_A.X.master, ES.DEMO.MODBUS.SUM.V.master, ES.DEMO.MODBUS.V11.X.master, ES.DEMO.MODBUS.V2.X.master",
+      "master.id": "ES.DEMO.MODBUS.BT_LG_A.X.master, ES.DEMO.MODBUS.ST_LG_A.X.master, ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master, ES.DEMO.MODBUS.SUM.V.master, ES.DEMO.MODBUS.V11.X.master, ES.DEMO.MODBUS.V2.X.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
@@ -1194,6 +1206,16 @@
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
+    "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.sum.phase1": {
+      "master.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master",
+      "info.item": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.2": "MODBUS",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag": "error"
+    },
     "ES.DEMO.SUM.V.sum.phase1": {
       "master.id": "ES.DEMO.SUM.V.master",
       "info.item": "ES.DEMO.SUM.V",
@@ -1202,6 +1224,24 @@
       "info.level.1": "DEMO",
       "info.level.0": "ES",
       "tag": "error"
+    },
+    "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "info.level.2": "MODBUS",
+      "tag.manual.prefix": "phase2",
+      "info.level.1": "DEMO",
+      "info.level.0": "ES",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
     }
   }
 }

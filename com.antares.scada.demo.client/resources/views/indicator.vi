@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface" 
+onInit="init()"
+onUpdate="update()"
+>
+  <root xsi:type="visualInterface:FigureContainer" name="figure" border="LINE:[lineWidth=3,color=#FF0000]">
+    <content xsi:type="visualInterface:BorderContainer">
+      <children alignment="CENTER">
+        	<element xsi:type="visualInterface:Text" name="label" text="[Button]" backgroundColor="#ff0000"/>
+      	</children>
+    </content>
+  </root>
+  <scriptModules>../symbols/indicator.js</scriptModules>
+</visualInterface:Symbol>
