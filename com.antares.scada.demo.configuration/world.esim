@@ -14,8 +14,14 @@
   <nodes xsi:type="infrastructure:ExternalNode" xmi:id="_JhaTEMHmEeSt_YDd5zSHwg" hostName="localhost">
     <devices xsi:type="modbus:ModbusDevice" xmi:id="_Nw3WEMHmEeSt_YDd5zSHwg" name="modbus" port="502">
       <slaves xmi:id="_qhyjwMHmEeSt_YDd5zSHwg" id="S1">
-        <blocks xmi:id="_rZfAwMHmEeSt_YDd5zSHwg" id="B1" name="" blockType="HOLDING" count="64" period="250" timeout="10000">
-          <type href="modbusTypes.mtd#T1"/>
+        <blocks xmi:id="_rZfAwMHmEeSt_YDd5zSHwg" id="STANDARD" name="STANDARD" blockType="HOLDING" count="64" period="250" timeout="10000">
+          <type href="modbusTypes.mtd#HOLDING_STANDARD"/>
+        </blocks>
+        <blocks xmi:id="_L5qbEMnBEeSjptOA6-rQCQ" id="INPUT" name="INPUT" blockType="HOLDING" startAddress="64" count="64" period="250" timeout="10000">
+          <type href="modbusTypes.mtd#HOLDING_INPUT"/>
+        </blocks>
+        <blocks xmi:id="_IHlhUMwWEeSjptOA6-rQCQ" id="OUTPUT" name="OUTPUT" blockType="HOLDING" startAddress="128" count="64" period="250" timeout="10000">
+          <type href="modbusTypes.mtd#HOLDING_OUTPUT"/>
         </blocks>
       </slaves>
       <typeSystem href="modbusTypes.mtd#TS1"/>

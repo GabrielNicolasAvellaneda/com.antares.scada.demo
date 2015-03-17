@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface" backgroundColor="#FFFFFF">
+<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface" backgroundColor="#eaedf1">
+  
   <root xsi:type="visualInterface:XYContainer">
+  
+  <element xsi:type="visualInterface:XYContainer">
     <!-- <children>
       <element xsi:type="visualInterface:SymbolReference" uri="../symbols/node/node.vi">
         <properties key="title" value="TEST"/>
@@ -12,9 +15,41 @@
     
     <children>
     	<element xsi:type="visualInterface:Text" text="Velocidade Canahao A (RPM)" ></element>
-    	<position x="100.0" y="10.0"/>
+       <position x="100.0" y="10.0"/>
        <dimension width="-1.0" height="-1.0"/>
     </children>
+    
+    <children>
+    	<element xsi:type="visualInterface:Rectangle" fill="true" backgroundColor="#fcfcfb" lineWidth="2.0" antiAlias="true" outline="false">
+    	</element>
+    	<dimension width="205.0" height="30.0"/>
+    	<position x="600.00" y="80.0"></position>
+    </children>
+    
+    <children>
+    	<element xsi:type="visualInterface:Rectangle" fill="true" backgroundColor="#fe7a7a" lineWidth="2.0" antiAlias="true" outline="false">
+    		<size width="205.0" heigth="66.0"></size>
+    	</element>
+    	<dimension width="205.0" height="66.0"/>
+    	<position x="600.00" y="10.0"></position>
+    </children>
+    <children>
+    	<element xsi:type="visualInterface:Text" foregroundColor="#fcfcfb" fontBold="true" fontSize="14" textAlignment="center" fontName="Roboto Thin" antialias="true" text="Liga Cahão A">
+    		<size width="205.0" heigth="66.0"></size>
+    	</element>
+    	<dimension width="205.0" height="66.0"/>
+	   	<position x="600.00" y="10.0"></position>
+    </children>
+    
+    <children>
+    	<element xsi:type="visualInterface:Text" foregroundColor="#3a3b36" fontBold="true" fontSize="14" textAlignment="center" fontName="Roboto Thin" antialias="true" text="This is a test">
+    		<size width="205.0" heigth="66.0"></size>
+    	</element>
+    	<dimension width="205.0" height="66.0"/>
+	   	<position x="600.00" y="200.0"></position>
+    </children>
+    
+    
     
     <children>
        <element xsi:type="visualInterface:SymbolReference" uri="button.vi">
@@ -29,6 +64,22 @@
        <position x="10.0" y="10.0"/>
        <dimension width="-1.0" height="-1.0"/>
    </children>
+   
+     <children>
+       <element xsi:type="visualInterface:SymbolReference" uri="button.vi">
+         <properties key="prefix" value="ES.DEMO.MODBUS" />
+         <properties key="offLens" value="APAGADO" />
+         <properties key="onLens" value="ENCENDIDO" />
+         <properties key="backgroundColor" value="#ff0000" />
+         <properties key="switchInput" value="ST_LG_A.X" />
+         <properties key="lensOutput" value="ST_LG_A.X" />
+         <properties key="border" value="LINE:[lineWidth=3,color=#FF0000]"/>
+         <properties key="description" value="This is a sample button."/>
+       </element>
+       <position x="350.0" y="10.0"/>
+       <dimension width="-1.0" height="-1.0"/>
+   </children>
+   
    <children>
    	<element xsi:type="visualInterface:SymbolReference" uri="indicator.vi">
    		<properties key="prefix" value="ES.DEMO.MODBUS" />
@@ -52,7 +103,10 @@
 		<position x="10.0" y="120.0" />
 		<dimension width="-1.0" height="-1.0"/>
    </children>
-    
+   
+	<position x="0.0" y="0.0"/>
+	<dimension width="1024.0" height="768.0"/>
+  </element>  
   </root>
   <properties key="connection" value="connection.da.main"/>
   <properties key="hdConnection" value="connection.hd.main"/>

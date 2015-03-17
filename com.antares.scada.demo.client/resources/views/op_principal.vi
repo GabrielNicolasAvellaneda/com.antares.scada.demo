@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface">
+ <root xsi:type="visualInterface:GridContainer" name="background"
+      columns="4"
+      equalWidth="false"
+      verticalSpacing="10"
+ >
+
+	<children spanCols="1" horizontalAlignment="CENTER">
+		<element xsi:type="visualInterface:Image" uri="../images/huhtamaki_logo_small.png">
+			<size width="100.0" height="100.0"></size>
+		</element>
+	</children>
+
+	<children spanCols="2" horizontalAlignment="CENTER" verticalAlignment="CENTER">
+    	<element xsi:type="visualInterface:Text" backgroundColor="#333333" foregroundColor="#333333" fontBold="true" fontSize="18" textAlignment="CENTER" fontName="Roboto Thin" text="Operação Principal">
+    	</element>
+    </children>
+    
+	<children spanCols="1" horizontalAlignment="CENTER">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/smallnone.vi">
+    	</element>
+    </children>
+        
+    <children spanCols="4" horizontalAlignment="CENTER">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/smallnone.vi">
+    	</element>
+    </children>
+    
+
+      <children>
+      	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/col1.vi">
+	      	<properties key="type" value="momentary" />
+	      	<properties key="offLens" value="LIGA CANHAO A" />
+	        <properties key="onLens" value="CANAHO A LIGADO" />
+	        <properties key="switchInput" value="COEX.BT_LG_A.X" />
+	        <properties key="lensOutput" value="COEX.ST_LG_A.X" />
+	        <properties key="border" value="LINE:[lineWidth=3,color=#FF0000]"/>
+	        <properties key="toolTip" value="This is a sample button."/>
+      	</element> 
+      </children>
+      <children>
+      	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/col2.vi">
+      		<properties key="type" value="momentary" />
+	      	<properties key="offLens" value="LIGA CANHAO B" />
+	        <properties key="onLens" value="CANAHO A LIGADO" />
+	        <properties key="switchInput" value="COEX.BT_LG_A.X" />
+	        <properties key="lensOutput" value="COEX.ST_LG_A.X" />
+	        <properties key="border" value="LINE:[lineWidth=3,color=#FF0000]"/>
+	        <properties key="toolTip" value="This is a sample button."/>
+      	</element> 
+      </children>
+      <children>
+      	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/col3.vi">
+      		<properties key="type" value="momentary" />
+	      	<properties key="offLens" value="LIGA CANHAO C" />
+	        <properties key="onLens" value="CANAHO A LIGADO" />
+	        <properties key="switchInput" value="COEX.BT_LG_A.X" />
+	        <properties key="lensOutput" value="COEX.ST_LG_A.X" />
+	        <properties key="border" value="LINE:[lineWidth=3,color=#FF0000]"/>
+	        <properties key="toolTip" value="This is a sample button."/>
+      	</element> 
+      </children>
+      <children>
+      	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/col4.vi">
+      		<properties key="lensOutput" value="ST_LG_A.X" />
+      		<properties key="switchInput" value="COEX.BT_LG_A.X" />
+      	</element> 
+      </children>
+   </root>
+  <cursors xsi:type="visualInterface:SystemCursor"
+      type="HAND"/>
+  <properties key="connection" value="connection.da.main"/>
+  <properties key="hdConnection" value="connection.hd.main"/>
+  <properties key="nullString" value="?" />
+</visualInterface:Symbol>

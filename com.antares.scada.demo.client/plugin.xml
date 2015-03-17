@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-
    <extension
          id="application"
          point="org.eclipse.core.runtime.applications">
@@ -678,21 +677,7 @@
             name="Operação Principal"
             zooming="false"
             mainView="true"
-            resource="resources/views/main.vi"
-            factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
-            id="com.antares.scada.demo.client.main">
-         <visibility>
-            <reference
-                  definitionId="com.antares.scada.demo.client.hassession">
-            </reference>
-         </visibility>
-      </viewInstance>
-      <viewInstance
-            defaultInstance="true"
-            name="Operação da Linha"
-            zooming="false"
-            mainView="true"
-            resource="resources/views/op_linha.vi"
+            resource="resources/views/op_principal.vi"
             factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
             id="com.antares.scada.demo.client.opLinha">
          <visibility>

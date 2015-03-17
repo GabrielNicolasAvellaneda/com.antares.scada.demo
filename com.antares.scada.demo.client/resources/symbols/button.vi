@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualInterface:Symbol xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface"
+	onInit="var ctx = new Button(controller, data); ctx.init();" onUpdate="ctx.update()">
+	<root xsi:type="visualInterface:FigureContainer" name="mainContainer"
+		onClick="ctx.click();" onMouseIn="ctx.mouseIn()" onMouseOut="ctx.mouseOut()" cursor="//@cursors">
+		<size width="150.0" height="90.0" />
+		<content xsi:type="visualInterface:BorderContainer" name="borderContainer">
+			<children>
+				<element xsi:type="visualInterface:Rectangle" fill="true" name="background"
+					backgroundColor="#02205c" lineWidth="-1" foregroundColor="#02205c" toolTip="Rectangle without outline">
+					<size width="1024.0" height="768.0" />
+				</element>
+			</children>
+			<children>
+				<element xsi:type="visualInterface:Text" name="text" backgroundColor="#ffffff"
+					foregroundColor="#ffffff" fontBold="true" fontSize="12"
+					textAlignment="CENTER" fontName="Roboto Thin" text="[Button Text]">
+				</element>
+			</children>
+		</content>
+	</root>
+	<scriptModules>component.js</scriptModules>
+	<scriptModules>button.js</scriptModules>
+	<cursors xsi:type="visualInterface:SystemCursor" type="HAND" />
+</visualInterface:Symbol>

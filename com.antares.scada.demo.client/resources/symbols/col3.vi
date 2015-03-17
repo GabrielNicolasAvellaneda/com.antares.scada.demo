@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface">
+ <root xsi:type="visualInterface:GridContainer"
+      name="background"
+      columns="2"
+      equalWidth="false"
+      verticalSpacing="10"
+      >
+   <!--  First Column -->
+    
+    <children spanRows="2" horizontalAlignment="CENTER">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/label.vi">
+    		<properties key="valueOutput" value="COEX.Vel_Atual_Canhao_C.X" />
+    		<properties key="text" value="1234.00" />
+    		<properties key="backgroundColor" value="#fed24d" />
+    	</element>
+    </children>
+    
+    <children horizontalAlignment="CENTER">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/smallbutton.vi">
+    		<properties key="width" value="40.0" />
+    		<properties key="height" value="40.0" />
+    		<properties key="text" value="+" />
+    		<properties key="backgroundColor" value="#02205c" />
+    		<properties key="hoverBackgroundColor" value="#da9c35" />
+    	</element>
+    </children>
+    <children horizontalAlignment="CENTER">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/smallbutton.vi">
+    		<properties key="width" value="40.0" />
+    		<properties key="height" value="40.0" />
+    		<properties key="text" value="-" />
+
+    		<properties key="backgroundColor" value="#02205c" />
+    		<properties key="hoverBackgroundColor" value="#da9c35" />
+    	</element>
+    </children>
+    <children horizontalAlignment="CENTER">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/button.vi">
+    		<properties key="text" value="Liga Cahhão C" />
+			<properties key="offLens" value="Liga Canhão C" />
+	        <properties key="onLens" value="Canhão C Ligado" />
+			<properties key="switchInput" value="COEX.BT_LG_CC.X" />
+	        <properties key="lensOutput" value="ST_LG_CC.X" />
+    		<properties key="backgroundColor" value="#02205c" />
+    		<properties key="hoverBackgroundColor" value="#da9c35" />
+    	</element>
+    </children>
+    <children horizontalAlignment="CENTER">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/smallnone.vi">
+    	</element>
+    </children>
+    
+    <children spanRows="2" horizontalAlignment="CENTER">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/smalllabel.vi">
+    		<properties key="text" value="Bloqueado A" />
+    		<properties key="backgroundColor" value="#e66b6b" />
+    	</element>
+    </children>
+    
+  </root>
+  <cursors xsi:type="visualInterface:SystemCursor"
+      type="HAND"/>
+</visualInterface:Symbol>

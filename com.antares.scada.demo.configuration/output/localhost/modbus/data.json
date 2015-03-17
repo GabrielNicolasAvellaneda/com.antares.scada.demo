@@ -50,9 +50,11 @@
   "org.eclipse.scada.da.server.osgi.modbus.slaveDevice": {
     "S1": {
       "dataOrder": "BIG_ENDIAN",
-      "block.B1": "HOLDING:0:64:250:10000:T1",
+      "block.INPUT": "HOLDING:64:64:250:10000:HOLDING_INPUT:INPUT",
       "modbus.master.id": "modbus",
-      "slave.id": "0"
+      "slave.id": "0",
+      "block.STANDARD": "HOLDING:0:64:250:10000:HOLDING_STANDARD:STANDARD",
+      "block.OUTPUT": "HOLDING:128:64:250:10000:HOLDING_OUTPUT:OUTPUT"
     }
   },
   "org.eclipse.scada.da.server.osgi.modbus.masterDevice": {
@@ -63,12 +65,26 @@
     }
   },
   "org.eclipse.scada.da.server.common.memory.types": {
-    "T1": {
-      "variable.ST_LG_A": "UINT16:4:0:BIG_ENDIAN",
+    "HOLDING_OUTPUT": {
+      "variable.BT_LG_CB": "UINT16:0:0:BIG_ENDIAN",
+      "variable.BT_LG_CC": "UINT16:0:0:BIG_ENDIAN",
+      "variable.BT_LG_CA": "UINT16:0:0:BIG_ENDIAN"
+    },
+    "HOLDING_STANDARD": {
       "variable.ST_L_BK_ROSCA_A": "UINT16:8:0:BIG_ENDIAN",
-      "variable.V2": "UINT16:2:0:BIG_ENDIAN",
-      "variable.V1": "UINT16:0:0:BIG_ENDIAN",
-      "variable.BT_LG_A": "UINT16:6:0:BIG_ENDIAN"
+      "variable.STP_VEL_CB": "UINT16:12:0:BIG_ENDIAN",
+      "variable.STP_Vel_Linha": "UINT16:16:0:BIG_ENDIAN",
+      "variable.STP_VEL_CA": "UINT16:10:0:BIG_ENDIAN",
+      "variable.STP_VEL_CC": "UINT16:14:0:BIG_ENDIAN"
+    },
+    "HOLDING_INPUT": {
+      "variable.Vel_Atual_Canhao_C": "UINT16:10:0:BIG_ENDIAN",
+      "variable.ST_Vel_Linha": "UINT16:12:0:BIG_ENDIAN",
+      "variable.ST_LG_CA": "UINT16:0:0:BIG_ENDIAN",
+      "variable.ST_LG_CB": "UINT16:4:0:BIG_ENDIAN",
+      "variable.ST_LG_CC": "UINT16:8:0:BIG_ENDIAN",
+      "variable.Vel_Atual_Canhao_B": "UINT16:6:0:BIG_ENDIAN",
+      "variable.Vel_Atual_Canhao_A": "UINT16:2:0:BIG_ENDIAN"
     }
   }
 }
