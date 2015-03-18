@@ -6,8 +6,7 @@
     <valueArchives xmi:id="_1C94-MHlEeSt_YDd5zSHwg" name="hdserver" instanceNumber="2"/>
     <masters xmi:id="_1C94-cHlEeSt_YDd5zSHwg" name="master" configuration="_3YgZsMH1EeSt_YDd5zSHwg" driver="_1C9498HlEeSt_YDd5zSHwg _xyApEMHmEeSt_YDd5zSHwg" archiveTo="_1C94-MHlEeSt_YDd5zSHwg">
       <authoratives xmi:id="_1C94-sHlEeSt_YDd5zSHwg">
-        <hierarchy>ES</hierarchy>
-        <hierarchy>DEMO</hierarchy>
+        <hierarchy>COEX</hierarchy>
       </authoratives>
     </masters>
   </nodes>

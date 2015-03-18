@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualInterface:Symbol xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface"
+	>
+	<root xsi:type="visualInterface:Image" uri="../images/ui/button.png">
+		
+	</root>
+	<scriptModules>component.js</scriptModules>
+	<cursors xsi:type="visualInterface:SystemCursor" type="HAND" />
+</visualInterface:Symbol>

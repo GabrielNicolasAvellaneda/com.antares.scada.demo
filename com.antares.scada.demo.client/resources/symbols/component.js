@@ -63,6 +63,25 @@ Component.prototype.setBackgroundColor = function (color) {
 	}
 }
 
+Component.prototype.setForegroundColor = function (color) {
+	var self = this;
+	
+	var foregroundElement = self.getElement('text');
+	if (foregroundElement != null) {
+		foregroundElement.setForegroundColor(color);
+	}
+}
+
+Component.prototype.setFontSize = function (fontSize) {
+	
+	var self = this;
+	
+	var foregroundElement = self.getElement('text');
+	if (foregroundElement != null) {
+		foregroundElement.setFont(null, fontSize);
+	}
+}
+
 Component.prototype.setText = function (text) {
 	var self = this;
 	

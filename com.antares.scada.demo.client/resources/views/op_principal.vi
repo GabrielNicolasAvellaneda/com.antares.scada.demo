@@ -18,7 +18,11 @@
     </children>
     
 	<children spanCols="1" horizontalAlignment="CENTER">
-    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/smallnone.vi">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/label.vi">
+    		<properties key="valueOutput" value="SYS.CURRENT_TIME.V" />
+    		<properties key="dataType" value="string" />
+    		<properties key="foregroundColor" value="#333333" />
+    		<properties key="fontSize" value="24" />
     	</element>
     </children>
         

@@ -12,7 +12,7 @@
     	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/label.vi">
     		<properties key="valueOutput" value="COEX.Vel_Atual_Canhao_A.X" />
     		<properties key="text" value="1234.00" />
-    		<properties key="expression" value="round(valueOutput / 14)" />
+    		<properties key="expression" value="round(valueOutput / 14) + 50" />
     		<properties key="backgroundColor" value="#fed24d" />
     	</element>
     </children>
@@ -22,8 +22,10 @@
     		<properties key="width" value="40.0" />
     		<properties key="height" value="40.0" />
     		<properties key="text" value="+" />
+    		<properties key="type" value="increment" />
     		<properties key="incrementBy" value="70" />
     		<properties key="maximum" value="1750" />
+    		<properties key="switchInput" value="COEX.STP_VEL_CA.X" />
     		<properties key="backgroundColor" value="#02205c" />
     		<properties key="hoverBackgroundColor" value="#da9c35" />
     	</element>
@@ -33,13 +35,16 @@
     		<properties key="width" value="40.0" />
     		<properties key="height" value="40.0" />
     		<properties key="text" value="-" />
-
+			<properties key="type" value="decrement" />
+			<properties key="decrementBy" value="70" />
+			<properties key="minimum" value="0" />
+    		<properties key="switchInput" value="COEX.STP_VEL_CA.X" />
     		<properties key="backgroundColor" value="#02205c" />
     		<properties key="hoverBackgroundColor" value="#da9c35" />
     	</element>
     </children>
     <children horizontalAlignment="CENTER">
-    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/button.vi">
+    	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/button2.vi">
     		<properties key="text" value="Liga Cahhão A" />
 			<properties key="offLens" value="Liga Canhão A" />
 	        <properties key="onLens" value="Canhão A Ligado" />

@@ -21,6 +21,10 @@
     		<properties key="width" value="40.0" />
     		<properties key="height" value="40.0" />
     		<properties key="text" value="+" />
+    		<properties key="type" value="increment" />
+    		<properties key="incrementBy" value="70" />
+    		<properties key="maximum" value="1750" />
+    		<properties key="switchInput" value="COEX.STP_VEL_CC.X" />
     		<properties key="backgroundColor" value="#02205c" />
     		<properties key="hoverBackgroundColor" value="#da9c35" />
     	</element>
@@ -30,7 +34,10 @@
     		<properties key="width" value="40.0" />
     		<properties key="height" value="40.0" />
     		<properties key="text" value="-" />
-
+			<properties key="type" value="decrement" />
+			<properties key="decrementBy" value="70" />
+			<properties key="minimum" value="0" />
+			<properties key="switchInput" value="COEX.STP_VEL_CC.X" />
     		<properties key="backgroundColor" value="#02205c" />
     		<properties key="hoverBackgroundColor" value="#da9c35" />
     	</element>

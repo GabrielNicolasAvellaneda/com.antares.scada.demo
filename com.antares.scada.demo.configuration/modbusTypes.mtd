@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <memory:TypeSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:memory="http://eclipse.org/SCADA/Configuration/Memory" name="TS1">
-  <types name="HOLDING_STANDARD">
-    <variables name="ST_L_BK_ROSCA_A">
-      <type xsi:type="memory:UnsignedInteger16Type" index="8"/>
-    </variables>
-    <variables name="STP_Vel_Linha">
-      <type xsi:type="memory:UnsignedInteger16Type" index="16"/>
-    </variables>
-  </types>
+  <types name="HOLDING_STANDARD"/>
   <types name="HOLDING_INPUT">
     <variables name="ST_LG_CA">
       <type xsi:type="memory:UnsignedInteger16Type"/>
@@ -29,6 +22,18 @@
     </variables>
     <variables name="ST_Vel_Linha">
       <type xsi:type="memory:UnsignedInteger16Type" index="12"/>
+    </variables>
+    <variables name="ST_L_BK_ROSCA_A">
+      <type xsi:type="memory:UnsignedInteger16Type" index="14"/>
+    </variables>
+    <variables name="ST_L_BK_ROSCA_B">
+      <type xsi:type="memory:UnsignedInteger16Type" index="16"/>
+    </variables>
+    <variables name="ST_L_BK_ROSCA_C">
+      <type xsi:type="memory:UnsignedInteger16Type" index="18"/>
+    </variables>
+    <variables name="ST_L_BK_FD">
+      <type xsi:type="memory:UnsignedInteger16Type" index="20"/>
     </variables>
   </types>
   <types name="HOLDING_OUTPUT">

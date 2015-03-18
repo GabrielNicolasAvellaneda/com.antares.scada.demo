@@ -21,6 +21,10 @@
     		<properties key="width" value="40.0" />
     		<properties key="height" value="40.0" />
     		<properties key="text" value="+" />
+    		<properties key="type" value="increment" />
+    		<properties key="incrementBy" value="70" />
+    		<properties key="maximum" value="1750" />
+    		<properties key="switchInput" value="COEX.STP_Vel_Linha.X" />
     		<properties key="backgroundColor" value="#02205c" />
     		<properties key="hoverBackgroundColor" value="#da9c35" />
     	</element>
@@ -30,7 +34,10 @@
     		<properties key="width" value="40.0" />
     		<properties key="height" value="40.0" />
     		<properties key="text" value="-" />
-
+			<properties key="type" value="decrement" />
+			<properties key="decrementBy" value="70" />
+			<properties key="minimum" value="0" />
+			<properties key="switchInput" value="COEX.STP_Vel_Linha.X" />
     		<properties key="backgroundColor" value="#02205c" />
     		<properties key="hoverBackgroundColor" value="#da9c35" />
     	</element>
@@ -40,8 +47,8 @@
     		<properties key="text" value="Liga Cahhão C" />
 			<properties key="offLens" value="Liga Canhão C" />
 	        <properties key="onLens" value="Canhão C Ligado" />
-			<properties key="switchInput" value="COEX.BT_LG_CC.X" />
-	        <properties key="lensOutput" value="ST_LG_CC.X" />
+			<properties key="switchInput" value="COEX.BT_LG_MR.X" />
+	        <properties key="lensOutput" value="COEX.ST_LG_MR.X" />
     		<properties key="backgroundColor" value="#02205c" />
     		<properties key="hoverBackgroundColor" value="#da9c35" />
     	</element>
@@ -54,12 +61,12 @@
      <children horizontalAlignment="CENTER">
     	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/button.vi">
     		<properties key="text" value="Liga Cahhão C" />
-			<properties key="offLens" value="Liga Canhão C" />
-	        <properties key="onLens" value="Canhão C Ligado" />
-			<properties key="switchInput" value="COEX.BT_LG_CC.X" />
-	        <properties key="lensOutput" value="ST_LG_CC.X" />
-    		<properties key="backgroundColor" value="#02205c" />
-    		<properties key="hoverBackgroundColor" value="#da9c35" />
+			<properties key="offLens" value="Resetar Erros" />
+	        <properties key="onLens" value="Resetando Erros..." />
+			<properties key="switchInput" value="COEX.Resetar_Erros.X" />
+	        <properties key="lensOutput" value="COEX.ST_Resetar_Erros.X" />
+    		<properties key="backgroundColor" value="#333333" />
+    		<properties key="hoverBackgroundColor" value="#3f3f3f" />
     	</element>
     </children>
     

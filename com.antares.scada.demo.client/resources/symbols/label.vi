@@ -4,7 +4,7 @@
 	xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface"
 	onInit="var ctx = new Label(controller, data); ctx.init();" onUpdate="ctx.update();">
 	<root xsi:type="visualInterface:FigureContainer" name="mainContainer"
-		cursor="//@cursors">
+		>
 		<size width="150.0" height="90.0" />
 		<content xsi:type="visualInterface:BorderContainer" name="borderContainer">
 			<children>

@@ -1,4 +1,127 @@
 {
+  "da.datasource.dataitem": {
+    "COEX.Vel_Atual_Canhao_A.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.Vel_Atual_Canhao_A.X"
+    },
+    "COEX.Vel_Atual_Canhao_C.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.Vel_Atual_Canhao_C.X"
+    },
+    "COEX.BT_LG_CB.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.BT_LG_CB.X"
+    },
+    "COEX.ST_LG_CB.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.ST_LG_CB.X"
+    },
+    "COEX.STP_VEL_CB.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.STP_VEL_CB.X"
+    },
+    "COEX.ST_L_BK_ROSCA_A.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.ST_L_BK_ROSCA_A.X"
+    },
+    "COEX.ST_L_BK_ROSCA_C.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.ST_L_BK_ROSCA_C.X"
+    },
+    "COEX.BT_LG_CA.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.BT_LG_CA.X"
+    },
+    "COEX.ST_LG_CA.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.ST_LG_CA.X"
+    },
+    "COEX.Vel_Atual_Canhao_B.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.Vel_Atual_Canhao_B.X"
+    },
+    "SYS.CURRENT_TIME.V/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "SYS.CURRENT_TIME.V"
+    },
+    "COEX.BT_LG_CC.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.BT_LG_CC.X"
+    },
+    "COEX.ST_LG_CC.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.ST_LG_CC.X"
+    },
+    "COEX.ST_L_BK_ROSCA_B.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.ST_L_BK_ROSCA_B.X"
+    },
+    "COEX.STP_VEL_CC.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.STP_VEL_CC.X"
+    },
+    "COEX.ST_L_BK_FD.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.ST_L_BK_FD.X"
+    },
+    "COEX.STP_VEL_CA.X/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "COEX.STP_VEL_CA.X"
+    }
+  },
+  "historical.item.factory": {
+    "SYS.CURRENT_TIME.V": {
+      "datasource.id": "SYS.CURRENT_TIME.V/0.source"
+    },
+    "COEX.ST_L_BK_FD.X": {
+      "datasource.id": "COEX.ST_L_BK_FD.X/0.source"
+    },
+    "COEX.BT_LG_CA.X": {
+      "datasource.id": "COEX.BT_LG_CA.X/0.source"
+    },
+    "COEX.BT_LG_CB.X": {
+      "datasource.id": "COEX.BT_LG_CB.X/0.source"
+    },
+    "COEX.ST_L_BK_ROSCA_C.X": {
+      "datasource.id": "COEX.ST_L_BK_ROSCA_C.X/0.source"
+    },
+    "COEX.ST_L_BK_ROSCA_A.X": {
+      "datasource.id": "COEX.ST_L_BK_ROSCA_A.X/0.source"
+    },
+    "COEX.ST_L_BK_ROSCA_B.X": {
+      "datasource.id": "COEX.ST_L_BK_ROSCA_B.X/0.source"
+    },
+    "COEX.STP_VEL_CB.X": {
+      "datasource.id": "COEX.STP_VEL_CB.X/0.source"
+    },
+    "COEX.Vel_Atual_Canhao_C.X": {
+      "datasource.id": "COEX.Vel_Atual_Canhao_C.X/0.source"
+    },
+    "COEX.Vel_Atual_Canhao_B.X": {
+      "datasource.id": "COEX.Vel_Atual_Canhao_B.X/0.source"
+    },
+    "COEX.STP_VEL_CC.X": {
+      "datasource.id": "COEX.STP_VEL_CC.X/0.source"
+    },
+    "COEX.Vel_Atual_Canhao_A.X": {
+      "datasource.id": "COEX.Vel_Atual_Canhao_A.X/0.source"
+    },
+    "COEX.BT_LG_CC.X": {
+      "datasource.id": "COEX.BT_LG_CC.X/0.source"
+    },
+    "COEX.STP_VEL_CA.X": {
+      "datasource.id": "COEX.STP_VEL_CA.X/0.source"
+    },
+    "COEX.ST_LG_CC.X": {
+      "datasource.id": "COEX.ST_LG_CC.X/0.source"
+    },
+    "COEX.ST_LG_CB.X": {
+      "datasource.id": "COEX.ST_LG_CB.X/0.source"
+    },
+    "COEX.ST_LG_CA.X": {
+      "datasource.id": "COEX.ST_LG_CA.X/0.source"
+    }
+  },
   "org.eclipse.scada.sec.osgi.manager": {
     "reject.all.session": {
       "serviceType": "script",

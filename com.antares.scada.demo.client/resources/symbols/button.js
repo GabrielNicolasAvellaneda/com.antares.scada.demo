@@ -28,30 +28,58 @@ function ButtonBehaviourIncrement(button) {
 	self.button = button;
 	self.incrementBy = parseInt(self.button.getProperty('incrementBy'));
 	self.maximum = parseInt(self.button.getProperty('maximum'));
+	self.switchInput = self.button.getProperty('switchInput');
 }
 
 ButtonBehaviourIncrement.prototype.execute = function () {
-	if (self.maximum = )
+	var self = this;
 	
+	var value = self.button.getValue(self.switchInput).asInteger();
 	
+	if (value + self.incrementBy <= self.maximum) {
+		
+		var newValue = value + self.incrementBy;
+		
+		self.button.write(newValue);	
+	}
 };
-
-
 
 ButtonBehaviourIncrement.prototype.update = function () {
 	var self = this;
 	
-	
+	// Do nothing.
 }
 
 function ButtonBehaviourDecrement(button) {
 	var self = this;
 	
 	self.button = button;
+	
+	self.decrementBy = self.button.getProperty('decrementBy');
+	if (self.decrementBy == null) {
+		throw new Error('The decrementBy property must be set.');
+	}
+	
+	self.minimum = self.button.getProperty('minimum');
+	if (self.minimum == null) {
+		throw new Error('The minimum property must be set.');
+	}
+	
+	self.switchInput = self.button.getProperty('switchInput');
+	if (self.switchInput == null) {
+		throw new Error('The switchInput property must be set.');
+	}
 }
 
 ButtonBehaviourDecrement.prototype.execute = function() {
 	var self = this;
+	
+	var value = self.button.getValue(self.switchInput).asInteger();
+	if (self.minimum <= value - self.decrementBy) {
+		var newValue = value - self.decrementBy;
+		self.button.write(newValue);
+	}
+	
 };
 
 ButtonBehaviourDecrement.prototype.update = function () {

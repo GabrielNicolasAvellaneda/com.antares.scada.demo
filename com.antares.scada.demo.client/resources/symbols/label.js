@@ -35,21 +35,38 @@ Label.prototype.init = function () {
 		self.registerItem(self.valueOutput);
 	}
 	
+	var foregroundColor = self.getProperty('foregroundColor');
+	if (foregroundColor != null) {
+		self.setForegroundColor(foregroundColor);	
+	}
+	
+	var fontSize = self.getProperty('fontSize');
+	if (fontSize != null) {
+		self.setFontSize(fontSize);
+	}
+	
 	self.setBackgroundColor(self.getProperty('backgroundColor'));
 }	
 	
 Label.prototype.update = function () {
 	var self = this;
 	
-	var value = self.getValue(self.valueOutput).asInteger();
+	var value = self.getValue(self.valueOutput)
 	
-	var expression = self.getProperty('expression');
-	if (expression != null) {
-		var expr = Parser.parse(expression);
-		value = expr.evaluate({valueOutput: value});
+	var dataType = self.getProperty('dataType') || 'number';
+	if (dataType == 'string') {
+		value = value.asString();
+	} else {
+		value = value.asInteger();
+		
+		var expression = self.getProperty('expression');
+		if (expression != null) {
+			var expr = Parser.parse(expression);
+			value = expr.evaluate({valueOutput: value});
+		}
 	}
-	
-	self.setText(value);	
+		
+	self.setText(value);
 }
 
 Label.prototype.mouseIn = function () {

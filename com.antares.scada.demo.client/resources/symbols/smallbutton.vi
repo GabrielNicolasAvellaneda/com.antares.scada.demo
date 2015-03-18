@@ -4,7 +4,7 @@
 	xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface"
 	onInit="var ctx = new Button(controller, data); ctx.init();" onUpdate="ctx.update()">
 	<root xsi:type="visualInterface:FigureContainer" name="mainContainer"
-		onClick="click()" onMouseIn="ctx.mouseIn()" onMouseOut="ctx.mouseOut()" cursor="//@cursors">
+		onClick="ctx.click()" onMouseIn="ctx.mouseIn()" onMouseOut="ctx.mouseOut()" cursor="//@cursors">
 		<size width="40.0" height="40.0" />
 		<content xsi:type="visualInterface:BorderContainer" name="borderContainer">
 			<children>

@@ -3,23 +3,15 @@
 	xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface">
 	<root xsi:type="visualInterface:FigureContainer" name="mainContainer"
-		cursor="//@cursors">
+		>
 		<size width="40.0" height="40.0" />
 		<content xsi:type="visualInterface:BorderContainer" name="borderContainer">
 			<children>
-				<element xsi:type="visualInterface:Rectangle" fill="false" name="background"
-					backgroundColor="#02205c" lineWidth="-1" foregroundColor="#02205c" toolTip="Rectangle without outline">
+				<element xsi:type="visualInterface:Rectangle" fill="false" name="background" outline="false"
+					backgroundColor="#02205c" lineWidth="0" foregroundColor="#02205c" toolTip="Rectangle without outline">
 					<size width="1024.0" height="768.0" />
-				</element>
-			</children>
-			<children>
-				<element xsi:type="visualInterface:Text" name="text" backgroundColor="#ffffff"
-					foregroundColor="#ffffff" fontBold="true" fontSize="12"
-					textAlignment="CENTER" fontName="Roboto Thin" text="[Button Text]">
 				</element>
 			</children>
 		</content>
 	</root>
-	
-	<cursors xsi:type="visualInterface:SystemCursor" type="HAND" />
 </visualInterface:Symbol>

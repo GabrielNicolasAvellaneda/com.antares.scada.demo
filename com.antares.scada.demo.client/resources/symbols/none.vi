@@ -13,12 +13,6 @@
 					<size width="1024.0" height="768.0" />
 				</element>
 			</children>
-			<children>
-				<element xsi:type="visualInterface:Text" name="text" backgroundColor="#ffffff"
-					foregroundColor="#ffffff" fontBold="true" fontSize="12"
-					textAlignment="CENTER" fontName="Roboto Thin" text="[Button Text]">
-				</element>
-			</children>
 		</content>
 	</root>
 

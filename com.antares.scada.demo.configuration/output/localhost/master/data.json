@@ -1,20 +1,44 @@
 {
   "da.datasource.dataitem": {
-    "ES.DEMO.MODBUS.ST_LG_A.X.source": {
+    "COEX.ST_L_BK_ROSCA_A.X.source": {
       "connection.id": "driver.modbus.on.localhost",
-      "item.id": "modbus.data.S1.B1.ST_LG_A"
-    },
-    "ES.DEMO.MODBUS.BT_LG_A.X.source": {
-      "connection.id": "driver.modbus.on.localhost",
-      "item.id": "modbus.data.S1.B1.BT_LG_A"
-    },
-    "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.source": {
-      "connection.id": "driver.modbus.on.localhost",
-      "item.id": "modbus.data.S1.B1.ST_L_BK_ROSCA_A"
+      "item.id": "modbus.data.S1.INPUT.ST_L_BK_ROSCA_A"
     },
     "COEX.Vel_Atual_Canhao_A.X.source": {
       "connection.id": "driver.modbus.on.localhost",
       "item.id": "modbus.data.S1.INPUT.Vel_Atual_Canhao_A"
+    },
+    "COEX.STP_VEL_CB.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.OUTPUT.STP_VEL_CB"
+    },
+    "COEX.BT_LG_CC.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.OUTPUT.BT_LG_CC"
+    },
+    "COEX.Vel_Atual_Canhao_B.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.INPUT.Vel_Atual_Canhao_B"
+    },
+    "COEX.BT_LG_CB.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.OUTPUT.BT_LG_CB"
+    },
+    "COEX.ST_LG_CC.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.INPUT.ST_LG_CC"
+    },
+    "COEX.STP_VEL_CA.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.OUTPUT.STP_VEL_CA"
+    },
+    "COEX.ST_L_BK_ROSCA_C.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.INPUT.ST_L_BK_ROSCA_C"
+    },
+    "COEX.ST_LG_CB.X.source": {
+      "connection.id": "driver.modbus.on.localhost",
+      "item.id": "modbus.data.S1.INPUT.ST_LG_CB"
     },
     "COEX.BT_LG_CA.X.source": {
       "connection.id": "driver.modbus.on.localhost",
@@ -28,101 +52,161 @@
       "connection.id": "driver.modbus.on.localhost",
       "item.id": "modbus.data.S1.INPUT.ST_LG_CA"
     },
-    "COEX.Vel_Atual_Canhao_B.X.source": {
+    "COEX.ST_L_BK_FD.X.source": {
       "connection.id": "driver.modbus.on.localhost",
-      "item.id": "modbus.data.S1.INPUT.Vel_Atual_Canhao_B"
+      "item.id": "modbus.data.S1.INPUT.ST_L_BK_FD"
     },
-    "ES.DEMO.MODBUS.V11.X.source": {
+    "COEX.ST_L_BK_ROSCA_B.X.source": {
       "connection.id": "driver.modbus.on.localhost",
-      "item.id": "modbus.data.S1.B1.V1"
+      "item.id": "modbus.data.S1.INPUT.ST_L_BK_ROSCA_B"
     },
-    "ES.DEMO.MODBUS.V2.X.source": {
+    "COEX.STP_VEL_CC.X.source": {
       "connection.id": "driver.modbus.on.localhost",
-      "item.id": "modbus.data.S1.B1.V2"
+      "item.id": "modbus.data.S1.OUTPUT.STP_VEL_CC"
+    }
+  },
+  "org.eclipse.scada.ae.server.common.event.pool": {
+    "events.all": {
+      "filter": "(eventType\u003d*)",
+      "size": "10000"
+    }
+  },
+  "master.item": {
+    "ae.server.info.INIT.master": {
+      "datasource.id": "ae.server.info.INIT"
+    },
+    "ae.server.info.NOT_AKN.master": {
+      "datasource.id": "ae.server.info.NOT_AKN"
+    },
+    "COEX.ST_LG_CB.X.master": {
+      "datasource.id": "COEX.ST_LG_CB.X.source"
+    },
+    "COEX.ST_L_BK_ROSCA_C.X.master": {
+      "datasource.id": "COEX.ST_L_BK_ROSCA_C.X.source"
+    },
+    "COEX.BT_LG_CB.X.master": {
+      "datasource.id": "COEX.BT_LG_CB.X.source"
+    },
+    "COEX.STP_VEL_CB.X.master": {
+      "datasource.id": "COEX.STP_VEL_CB.X.source"
+    },
+    "COEX.Vel_Atual_Canhao_A.X.master": {
+      "datasource.id": "COEX.Vel_Atual_Canhao_A.X.source"
+    },
+    "COEX.ST_LG_CC.X.master": {
+      "datasource.id": "COEX.ST_LG_CC.X.source"
+    },
+    "SYS.CURRENT_TIME.V.master": {
+      "datasource.id": "SYS.CURRENT_TIME.V.script"
+    },
+    "ae.server.info.UNSAFE.master": {
+      "datasource.id": "ae.server.info.UNSAFE"
+    },
+    "ae.server.info.INACTIVE.master": {
+      "datasource.id": "ae.server.info.INACTIVE"
+    },
+    "ae.server.info.NOT_OK_NOT_AKN.master": {
+      "datasource.id": "ae.server.info.NOT_OK_NOT_AKN"
+    },
+    "ae.server.info.OK.master": {
+      "datasource.id": "ae.server.info.OK"
+    },
+    "ae.server.info.ALERT_DISABLED.master": {
+      "datasource.id": "ae.server.info.ALERT_DISABLED"
+    },
+    "ae.server.info.NOT_OK_AKN.master": {
+      "datasource.id": "ae.server.info.NOT_OK_AKN"
+    },
+    "ae.server.info.NOT_OK.master": {
+      "datasource.id": "ae.server.info.NOT_OK"
+    },
+    "COEX.ST_L_BK_ROSCA_B.X.master": {
+      "datasource.id": "COEX.ST_L_BK_ROSCA_B.X.source"
+    },
+    "COEX.ST_LG_CA.X.master": {
+      "datasource.id": "COEX.ST_LG_CA.X.source"
+    },
+    "COEX.Vel_Atual_Canhao_B.X.master": {
+      "datasource.id": "COEX.Vel_Atual_Canhao_B.X.source"
+    },
+    "COEX.ST_L_BK_FD.X.master": {
+      "datasource.id": "COEX.ST_L_BK_FD.X.source"
+    },
+    "COEX.BT_LG_CA.X.master": {
+      "datasource.id": "COEX.BT_LG_CA.X.source"
+    },
+    "COEX.STP_VEL_CA.X.master": {
+      "datasource.id": "COEX.STP_VEL_CA.X.source"
+    },
+    "COEX.SUM.V.master": {
+      "datasource.id": "COEX.SUM.V.sum"
+    },
+    "ae.server.info.ALERT_ACTIVE.master": {
+      "datasource.id": "ae.server.info.ALERT_ACTIVE"
+    },
+    "COEX.Vel_Atual_Canhao_C.X.master": {
+      "datasource.id": "COEX.Vel_Atual_Canhao_C.X.source"
+    },
+    "COEX.STP_VEL_CC.X.master": {
+      "datasource.id": "COEX.STP_VEL_CC.X.source"
+    },
+    "COEX.BT_LG_CC.X.master": {
+      "datasource.id": "COEX.BT_LG_CC.X.source"
+    },
+    "SYS.SUM.V.master": {
+      "datasource.id": "SYS.SUM.V.sum"
+    },
+    "COEX.ST_L_BK_ROSCA_A.X.master": {
+      "datasource.id": "COEX.ST_L_BK_ROSCA_A.X.source"
     }
   },
   "org.eclipse.scada.da.datasource.sum": {
     "COEX.SUM.V.sum": {
-      "datasource.1": "COEX.ST_LG_CA.X.master",
-      "datasource.2": "COEX.Vel_Atual_Canhao_A.X.master",
-      "datasource.3": "COEX.Vel_Atual_Canhao_B.X.master",
-      "datasource.4": "COEX.Vel_Atual_Canhao_C.X.master",
+      "datasource.9": "COEX.ST_L_BK_FD.X.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "datasource.0": "COEX.BT_LG_CA.X.master"
+      "datasource.1": "COEX.BT_LG_CB.X.master",
+      "datasource.2": "COEX.BT_LG_CC.X.master",
+      "datasource.3": "COEX.STP_VEL_CA.X.master",
+      "datasource.4": "COEX.STP_VEL_CB.X.master",
+      "datasource.5": "COEX.STP_VEL_CC.X.master",
+      "datasource.6": "COEX.ST_LG_CA.X.master",
+      "datasource.7": "COEX.ST_LG_CB.X.master",
+      "datasource.8": "COEX.ST_LG_CC.X.master",
+      "datasource.14": "COEX.Vel_Atual_Canhao_B.X.master",
+      "datasource.15": "COEX.Vel_Atual_Canhao_C.X.master",
+      "datasource.12": "COEX.ST_L_BK_ROSCA_C.X.master",
+      "datasource.13": "COEX.Vel_Atual_Canhao_A.X.master",
+      "datasource.10": "COEX.ST_L_BK_ROSCA_A.X.master",
+      "datasource.0": "COEX.BT_LG_CA.X.master",
+      "datasource.11": "COEX.ST_L_BK_ROSCA_B.X.master"
     },
-    "ES.DEMO.SUM.V.sum": {
+    "SYS.SUM.V.sum": {
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "subDatasource.0": "ES.DEMO.MODBUS.SUM.V.master"
-    },
-    "ES.DEMO.MODBUS.SUM.V.sum": {
-      "datasource.1": "ES.DEMO.MODBUS.ST_LG_A.X.master",
-      "datasource.2": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master",
-      "datasource.3": "ES.DEMO.MODBUS.V11.X.master",
-      "datasource.4": "ES.DEMO.MODBUS.V2.X.master",
-      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "datasource.0": "ES.DEMO.MODBUS.BT_LG_A.X.master"
-    },
-    "ES.SUM.V.sum": {
-      "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
-      "subDatasource.0": "ES.DEMO.SUM.V.master"
+      "datasource.0": "SYS.CURRENT_TIME.V.master"
     }
   },
   "da.dataitem.datasource": {
-    "master/exporter/ae.server.info.ALERT_DISABLED": {
-      "datasource.id": "ae.server.info.ALERT_DISABLED.master",
-      "item.id": "ae.server.info.ALERT_DISABLED",
-      "description": "Alert disabled"
+    "master/exporter/COEX.ST_LG_CC.X": {
+      "datasource.id": "COEX.ST_LG_CC.X.master",
+      "item.id": "COEX.ST_LG_CC.X"
     },
-    "master/exporter/ES.DEMO.MODBUS.ST_LG_A.X": {
-      "datasource.id": "ES.DEMO.MODBUS.ST_LG_A.X.master",
-      "item.id": "ES.DEMO.MODBUS.ST_LG_A.X"
+    "master/exporter/COEX.ST_LG_CB.X": {
+      "datasource.id": "COEX.ST_LG_CB.X.master",
+      "item.id": "COEX.ST_LG_CB.X"
     },
     "master/exporter/COEX.ST_LG_CA.X": {
       "datasource.id": "COEX.ST_LG_CA.X.master",
       "item.id": "COEX.ST_LG_CA.X"
-    },
-    "master/exporter/COEX.SUM.V": {
-      "datasource.id": "COEX.SUM.V.master",
-      "item.id": "COEX.SUM.V"
     },
     "master/exporter/ae.server.info.NOT_AKN": {
       "datasource.id": "ae.server.info.NOT_AKN.master",
       "item.id": "ae.server.info.NOT_AKN",
       "description": "Summarized state NOT_OK_AKN"
     },
-    "master/exporter/ES.DEMO.MODBUS.BT_LG_A.X": {
-      "datasource.id": "ES.DEMO.MODBUS.BT_LG_A.X.master",
-      "item.id": "ES.DEMO.MODBUS.BT_LG_A.X",
-      "description": "Description"
-    },
-    "master/exporter/ES.DEMO.MODBUS.V2.X": {
-      "datasource.id": "ES.DEMO.MODBUS.V2.X.master",
-      "item.id": "ES.DEMO.MODBUS.V2.X"
-    },
-    "master/exporter/ae.server.info.NOT_OK_AKN": {
-      "datasource.id": "ae.server.info.NOT_OK_AKN.master",
-      "item.id": "ae.server.info.NOT_OK_AKN",
-      "description": "Summarized state NOT_OK_AKN"
-    },
     "master/exporter/ae.server.info.NOT_OK": {
       "datasource.id": "ae.server.info.NOT_OK.master",
       "item.id": "ae.server.info.NOT_OK",
       "description": "Summarized state NOT_OK_AKN"
-    },
-    "master/exporter/ES.DEMO.MODBUS.V11.X": {
-      "datasource.id": "ES.DEMO.MODBUS.V11.X.master",
-      "item.id": "ES.DEMO.MODBUS.V11.X",
-      "description": "This is the Variable V1"
-    },
-    "master/exporter/ae.server.info.UNSAFE": {
-      "datasource.id": "ae.server.info.UNSAFE.master",
-      "item.id": "ae.server.info.UNSAFE",
-      "description": "Summarized state UNSAFE"
-    },
-    "master/exporter/ae.server.info.INIT": {
-      "datasource.id": "ae.server.info.INIT.master",
-      "item.id": "ae.server.info.INIT",
-      "description": "Summarized state INIT"
     },
     "master/exporter/COEX.Vel_Atual_Canhao_A.X": {
       "datasource.id": "COEX.Vel_Atual_Canhao_A.X.master",
@@ -136,18 +220,68 @@
       "datasource.id": "COEX.Vel_Atual_Canhao_C.X.master",
       "item.id": "COEX.Vel_Atual_Canhao_C.X"
     },
-    "master/exporter/ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X": {
-      "datasource.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master",
-      "item.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X"
+    "master/exporter/SYS.SUM.V": {
+      "datasource.id": "SYS.SUM.V.master",
+      "item.id": "SYS.SUM.V"
     },
     "master/exporter/ae.server.info.ALERT_ACTIVE": {
       "datasource.id": "ae.server.info.ALERT_ACTIVE.master",
       "item.id": "ae.server.info.ALERT_ACTIVE",
       "description": "Alert active"
     },
-    "master/exporter/ES.DEMO.MODBUS.SUM.V": {
-      "datasource.id": "ES.DEMO.MODBUS.SUM.V.master",
-      "item.id": "ES.DEMO.MODBUS.SUM.V"
+    "master/exporter/ae.server.info.INACTIVE": {
+      "datasource.id": "ae.server.info.INACTIVE.master",
+      "item.id": "ae.server.info.INACTIVE",
+      "description": "Summarized state INACTIVE"
+    },
+    "master/exporter/COEX.ST_L_BK_FD.X": {
+      "datasource.id": "COEX.ST_L_BK_FD.X.master",
+      "item.id": "COEX.ST_L_BK_FD.X"
+    },
+    "master/exporter/ae.server.info.ALERT_DISABLED": {
+      "datasource.id": "ae.server.info.ALERT_DISABLED.master",
+      "item.id": "ae.server.info.ALERT_DISABLED",
+      "description": "Alert disabled"
+    },
+    "master/exporter/COEX.SUM.V": {
+      "datasource.id": "COEX.SUM.V.master",
+      "item.id": "COEX.SUM.V"
+    },
+    "master/exporter/ae.server.info.NOT_OK_AKN": {
+      "datasource.id": "ae.server.info.NOT_OK_AKN.master",
+      "item.id": "ae.server.info.NOT_OK_AKN",
+      "description": "Summarized state NOT_OK_AKN"
+    },
+    "master/exporter/ae.server.info.UNSAFE": {
+      "datasource.id": "ae.server.info.UNSAFE.master",
+      "item.id": "ae.server.info.UNSAFE",
+      "description": "Summarized state UNSAFE"
+    },
+    "master/exporter/ae.server.info.INIT": {
+      "datasource.id": "ae.server.info.INIT.master",
+      "item.id": "ae.server.info.INIT",
+      "description": "Summarized state INIT"
+    },
+    "master/exporter/COEX.ST_L_BK_ROSCA_A.X": {
+      "datasource.id": "COEX.ST_L_BK_ROSCA_A.X.master",
+      "item.id": "COEX.ST_L_BK_ROSCA_A.X"
+    },
+    "master/exporter/COEX.ST_L_BK_ROSCA_C.X": {
+      "datasource.id": "COEX.ST_L_BK_ROSCA_C.X.master",
+      "item.id": "COEX.ST_L_BK_ROSCA_C.X"
+    },
+    "master/exporter/COEX.ST_L_BK_ROSCA_B.X": {
+      "datasource.id": "COEX.ST_L_BK_ROSCA_B.X.master",
+      "item.id": "COEX.ST_L_BK_ROSCA_B.X"
+    },
+    "master/exporter/COEX.BT_LG_CB.X": {
+      "datasource.id": "COEX.BT_LG_CB.X.master",
+      "item.id": "COEX.BT_LG_CB.X"
+    },
+    "master/exporter/COEX.BT_LG_CC.X": {
+      "datasource.id": "COEX.BT_LG_CC.X.master",
+      "item.id": "COEX.BT_LG_CC.X",
+      "description": "Description"
     },
     "master/exporter/COEX.BT_LG_CA.X": {
       "datasource.id": "COEX.BT_LG_CA.X.master",
@@ -158,23 +292,28 @@
       "item.id": "ae.server.info.NOT_OK_NOT_AKN",
       "description": "Summarized state NOT_OK_NOT_AKN"
     },
+    "master/exporter/COEX.STP_VEL_CB.X": {
+      "datasource.id": "COEX.STP_VEL_CB.X.master",
+      "item.id": "COEX.STP_VEL_CB.X"
+    },
+    "master/exporter/SYS.CURRENT_TIME.V": {
+      "datasource.id": "SYS.CURRENT_TIME.V.master",
+      "item.id": "SYS.CURRENT_TIME.V",
+      "description": "Current time"
+    },
+    "master/exporter/COEX.STP_VEL_CA.X": {
+      "datasource.id": "COEX.STP_VEL_CA.X.master",
+      "item.id": "COEX.STP_VEL_CA.X",
+      "description": ""
+    },
     "master/exporter/ae.server.info.OK": {
       "datasource.id": "ae.server.info.OK.master",
       "item.id": "ae.server.info.OK",
       "description": "Summarized state OK"
     },
-    "master/exporter/ae.server.info.INACTIVE": {
-      "datasource.id": "ae.server.info.INACTIVE.master",
-      "item.id": "ae.server.info.INACTIVE",
-      "description": "Summarized state INACTIVE"
-    },
-    "master/exporter/ES.DEMO.SUM.V": {
-      "datasource.id": "ES.DEMO.SUM.V.master",
-      "item.id": "ES.DEMO.SUM.V"
-    },
-    "master/exporter/ES.SUM.V": {
-      "datasource.id": "ES.SUM.V.master",
-      "item.id": "ES.SUM.V"
+    "master/exporter/COEX.STP_VEL_CC.X": {
+      "datasource.id": "COEX.STP_VEL_CC.X.master",
+      "item.id": "COEX.STP_VEL_CC.X"
     }
   },
   "ae.monitor.query": {
@@ -256,6 +395,24 @@
       "connection.uri": "da:ngp://interconnect:interconnect12@localhost:2101"
     }
   },
+  "org.eclipse.scada.da.manual": {
+    "SYS.CURRENT_TIME.V.local.manual": {
+      "master.id": "SYS.CURRENT_TIME.V.master",
+      "info.item": "SYS.CURRENT_TIME.V",
+      "handlerPriority": "500",
+      "info.system": "SCADA",
+      "info.level.0": "SYS",
+      "info.itemDescription": "Current time"
+    }
+  },
+  "org.eclipse.scada.da.datasource.script": {
+    "SYS.CURRENT_TIME.V.script": {
+      "init": "var DF \u003d new java.text.SimpleDateFormat (\"HH:mm:ss\");",
+      "timer": "100",
+      "timerCommand": "DF.format ( new java.util.Date() );",
+      "engine": "JavaScript"
+    }
+  },
   "ae.server.info": {
     "ae.server.info": {
       "prefix": "ae.server.info"
@@ -263,116 +420,20 @@
   },
   "org.eclipse.scada.da.master.common.marker": {
     "COEX": {
-      "master.id": "COEX.BT_LG_CA.X.master, COEX.ST_LG_CA.X.master, COEX.SUM.V.master, COEX.Vel_Atual_Canhao_A.X.master, COEX.Vel_Atual_Canhao_B.X.master, COEX.Vel_Atual_Canhao_C.X.master",
+      "master.id": "COEX.BT_LG_CA.X.master, COEX.BT_LG_CB.X.master, COEX.BT_LG_CC.X.master, COEX.STP_VEL_CA.X.master, COEX.STP_VEL_CB.X.master, COEX.STP_VEL_CC.X.master, COEX.ST_LG_CA.X.master, COEX.ST_LG_CB.X.master, COEX.ST_LG_CC.X.master, COEX.ST_L_BK_FD.X.master, COEX.ST_L_BK_ROSCA_A.X.master, COEX.ST_L_BK_ROSCA_B.X.master, COEX.ST_L_BK_ROSCA_C.X.master, COEX.SUM.V.master, COEX.Vel_Atual_Canhao_A.X.master, COEX.Vel_Atual_Canhao_B.X.master, COEX.Vel_Atual_Canhao_C.X.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
       "marker.maintenance.ack": "",
       "marker.maintenance.warning": ""
     },
-    "ES_DEMO_MODBUS": {
-      "master.id": "ES.DEMO.MODBUS.BT_LG_A.X.master, ES.DEMO.MODBUS.ST_LG_A.X.master, ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master, ES.DEMO.MODBUS.SUM.V.master, ES.DEMO.MODBUS.V11.X.master, ES.DEMO.MODBUS.V2.X.master",
+    "SYS": {
+      "master.id": "SYS.CURRENT_TIME.V.master, SYS.SUM.V.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
       "marker.maintenance.ack": "",
       "marker.maintenance.warning": ""
-    },
-    "ES": {
-      "master.id": "ES.SUM.V.master",
-      "handlerPriority": "10",
-      "exportAttribute": "true",
-      "alwaysExport": "true",
-      "marker.maintenance.ack": "",
-      "marker.maintenance.warning": ""
-    },
-    "ES_DEMO": {
-      "master.id": "ES.DEMO.SUM.V.master",
-      "handlerPriority": "10",
-      "exportAttribute": "true",
-      "alwaysExport": "true",
-      "marker.maintenance.ack": "",
-      "marker.maintenance.warning": ""
-    }
-  },
-  "org.eclipse.scada.ae.server.common.event.pool": {
-    "events.all": {
-      "filter": "(eventType\u003d*)",
-      "size": "10000"
-    }
-  },
-  "master.item": {
-    "ae.server.info.NOT_OK.master": {
-      "datasource.id": "ae.server.info.NOT_OK"
-    },
-    "ES.DEMO.MODBUS.V11.X.master": {
-      "datasource.id": "ES.DEMO.MODBUS.V11.X.source"
-    },
-    "COEX.ST_LG_CA.X.master": {
-      "datasource.id": "COEX.ST_LG_CA.X.source"
-    },
-    "COEX.Vel_Atual_Canhao_B.X.master": {
-      "datasource.id": "COEX.Vel_Atual_Canhao_B.X.source"
-    },
-    "ae.server.info.INIT.master": {
-      "datasource.id": "ae.server.info.INIT"
-    },
-    "ES.DEMO.MODBUS.ST_LG_A.X.master": {
-      "datasource.id": "ES.DEMO.MODBUS.ST_LG_A.X.source"
-    },
-    "ES.DEMO.MODBUS.BT_LG_A.X.master": {
-      "datasource.id": "ES.DEMO.MODBUS.BT_LG_A.X.source"
-    },
-    "ae.server.info.NOT_AKN.master": {
-      "datasource.id": "ae.server.info.NOT_AKN"
-    },
-    "COEX.BT_LG_CA.X.master": {
-      "datasource.id": "COEX.BT_LG_CA.X.source"
-    },
-    "ES.DEMO.MODBUS.SUM.V.master": {
-      "datasource.id": "ES.DEMO.MODBUS.SUM.V.sum"
-    },
-    "COEX.SUM.V.master": {
-      "datasource.id": "COEX.SUM.V.sum"
-    },
-    "ES.SUM.V.master": {
-      "datasource.id": "ES.SUM.V.sum"
-    },
-    "ES.DEMO.SUM.V.master": {
-      "datasource.id": "ES.DEMO.SUM.V.sum"
-    },
-    "COEX.Vel_Atual_Canhao_A.X.master": {
-      "datasource.id": "COEX.Vel_Atual_Canhao_A.X.source"
-    },
-    "ae.server.info.ALERT_ACTIVE.master": {
-      "datasource.id": "ae.server.info.ALERT_ACTIVE"
-    },
-    "ae.server.info.UNSAFE.master": {
-      "datasource.id": "ae.server.info.UNSAFE"
-    },
-    "ae.server.info.INACTIVE.master": {
-      "datasource.id": "ae.server.info.INACTIVE"
-    },
-    "ae.server.info.NOT_OK_NOT_AKN.master": {
-      "datasource.id": "ae.server.info.NOT_OK_NOT_AKN"
-    },
-    "COEX.Vel_Atual_Canhao_C.X.master": {
-      "datasource.id": "COEX.Vel_Atual_Canhao_C.X.source"
-    },
-    "ES.DEMO.MODBUS.V2.X.master": {
-      "datasource.id": "ES.DEMO.MODBUS.V2.X.source"
-    },
-    "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master": {
-      "datasource.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.source"
-    },
-    "ae.server.info.OK.master": {
-      "datasource.id": "ae.server.info.OK"
-    },
-    "ae.server.info.ALERT_DISABLED.master": {
-      "datasource.id": "ae.server.info.ALERT_DISABLED"
-    },
-    "ae.server.info.NOT_OK_AKN.master": {
-      "datasource.id": "ae.server.info.NOT_OK_AKN"
     }
   },
   "da.master.handler.sum": {
@@ -398,51 +459,6 @@
       "handlerPriority": "100",
       "tag.error.prefix": "phase1",
       "info.level.0": "COEX",
-      "tag": "error"
-    },
-    "ES.DEMO.SUM.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "ES.DEMO.SUM.V",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag.alarm.prefix": "phase2",
-      "tag.info.prefix": "phase2",
-      "master.id": "ES.DEMO.SUM.V.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "ES.DEMO.MODBUS.ST_LG_A.X.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "ES.DEMO.MODBUS.ST_LG_A.X",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "MODBUS",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag.alarm.prefix": "phase2",
-      "tag.info.prefix": "phase2",
-      "master.id": "ES.DEMO.MODBUS.ST_LG_A.X.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "ES.DEMO.MODBUS.ST_LG_A.X.sum.phase1": {
-      "master.id": "ES.DEMO.MODBUS.ST_LG_A.X.master",
-      "info.item": "ES.DEMO.MODBUS.ST_LG_A.X",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.2": "MODBUS",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
       "tag": "error"
     },
     "COEX.Vel_Atual_Canhao_B.X.sum.phase2": {
@@ -493,6 +509,22 @@
       "info.level.0": "COEX",
       "tag": "error"
     },
+    "SYS.SUM.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "SYS.SUM.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "SYS",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "SYS.SUM.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
     "COEX.Vel_Atual_Canhao_A.X.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
       "info.item": "COEX.Vel_Atual_Canhao_A.X",
@@ -509,6 +541,14 @@
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
+    "SYS.SUM.V.sum.phase1": {
+      "master.id": "SYS.SUM.V.master",
+      "info.item": "SYS.SUM.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "SYS",
+      "tag": "error"
+    },
     "COEX.Vel_Atual_Canhao_A.X.sum.phase1": {
       "master.id": "COEX.Vel_Atual_Canhao_A.X.master",
       "info.item": "COEX.Vel_Atual_Canhao_A.X",
@@ -517,84 +557,122 @@
       "info.level.0": "COEX",
       "tag": "error"
     },
-    "ES.DEMO.MODBUS.SUM.V.sum.phase1": {
-      "master.id": "ES.DEMO.MODBUS.SUM.V.master",
-      "info.item": "ES.DEMO.MODBUS.SUM.V",
+    "SYS.CURRENT_TIME.V.sum.phase1": {
+      "master.id": "SYS.CURRENT_TIME.V.master",
+      "info.item": "SYS.CURRENT_TIME.V",
+      "handlerPriority": "100",
+      "info.system": "SCADA",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "SYS",
+      "tag": "error",
+      "info.itemDescription": "Current time"
+    },
+    "COEX.ST_L_BK_FD.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "COEX.ST_L_BK_FD.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "COEX",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "COEX.ST_L_BK_FD.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "COEX.ST_L_BK_FD.X.sum.phase1": {
+      "master.id": "COEX.ST_L_BK_FD.X.master",
+      "info.item": "COEX.ST_L_BK_FD.X",
       "handlerPriority": "100",
       "tag.error.prefix": "phase1",
-      "info.level.2": "MODBUS",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
+      "info.level.0": "COEX",
       "tag": "error"
     },
-    "ES.DEMO.MODBUS.SUM.V.sum.phase2": {
+    "SYS.CURRENT_TIME.V.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "ES.DEMO.MODBUS.SUM.V",
+      "info.item": "SYS.CURRENT_TIME.V",
       "handlerPriority": "5000",
       "tag.error.ackRequired.prefix": "phase2",
       "tag.error.prefix": "phase2",
       "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "MODBUS",
       "tag.manual.prefix": "phase2",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
+      "info.level.0": "SYS",
       "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Current time",
       "tag.info.prefix": "phase2",
-      "master.id": "ES.DEMO.MODBUS.SUM.V.master",
+      "master.id": "SYS.CURRENT_TIME.V.master",
+      "info.system": "SCADA",
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
-    "ES.DEMO.MODBUS.V2.X.sum.phase1": {
-      "master.id": "ES.DEMO.MODBUS.V2.X.master",
-      "info.item": "ES.DEMO.MODBUS.V2.X",
+    "COEX.STP_VEL_CA.X.sum.phase1": {
+      "master.id": "COEX.STP_VEL_CA.X.master",
+      "info.item": "COEX.STP_VEL_CA.X",
       "handlerPriority": "100",
       "tag.error.prefix": "phase1",
-      "info.level.2": "MODBUS",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag": "error"
+      "info.level.0": "COEX",
+      "tag": "error",
+      "info.itemDescription": ""
     },
-    "ES.DEMO.MODBUS.V2.X.sum.phase2": {
+    "COEX.STP_VEL_CA.X.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "ES.DEMO.MODBUS.V2.X",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "MODBUS",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag.alarm.prefix": "phase2",
-      "tag.info.prefix": "phase2",
-      "master.id": "ES.DEMO.MODBUS.V2.X.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "ES.SUM.V.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "ES.SUM.V",
+      "info.item": "COEX.STP_VEL_CA.X",
       "handlerPriority": "5000",
       "tag.error.ackRequired.prefix": "phase2",
       "tag.error.prefix": "phase2",
       "tag.warning.ackRequired.prefix": "phase2",
       "tag.manual.prefix": "phase2",
-      "info.level.0": "ES",
+      "info.level.0": "COEX",
       "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "",
       "tag.info.prefix": "phase2",
-      "master.id": "ES.SUM.V.master",
+      "master.id": "COEX.STP_VEL_CA.X.master",
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
-    "ES.SUM.V.sum.phase1": {
-      "master.id": "ES.SUM.V.master",
-      "info.item": "ES.SUM.V",
+    "COEX.BT_LG_CB.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "COEX.BT_LG_CB.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "COEX",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "COEX.BT_LG_CB.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "COEX.STP_VEL_CB.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "COEX.STP_VEL_CB.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "COEX",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "COEX.STP_VEL_CB.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "COEX.STP_VEL_CC.X.sum.phase1": {
+      "master.id": "COEX.STP_VEL_CC.X.master",
+      "info.item": "COEX.STP_VEL_CC.X",
       "handlerPriority": "100",
       "tag.error.prefix": "phase1",
-      "info.level.0": "ES",
+      "info.level.0": "COEX",
       "tag": "error"
     },
     "COEX.BT_LG_CA.X.sum.phase2": {
@@ -613,6 +691,30 @@
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
+    "COEX.BT_LG_CB.X.sum.phase1": {
+      "master.id": "COEX.BT_LG_CB.X.master",
+      "info.item": "COEX.BT_LG_CB.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "COEX",
+      "tag": "error"
+    },
+    "COEX.STP_VEL_CC.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "COEX.STP_VEL_CC.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "COEX",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "COEX.STP_VEL_CC.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
     "COEX.BT_LG_CA.X.sum.phase1": {
       "master.id": "COEX.BT_LG_CA.X.master",
       "info.item": "COEX.BT_LG_CA.X",
@@ -621,51 +723,34 @@
       "info.level.0": "COEX",
       "tag": "error"
     },
-    "ES.DEMO.MODBUS.V11.X.sum.phase2": {
-      "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "ES.DEMO.MODBUS.V11.X",
-      "handlerPriority": "5000",
-      "tag.error.ackRequired.prefix": "phase2",
-      "tag.error.prefix": "phase2",
-      "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "MODBUS",
-      "tag.manual.prefix": "phase2",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag.alarm.prefix": "phase2",
-      "info.itemDescription": "This is the Variable V1",
-      "tag.info.prefix": "phase2",
-      "master.id": "ES.DEMO.MODBUS.V11.X.master",
-      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
-      "tag.blocked.prefix": "phase2",
-      "tag.warning.prefix": "phase2"
-    },
-    "ES.DEMO.MODBUS.V11.X.sum.phase1": {
-      "master.id": "ES.DEMO.MODBUS.V11.X.master",
-      "info.item": "ES.DEMO.MODBUS.V11.X",
+    "COEX.STP_VEL_CB.X.sum.phase1": {
+      "master.id": "COEX.STP_VEL_CB.X.master",
+      "info.item": "COEX.STP_VEL_CB.X",
       "handlerPriority": "100",
       "tag.error.prefix": "phase1",
-      "info.level.2": "MODBUS",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag": "error",
-      "info.itemDescription": "This is the Variable V1"
+      "info.level.0": "COEX",
+      "tag": "error"
     },
-    "ES.DEMO.MODBUS.BT_LG_A.X.sum.phase2": {
+    "COEX.ST_LG_CB.X.sum.phase1": {
+      "master.id": "COEX.ST_LG_CB.X.master",
+      "info.item": "COEX.ST_LG_CB.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "COEX",
+      "tag": "error"
+    },
+    "COEX.ST_LG_CB.X.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "ES.DEMO.MODBUS.BT_LG_A.X",
+      "info.item": "COEX.ST_LG_CB.X",
       "handlerPriority": "5000",
       "tag.error.ackRequired.prefix": "phase2",
       "tag.error.prefix": "phase2",
       "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "MODBUS",
       "tag.manual.prefix": "phase2",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
+      "info.level.0": "COEX",
       "tag.alarm.prefix": "phase2",
-      "info.itemDescription": "Description",
       "tag.info.prefix": "phase2",
-      "master.id": "ES.DEMO.MODBUS.BT_LG_A.X.master",
+      "master.id": "COEX.ST_LG_CB.X.master",
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
@@ -677,17 +762,6 @@
       "tag.error.prefix": "phase1",
       "info.level.0": "COEX",
       "tag": "error"
-    },
-    "ES.DEMO.MODBUS.BT_LG_A.X.sum.phase1": {
-      "master.id": "ES.DEMO.MODBUS.BT_LG_A.X.master",
-      "info.item": "ES.DEMO.MODBUS.BT_LG_A.X",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.2": "MODBUS",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag": "error",
-      "info.itemDescription": "Description"
     },
     "COEX.ST_LG_CA.X.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
@@ -705,42 +779,127 @@
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
     },
-    "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.sum.phase1": {
-      "master.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master",
-      "info.item": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.2": "MODBUS",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag": "error"
-    },
-    "ES.DEMO.SUM.V.sum.phase1": {
-      "master.id": "ES.DEMO.SUM.V.master",
-      "info.item": "ES.DEMO.SUM.V",
-      "handlerPriority": "100",
-      "tag.error.prefix": "phase1",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
-      "tag": "error"
-    },
-    "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.sum.phase2": {
+    "COEX.BT_LG_CC.X.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
-      "info.item": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X",
+      "info.item": "COEX.BT_LG_CC.X",
       "handlerPriority": "5000",
       "tag.error.ackRequired.prefix": "phase2",
       "tag.error.prefix": "phase2",
       "tag.warning.ackRequired.prefix": "phase2",
-      "info.level.2": "MODBUS",
       "tag.manual.prefix": "phase2",
-      "info.level.1": "DEMO",
-      "info.level.0": "ES",
+      "info.level.0": "COEX",
       "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Description",
       "tag.info.prefix": "phase2",
-      "master.id": "ES.DEMO.MODBUS.ST_L_BK_ROSCA_A.X.master",
+      "master.id": "COEX.BT_LG_CC.X.master",
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
+    },
+    "COEX.BT_LG_CC.X.sum.phase1": {
+      "master.id": "COEX.BT_LG_CC.X.master",
+      "info.item": "COEX.BT_LG_CC.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "COEX",
+      "tag": "error",
+      "info.itemDescription": "Description"
+    },
+    "COEX.ST_L_BK_ROSCA_C.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "COEX.ST_L_BK_ROSCA_C.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "COEX",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "COEX.ST_L_BK_ROSCA_C.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "COEX.ST_L_BK_ROSCA_C.X.sum.phase1": {
+      "master.id": "COEX.ST_L_BK_ROSCA_C.X.master",
+      "info.item": "COEX.ST_L_BK_ROSCA_C.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "COEX",
+      "tag": "error"
+    },
+    "COEX.ST_L_BK_ROSCA_A.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "COEX.ST_L_BK_ROSCA_A.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "COEX",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "COEX.ST_L_BK_ROSCA_A.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "COEX.ST_L_BK_ROSCA_A.X.sum.phase1": {
+      "master.id": "COEX.ST_L_BK_ROSCA_A.X.master",
+      "info.item": "COEX.ST_L_BK_ROSCA_A.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "COEX",
+      "tag": "error"
+    },
+    "COEX.ST_LG_CC.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "COEX.ST_LG_CC.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "COEX",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "COEX.ST_LG_CC.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "COEX.ST_L_BK_ROSCA_B.X.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "COEX.ST_L_BK_ROSCA_B.X",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "COEX",
+      "tag.alarm.prefix": "phase2",
+      "tag.info.prefix": "phase2",
+      "master.id": "COEX.ST_L_BK_ROSCA_B.X.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
+    "COEX.ST_LG_CC.X.sum.phase1": {
+      "master.id": "COEX.ST_LG_CC.X.master",
+      "info.item": "COEX.ST_LG_CC.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "COEX",
+      "tag": "error"
+    },
+    "COEX.ST_L_BK_ROSCA_B.X.sum.phase1": {
+      "master.id": "COEX.ST_L_BK_ROSCA_B.X.master",
+      "info.item": "COEX.ST_L_BK_ROSCA_B.X",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "COEX",
+      "tag": "error"
     }
   }
 }
