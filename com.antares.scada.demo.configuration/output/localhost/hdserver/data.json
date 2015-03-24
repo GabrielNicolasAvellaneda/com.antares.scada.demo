@@ -4,6 +4,10 @@
       "connection.id": "master.localhost",
       "item.id": "COEX.Vel_Atual_Canhao_A.X"
     },
+    "SYS.LAVG15.V/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "SYS.LAVG15.V"
+    },
     "COEX.Vel_Atual_Canhao_C.X/0.source": {
       "connection.id": "master.localhost",
       "item.id": "COEX.Vel_Atual_Canhao_C.X"
@@ -15,6 +19,10 @@
     "COEX.ST_LG_CB.X/0.source": {
       "connection.id": "master.localhost",
       "item.id": "COEX.ST_LG_CB.X"
+    },
+    "SYS.LAVG1.V/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "SYS.LAVG1.V"
     },
     "COEX.STP_VEL_CB.X/0.source": {
       "connection.id": "master.localhost",
@@ -43,6 +51,10 @@
     "SYS.CURRENT_TIME.V/0.source": {
       "connection.id": "master.localhost",
       "item.id": "SYS.CURRENT_TIME.V"
+    },
+    "SYS.LAVG5.V/0.source": {
+      "connection.id": "master.localhost",
+      "item.id": "SYS.LAVG5.V"
     },
     "COEX.BT_LG_CC.X/0.source": {
       "connection.id": "master.localhost",
@@ -73,8 +85,14 @@
     "SYS.CURRENT_TIME.V": {
       "datasource.id": "SYS.CURRENT_TIME.V/0.source"
     },
+    "SYS.LAVG5.V": {
+      "datasource.id": "SYS.LAVG5.V/0.source"
+    },
     "COEX.ST_L_BK_FD.X": {
       "datasource.id": "COEX.ST_L_BK_FD.X/0.source"
+    },
+    "SYS.LAVG1.V": {
+      "datasource.id": "SYS.LAVG1.V/0.source"
     },
     "COEX.BT_LG_CA.X": {
       "datasource.id": "COEX.BT_LG_CA.X/0.source"
@@ -108,6 +126,9 @@
     },
     "COEX.BT_LG_CC.X": {
       "datasource.id": "COEX.BT_LG_CC.X/0.source"
+    },
+    "SYS.LAVG15.V": {
+      "datasource.id": "SYS.LAVG15.V/0.source"
     },
     "COEX.STP_VEL_CA.X": {
       "datasource.id": "COEX.STP_VEL_CA.X/0.source"

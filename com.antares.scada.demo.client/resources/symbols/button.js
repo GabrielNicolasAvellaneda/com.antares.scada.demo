@@ -29,6 +29,9 @@ function ButtonBehaviourIncrement(button) {
 	self.incrementBy = parseInt(self.button.getProperty('incrementBy'));
 	self.maximum = parseInt(self.button.getProperty('maximum'));
 	self.switchInput = self.button.getProperty('switchInput');
+	if (self.switchInput == null) {
+		throw new Error('The switchInput property must be set.');
+	}
 }
 
 ButtonBehaviourIncrement.prototype.execute = function () {

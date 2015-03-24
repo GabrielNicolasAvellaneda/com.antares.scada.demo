@@ -11,7 +11,7 @@
     <children spanRows="2" horizontalAlignment="CENTER">
     	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/label.vi">
     		<properties key="valueOutput" value="COEX.Vel_Atual_Canhao_C.X" />
-    		<properties key="text" value="1234.00" />
+    		<properties key="type" value="dynamic" />
     		<properties key="backgroundColor" value="#fed24d" />
     	</element>
     </children>

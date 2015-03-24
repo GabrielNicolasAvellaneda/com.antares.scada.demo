@@ -29,10 +29,10 @@
       <connections xsi:type="osgi:DataAccessConnection" shortDescription="Connection to ourself" name="self" endpoint="//@nodes.0/@endpoints.2">
         <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
       </connections>
-      <connections xsi:type="osgi:DataAccessConnection" name="driver.exec.on.localhost" endpoint="//@nodes.0/@endpoints.5">
+      <connections xsi:type="osgi:DataAccessConnection" name="driver.modbus.on.localhost" endpoint="//@nodes.0/@endpoints.6">
         <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
       </connections>
-      <connections xsi:type="osgi:DataAccessConnection" name="driver.modbus.on.localhost" endpoint="//@nodes.0/@endpoints.6">
+      <connections xsi:type="osgi:DataAccessConnection" name="driver.exec.on.localhost" endpoint="//@nodes.0/@endpoints.5">
         <credentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
       </connections>
       <exporter xsi:type="osgi:ConfigurationAdministratorExporter" name="master/exporter" endpoints="//@nodes.0/@endpoints.0"/>
@@ -55,18 +55,21 @@
         <exports item="//@nodes.0/@applications.0/@items.14" exportName="COEX.ST_L_BK_ROSCA_C.X"/>
         <exports item="//@nodes.0/@applications.0/@items.15" exportName="COEX.ST_L_BK_FD.X"/>
         <exports item="//@nodes.0/@applications.0/@items.16" exportName="SYS.CURRENT_TIME.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.17" exportName="COEX.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.18" exportName="SYS.SUM.V"/>
-        <exports item="//@nodes.0/@applications.0/@items.19" exportName="ae.server.info.ALERT_ACTIVE"/>
-        <exports item="//@nodes.0/@applications.0/@items.20" exportName="ae.server.info.ALERT_DISABLED"/>
-        <exports item="//@nodes.0/@applications.0/@items.21" exportName="ae.server.info.OK"/>
-        <exports item="//@nodes.0/@applications.0/@items.22" exportName="ae.server.info.NOT_OK"/>
-        <exports item="//@nodes.0/@applications.0/@items.23" exportName="ae.server.info.UNSAFE"/>
-        <exports item="//@nodes.0/@applications.0/@items.24" exportName="ae.server.info.INACTIVE"/>
-        <exports item="//@nodes.0/@applications.0/@items.25" exportName="ae.server.info.INIT"/>
-        <exports item="//@nodes.0/@applications.0/@items.26" exportName="ae.server.info.NOT_OK_AKN"/>
-        <exports item="//@nodes.0/@applications.0/@items.27" exportName="ae.server.info.NOT_OK_NOT_AKN"/>
-        <exports item="//@nodes.0/@applications.0/@items.28" exportName="ae.server.info.NOT_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.17" exportName="SYS.LAVG1.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.18" exportName="SYS.LAVG5.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.19" exportName="SYS.LAVG15.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.20" exportName="COEX.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.21" exportName="SYS.SUM.V"/>
+        <exports item="//@nodes.0/@applications.0/@items.22" exportName="ae.server.info.ALERT_ACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.23" exportName="ae.server.info.ALERT_DISABLED"/>
+        <exports item="//@nodes.0/@applications.0/@items.24" exportName="ae.server.info.OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.25" exportName="ae.server.info.NOT_OK"/>
+        <exports item="//@nodes.0/@applications.0/@items.26" exportName="ae.server.info.UNSAFE"/>
+        <exports item="//@nodes.0/@applications.0/@items.27" exportName="ae.server.info.INACTIVE"/>
+        <exports item="//@nodes.0/@applications.0/@items.28" exportName="ae.server.info.INIT"/>
+        <exports item="//@nodes.0/@applications.0/@items.29" exportName="ae.server.info.NOT_OK_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.30" exportName="ae.server.info.NOT_OK_NOT_AKN"/>
+        <exports item="//@nodes.0/@applications.0/@items.31" exportName="ae.server.info.NOT_AKN"/>
       </exporter>
       <customizationProfile name="Local customization profile">
         <start name="org.eclipse.scada.sec.provider.plain.property"/>
@@ -78,8 +81,8 @@
       </customizationProfile>
       <securityConfiguration href="../global/global.security#/"/>
       <summaryGroups name="COEX" items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.6 //@nodes.0/@applications.0/@items.7 //@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.9 //@nodes.0/@applications.0/@items.10 //@nodes.0/@applications.0/@items.11 //@nodes.0/@applications.0/@items.12 //@nodes.0/@applications.0/@items.13 //@nodes.0/@applications.0/@items.14 //@nodes.0/@applications.0/@items.15"/>
-      <summaryGroups name="SYS" items="//@nodes.0/@applications.0/@items.16"/>
-      <items xsi:type="osgi:SourceItem" name="COEX.BT_LG_CA.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.OUTPUT.BT_LG_CA">
+      <summaryGroups name="SYS" items="//@nodes.0/@applications.0/@items.16 //@nodes.0/@applications.0/@items.17 //@nodes.0/@applications.0/@items.18 //@nodes.0/@applications.0/@items.19"/>
+      <items xsi:type="osgi:SourceItem" name="COEX.BT_LG_CA.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.OUTPUT.BT_LG_CA">
         <information dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -98,7 +101,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.ST_LG_CA.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.ST_LG_CA">
+      <items xsi:type="osgi:SourceItem" name="COEX.ST_LG_CA.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.ST_LG_CA">
         <information dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -117,7 +120,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.Vel_Atual_Canhao_A.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.Vel_Atual_Canhao_A">
+      <items xsi:type="osgi:SourceItem" name="COEX.Vel_Atual_Canhao_A.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.Vel_Atual_Canhao_A">
         <information dataType="INT32">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -136,7 +139,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.STP_VEL_CA.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.OUTPUT.STP_VEL_CA">
+      <items xsi:type="osgi:SourceItem" name="COEX.STP_VEL_CA.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.OUTPUT.STP_VEL_CA">
         <information description="" dataType="INT32">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -155,7 +158,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.BT_LG_CB.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.OUTPUT.BT_LG_CB">
+      <items xsi:type="osgi:SourceItem" name="COEX.BT_LG_CB.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.OUTPUT.BT_LG_CB">
         <information dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -174,7 +177,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.ST_LG_CB.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.ST_LG_CB">
+      <items xsi:type="osgi:SourceItem" name="COEX.ST_LG_CB.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.ST_LG_CB">
         <information dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -193,7 +196,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.Vel_Atual_Canhao_B.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.Vel_Atual_Canhao_B">
+      <items xsi:type="osgi:SourceItem" name="COEX.Vel_Atual_Canhao_B.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.Vel_Atual_Canhao_B">
         <information dataType="INT32">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -212,7 +215,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.STP_VEL_CB.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.OUTPUT.STP_VEL_CB">
+      <items xsi:type="osgi:SourceItem" name="COEX.STP_VEL_CB.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.OUTPUT.STP_VEL_CB">
         <information dataType="INT32">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -231,7 +234,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.BT_LG_CC.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.OUTPUT.BT_LG_CC">
+      <items xsi:type="osgi:SourceItem" name="COEX.BT_LG_CC.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.OUTPUT.BT_LG_CC">
         <information description="Description" dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -250,7 +253,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.ST_LG_CC.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.ST_LG_CC">
+      <items xsi:type="osgi:SourceItem" name="COEX.ST_LG_CC.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.ST_LG_CC">
         <information dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -269,7 +272,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.Vel_Atual_Canhao_C.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.Vel_Atual_Canhao_C">
+      <items xsi:type="osgi:SourceItem" name="COEX.Vel_Atual_Canhao_C.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.Vel_Atual_Canhao_C">
         <information dataType="INT32">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -288,7 +291,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.STP_VEL_CC.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.OUTPUT.STP_VEL_CC">
+      <items xsi:type="osgi:SourceItem" name="COEX.STP_VEL_CC.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.OUTPUT.STP_VEL_CC">
         <information>
           <hierarchy>COEX</hierarchy>
         </information>
@@ -307,7 +310,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.ST_L_BK_ROSCA_A.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.ST_L_BK_ROSCA_A">
+      <items xsi:type="osgi:SourceItem" name="COEX.ST_L_BK_ROSCA_A.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.ST_L_BK_ROSCA_A">
         <information dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -326,7 +329,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.ST_L_BK_ROSCA_B.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.ST_L_BK_ROSCA_B">
+      <items xsi:type="osgi:SourceItem" name="COEX.ST_L_BK_ROSCA_B.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.ST_L_BK_ROSCA_B">
         <information dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -345,7 +348,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.ST_L_BK_ROSCA_C.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.ST_L_BK_ROSCA_C">
+      <items xsi:type="osgi:SourceItem" name="COEX.ST_L_BK_ROSCA_C.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.ST_L_BK_ROSCA_C">
         <information dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -364,7 +367,7 @@
           <attributes>blocked</attributes>
         </itemFeatures>
       </items>
-      <items xsi:type="osgi:SourceItem" name="COEX.ST_L_BK_FD.X" connection="//@nodes.0/@applications.0/@connections.2" sourceName="modbus.data.S1.INPUT.ST_L_BK_FD">
+      <items xsi:type="osgi:SourceItem" name="COEX.ST_L_BK_FD.X" connection="//@nodes.0/@applications.0/@connections.1" sourceName="modbus.data.S1.INPUT.ST_L_BK_FD">
         <information dataType="BOOLEAN">
           <hierarchy>COEX</hierarchy>
         </information>
@@ -406,6 +409,66 @@
         <timer period="100">
           <script code="DF.format ( new java.util.Date() );"/>
         </timer>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="SYS.LAVG1.V" connection="//@nodes.0/@applications.0/@connections.2" sourceName="CMD.SYS.LAVG1.A.loadAvg1">
+        <information description="Load Average 1m" dataType="FLOAT">
+          <hierarchy>SYS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:ManualOverride" name="local.manual"/>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="SYS.LAVG5.V" connection="//@nodes.0/@applications.0/@connections.2" sourceName="CMD.SYS.LAVG1.A.loadAvg5">
+        <information description="Load Average 5m" dataType="FLOAT">
+          <hierarchy>SYS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:ManualOverride" name="local.manual"/>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
+      </items>
+      <items xsi:type="osgi:SourceItem" name="SYS.LAVG15.V" connection="//@nodes.0/@applications.0/@connections.2" sourceName="CMD.SYS.LAVG1.A.loadAvg15">
+        <information description="Load Average 15m" dataType="FLOAT">
+          <hierarchy>SYS</hierarchy>
+        </information>
+        <itemFeatures xsi:type="osgi:ManualOverride" name="local.manual"/>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase1" outputPrefix="phase1">
+          <attributes>error</attributes>
+        </itemFeatures>
+        <itemFeatures xsi:type="osgi:AttributesSummary" name="sum.phase2" outputPrefix="phase2">
+          <attributes>manual</attributes>
+          <attributes>error</attributes>
+          <attributes>alarm</attributes>
+          <attributes>warning</attributes>
+          <attributes>info</attributes>
+          <attributes>error.ackRequired</attributes>
+          <attributes>alarm.ackRequired</attributes>
+          <attributes>warning.ackRequired</attributes>
+          <attributes>blocked</attributes>
+        </itemFeatures>
       </items>
       <items xsi:type="osgi:SummaryItem" name="COEX.SUM.V" group="//@nodes.0/@applications.0/@summaryGroups.0">
         <information>
@@ -476,11 +539,11 @@
         <information description="Summarized state NOT_OK_AKN" system="SCADA"/>
       </items>
       <markers>
-        <markerGroups items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.6 //@nodes.0/@applications.0/@items.7 //@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.9 //@nodes.0/@applications.0/@items.10 //@nodes.0/@applications.0/@items.11 //@nodes.0/@applications.0/@items.12 //@nodes.0/@applications.0/@items.13 //@nodes.0/@applications.0/@items.14 //@nodes.0/@applications.0/@items.15 //@nodes.0/@applications.0/@items.17" name="COEX">
+        <markerGroups items="//@nodes.0/@applications.0/@items.0 //@nodes.0/@applications.0/@items.1 //@nodes.0/@applications.0/@items.2 //@nodes.0/@applications.0/@items.3 //@nodes.0/@applications.0/@items.4 //@nodes.0/@applications.0/@items.5 //@nodes.0/@applications.0/@items.6 //@nodes.0/@applications.0/@items.7 //@nodes.0/@applications.0/@items.8 //@nodes.0/@applications.0/@items.9 //@nodes.0/@applications.0/@items.10 //@nodes.0/@applications.0/@items.11 //@nodes.0/@applications.0/@items.12 //@nodes.0/@applications.0/@items.13 //@nodes.0/@applications.0/@items.14 //@nodes.0/@applications.0/@items.15 //@nodes.0/@applications.0/@items.20" name="COEX">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
-        <markerGroups items="//@nodes.0/@applications.0/@items.16 //@nodes.0/@applications.0/@items.18" name="SYS">
+        <markerGroups items="//@nodes.0/@applications.0/@items.16 //@nodes.0/@applications.0/@items.17 //@nodes.0/@applications.0/@items.18 //@nodes.0/@applications.0/@items.19 //@nodes.0/@applications.0/@items.21" name="SYS">
           <markers name="maintenance.warning"/>
           <markers name="maintenance.ack"/>
         </markerGroups>
@@ -526,6 +589,9 @@
       <archives name="COEX.ST_L_BK_ROSCA_C.X" items="//@nodes.0/@applications.0/@items.14"/>
       <archives name="COEX.ST_L_BK_FD.X" items="//@nodes.0/@applications.0/@items.15"/>
       <archives name="SYS.CURRENT_TIME.V" items="//@nodes.0/@applications.0/@items.16"/>
+      <archives name="SYS.LAVG1.V" items="//@nodes.0/@applications.0/@items.17"/>
+      <archives name="SYS.LAVG5.V" items="//@nodes.0/@applications.0/@items.18"/>
+      <archives name="SYS.LAVG15.V" items="//@nodes.0/@applications.0/@items.19"/>
     </applications>
     <applications xsi:type="world:ExecDriver" name="exec" endpoints="//@nodes.0/@endpoints.5">
       <password password="driver12"/>

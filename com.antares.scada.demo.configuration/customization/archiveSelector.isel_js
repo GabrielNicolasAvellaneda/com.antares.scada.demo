@@ -6,13 +6,13 @@ function select () {
 		return true;
 	}
 	
-	if ( request.isLocalTags ( [ "LUX", "V" ] ) ) {
+	if ( request.isLocalTags ( [ "Vel_Atual_Canhao_A", "X" ] ) ) {
 		return true;
 	}
 	
-	//return false;
+	return true;
 	
-	return true;	// Always persist.
+	//return true;	// Always persist.
 }
 
 select (); // use return value

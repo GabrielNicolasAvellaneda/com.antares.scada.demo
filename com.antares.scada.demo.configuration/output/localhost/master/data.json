@@ -4,6 +4,10 @@
       "connection.id": "driver.modbus.on.localhost",
       "item.id": "modbus.data.S1.INPUT.ST_L_BK_ROSCA_A"
     },
+    "SYS.LAVG15.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.SYS.LAVG1.A.loadAvg15"
+    },
     "COEX.Vel_Atual_Canhao_A.X.source": {
       "connection.id": "driver.modbus.on.localhost",
       "item.id": "modbus.data.S1.INPUT.Vel_Atual_Canhao_A"
@@ -28,9 +32,17 @@
       "connection.id": "driver.modbus.on.localhost",
       "item.id": "modbus.data.S1.INPUT.ST_LG_CC"
     },
+    "SYS.LAVG5.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.SYS.LAVG1.A.loadAvg5"
+    },
     "COEX.STP_VEL_CA.X.source": {
       "connection.id": "driver.modbus.on.localhost",
       "item.id": "modbus.data.S1.OUTPUT.STP_VEL_CA"
+    },
+    "SYS.LAVG1.V.source": {
+      "connection.id": "driver.exec.on.localhost",
+      "item.id": "CMD.SYS.LAVG1.A.loadAvg1"
     },
     "COEX.ST_L_BK_ROSCA_C.X.source": {
       "connection.id": "driver.modbus.on.localhost",
@@ -72,6 +84,9 @@
     }
   },
   "master.item": {
+    "SYS.LAVG5.V.master": {
+      "datasource.id": "SYS.LAVG5.V.source"
+    },
     "ae.server.info.INIT.master": {
       "datasource.id": "ae.server.info.INIT"
     },
@@ -83,6 +98,9 @@
     },
     "COEX.ST_L_BK_ROSCA_C.X.master": {
       "datasource.id": "COEX.ST_L_BK_ROSCA_C.X.source"
+    },
+    "SYS.LAVG15.V.master": {
+      "datasource.id": "SYS.LAVG15.V.source"
     },
     "COEX.BT_LG_CB.X.master": {
       "datasource.id": "COEX.BT_LG_CB.X.source"
@@ -138,6 +156,9 @@
     "COEX.STP_VEL_CA.X.master": {
       "datasource.id": "COEX.STP_VEL_CA.X.source"
     },
+    "SYS.LAVG1.V.master": {
+      "datasource.id": "SYS.LAVG1.V.source"
+    },
     "COEX.SUM.V.master": {
       "datasource.id": "COEX.SUM.V.sum"
     },
@@ -181,6 +202,9 @@
       "datasource.11": "COEX.ST_L_BK_ROSCA_B.X.master"
     },
     "SYS.SUM.V.sum": {
+      "datasource.1": "SYS.LAVG1.V.master",
+      "datasource.2": "SYS.LAVG15.V.master",
+      "datasource.3": "SYS.LAVG5.V.master",
       "groups": "blocked,alarm,warning,manual,error,ackRequired,info",
       "datasource.0": "SYS.CURRENT_TIME.V.master"
     }
@@ -243,9 +267,19 @@
       "item.id": "ae.server.info.ALERT_DISABLED",
       "description": "Alert disabled"
     },
+    "master/exporter/SYS.LAVG5.V": {
+      "datasource.id": "SYS.LAVG5.V.master",
+      "item.id": "SYS.LAVG5.V",
+      "description": "Load Average 5m"
+    },
     "master/exporter/COEX.SUM.V": {
       "datasource.id": "COEX.SUM.V.master",
       "item.id": "COEX.SUM.V"
+    },
+    "master/exporter/SYS.LAVG1.V": {
+      "datasource.id": "SYS.LAVG1.V.master",
+      "item.id": "SYS.LAVG1.V",
+      "description": "Load Average 1m"
     },
     "master/exporter/ae.server.info.NOT_OK_AKN": {
       "datasource.id": "ae.server.info.NOT_OK_AKN.master",
@@ -305,6 +339,11 @@
       "datasource.id": "COEX.STP_VEL_CA.X.master",
       "item.id": "COEX.STP_VEL_CA.X",
       "description": ""
+    },
+    "master/exporter/SYS.LAVG15.V": {
+      "datasource.id": "SYS.LAVG15.V.master",
+      "item.id": "SYS.LAVG15.V",
+      "description": "Load Average 15m"
     },
     "master/exporter/ae.server.info.OK": {
       "datasource.id": "ae.server.info.OK.master",
@@ -403,6 +442,27 @@
       "info.system": "SCADA",
       "info.level.0": "SYS",
       "info.itemDescription": "Current time"
+    },
+    "SYS.LAVG1.V.local.manual": {
+      "master.id": "SYS.LAVG1.V.master",
+      "info.item": "SYS.LAVG1.V",
+      "handlerPriority": "500",
+      "info.level.0": "SYS",
+      "info.itemDescription": "Load Average 1m"
+    },
+    "SYS.LAVG5.V.local.manual": {
+      "master.id": "SYS.LAVG5.V.master",
+      "info.item": "SYS.LAVG5.V",
+      "handlerPriority": "500",
+      "info.level.0": "SYS",
+      "info.itemDescription": "Load Average 5m"
+    },
+    "SYS.LAVG15.V.local.manual": {
+      "master.id": "SYS.LAVG15.V.master",
+      "info.item": "SYS.LAVG15.V",
+      "handlerPriority": "500",
+      "info.level.0": "SYS",
+      "info.itemDescription": "Load Average 15m"
     }
   },
   "org.eclipse.scada.da.datasource.script": {
@@ -428,7 +488,7 @@
       "marker.maintenance.warning": ""
     },
     "SYS": {
-      "master.id": "SYS.CURRENT_TIME.V.master, SYS.SUM.V.master",
+      "master.id": "SYS.CURRENT_TIME.V.master, SYS.LAVG1.V.master, SYS.LAVG15.V.master, SYS.LAVG5.V.master, SYS.SUM.V.master",
       "handlerPriority": "10",
       "exportAttribute": "true",
       "alwaysExport": "true",
@@ -731,6 +791,32 @@
       "info.level.0": "COEX",
       "tag": "error"
     },
+    "SYS.LAVG1.V.sum.phase1": {
+      "master.id": "SYS.LAVG1.V.master",
+      "info.item": "SYS.LAVG1.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "SYS",
+      "tag": "error",
+      "info.itemDescription": "Load Average 1m"
+    },
+    "SYS.LAVG1.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "SYS.LAVG1.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "SYS",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 1m",
+      "tag.info.prefix": "phase2",
+      "master.id": "SYS.LAVG1.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
     "COEX.ST_LG_CB.X.sum.phase1": {
       "master.id": "COEX.ST_LG_CB.X.master",
       "info.item": "COEX.ST_LG_CB.X",
@@ -738,6 +824,23 @@
       "tag.error.prefix": "phase1",
       "info.level.0": "COEX",
       "tag": "error"
+    },
+    "SYS.LAVG15.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "SYS.LAVG15.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "SYS",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 15m",
+      "tag.info.prefix": "phase2",
+      "master.id": "SYS.LAVG15.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
     },
     "COEX.ST_LG_CB.X.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
@@ -754,6 +857,15 @@
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
+    },
+    "SYS.LAVG15.V.sum.phase1": {
+      "master.id": "SYS.LAVG15.V.master",
+      "info.item": "SYS.LAVG15.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "SYS",
+      "tag": "error",
+      "info.itemDescription": "Load Average 15m"
     },
     "COEX.ST_LG_CA.X.sum.phase1": {
       "master.id": "COEX.ST_LG_CA.X.master",
@@ -853,6 +965,23 @@
       "info.level.0": "COEX",
       "tag": "error"
     },
+    "SYS.LAVG5.V.sum.phase2": {
+      "tag.alarm.ackRequired.prefix": "phase2",
+      "info.item": "SYS.LAVG5.V",
+      "handlerPriority": "5000",
+      "tag.error.ackRequired.prefix": "phase2",
+      "tag.error.prefix": "phase2",
+      "tag.warning.ackRequired.prefix": "phase2",
+      "tag.manual.prefix": "phase2",
+      "info.level.0": "SYS",
+      "tag.alarm.prefix": "phase2",
+      "info.itemDescription": "Load Average 5m",
+      "tag.info.prefix": "phase2",
+      "master.id": "SYS.LAVG5.V.master",
+      "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
+      "tag.blocked.prefix": "phase2",
+      "tag.warning.prefix": "phase2"
+    },
     "COEX.ST_LG_CC.X.sum.phase2": {
       "tag.alarm.ackRequired.prefix": "phase2",
       "info.item": "COEX.ST_LG_CC.X",
@@ -884,6 +1013,15 @@
       "tag": "manual, error, alarm, warning, info, error.ackRequired, alarm.ackRequired, warning.ackRequired, blocked",
       "tag.blocked.prefix": "phase2",
       "tag.warning.prefix": "phase2"
+    },
+    "SYS.LAVG5.V.sum.phase1": {
+      "master.id": "SYS.LAVG5.V.master",
+      "info.item": "SYS.LAVG5.V",
+      "handlerPriority": "100",
+      "tag.error.prefix": "phase1",
+      "info.level.0": "SYS",
+      "tag": "error",
+      "info.itemDescription": "Load Average 5m"
     },
     "COEX.ST_LG_CC.X.sum.phase1": {
       "master.id": "COEX.ST_LG_CC.X.master",

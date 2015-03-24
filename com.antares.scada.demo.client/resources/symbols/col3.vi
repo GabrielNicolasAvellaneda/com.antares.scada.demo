@@ -11,7 +11,7 @@
     <children spanRows="2" horizontalAlignment="CENTER">
     	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/label.vi">
     		<properties key="valueOutput" value="COEX.Vel_Atual_Canhao_C.X" />
-    		<properties key="text" value="1234.00" />
+    		<properties key="type" value="dynamic" />
     		<properties key="backgroundColor" value="#fed24d" />
     	</element>
     </children>
@@ -60,7 +60,14 @@
     
     <children spanRows="2" horizontalAlignment="CENTER">
     	<element xsi:type="visualInterface:SymbolReference" uri="../symbols/smalllabel.vi">
-    		<properties key="text" value="Bloqueado A" />
+    		<properties key="type" value="indicator" />
+    		<properties key="lensOutput" value="COEX.ST_L_BK_ROSCA_C.X" />
+    		<properties key="offLens.text" value="Bloqueado C" />
+    		<properties key="offLens.backgroundColor" value="#e66b6b" />
+    		<properties key="offLens.foregroundColor" value="#ffffff" />
+    		<properties key="onLens.text" value="Liberado C" />
+    		<properties key="onLens.backgroundColor" value="#00ff00" />
+    		<properties key="onLens.foregroundColor" value="#ffffff" />
     		<properties key="backgroundColor" value="#e66b6b" />
     	</element>
     </children>

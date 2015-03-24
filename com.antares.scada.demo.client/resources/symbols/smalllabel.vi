@@ -3,8 +3,7 @@
 	xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface"
 	onInit="var ctx = new Label(controller, data); ctx.init()" onUpdate="ctx.update()">
-	<root xsi:type="visualInterface:FigureContainer" name="mainContainer"
-		cursor="//@cursors">
+	<root xsi:type="visualInterface:FigureContainer" name="mainContainer">
 		<size width="150.0" height="40.0" />
 		<content xsi:type="visualInterface:BorderContainer" name="borderContainer">
 			<children>
