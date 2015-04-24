@@ -1,70 +1,24 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_1DA8QMHlEeSt_YDd5zSHwg">
-  <levels xmi:id="_CgF4EMnLEeSjptOA6-rQCQ" name="COEX">
-    <components xsi:type="component:ExternalValue" xmi:id="_HBaooMwEEeSjptOA6-rQCQ" name="BT_LG_CA" dataType="BOOLEAN" sourceName="modbus.data.S1.OUTPUT.BT_LG_CA">
+  <levels xmi:id="_CgF4EMnLEeSjptOA6-rQCQ" name="LAMIFLEX">
+    <components xsi:type="component:ExternalValue" xmi:id="_-QYMoMwKEeSjptOA6-rQCQ" name="FLOAT_VARIABLE1" dataType="FLOAT" sourceName="modbus.data.S1.HOLDING_B1.FLOAT_VARIABLE">
       <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
       <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
     </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_-QYMoMwKEeSjptOA6-rQCQ" name="ST_LG_CA" dataType="BOOLEAN" sourceName="modbus.data.S1.INPUT.ST_LG_CA">
+    <components xsi:type="component:ExternalValue" xmi:id="_aMaIcOqxEeS-c5EJ0MpBhg" name="FLOAT_VARIABLE2" dataType="FLOAT" sourceName="modbus.data.S1.HOLDING_B2.FLOAT_VARIABLE">
       <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
       <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
     </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_4u2yEMnLEeSjptOA6-rQCQ" name="Vel_Atual_Canhao_A" dataType="INT32" sourceName="modbus.data.S1.INPUT.Vel_Atual_Canhao_A">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_xU-OcMzAEeSjptOA6-rQCQ" shortDescription="" name="STP_VEL_CA" dataType="INT32" sourceName="modbus.data.S1.OUTPUT.STP_VEL_CA">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_nWxZAMxJEeSjptOA6-rQCQ" name="BT_LG_CB" dataType="BOOLEAN" sourceName="modbus.data.S1.OUTPUT.BT_LG_CB">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_0o9n0MxJEeSjptOA6-rQCQ" name="ST_LG_CB" dataType="BOOLEAN" sourceName="modbus.data.S1.INPUT.ST_LG_CB">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_wnSEcMwwEeSjptOA6-rQCQ" name="Vel_Atual_Canhao_B" dataType="INT32" sourceName="modbus.data.S1.INPUT.Vel_Atual_Canhao_B">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_b8-gsMzBEeSjptOA6-rQCQ" name="STP_VEL_CB" dataType="INT32" sourceName="modbus.data.S1.OUTPUT.STP_VEL_CB">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_fCSKcMaPEeSt_YDd5zSHwg" shortDescription="Description" name="BT_LG_CC" dataType="BOOLEAN" sourceName="modbus.data.S1.OUTPUT.BT_LG_CC">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_AOefAMaPEeSt_YDd5zSHwg" name="ST_LG_CC" dataType="BOOLEAN" sourceName="modbus.data.S1.INPUT.ST_LG_CC">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_5cz6sMwwEeSjptOA6-rQCQ" name="Vel_Atual_Canhao_C" dataType="INT32" sourceName="modbus.data.S1.INPUT.Vel_Atual_Canhao_C">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_l4fuoMzBEeSjptOA6-rQCQ" name="STP_VEL_CC" sourceName="modbus.data.S1.OUTPUT.STP_VEL_CC">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_Pv0SsMafEeSt_YDd5zSHwg" name="ST_L_BK_ROSCA_A" dataType="BOOLEAN" sourceName="modbus.data.S1.INPUT.ST_L_BK_ROSCA_A">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_zKJSQMy-EeSjptOA6-rQCQ" name="ST_L_BK_ROSCA_B" dataType="BOOLEAN" sourceName="modbus.data.S1.INPUT.ST_L_BK_ROSCA_B">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="__RW7sMy-EeSjptOA6-rQCQ" name="ST_L_BK_ROSCA_C" dataType="BOOLEAN" sourceName="modbus.data.S1.INPUT.ST_L_BK_ROSCA_C">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
-    <components xsi:type="component:ExternalValue" xmi:id="_Pe79kMy_EeSjptOA6-rQCQ" name="ST_L_BK_FD" dataType="BOOLEAN" sourceName="modbus.data.S1.INPUT.ST_L_BK_FD">
-      <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
-      <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
-    </components>
+    <levels xmi:id="_5VBmQOqxEeS-c5EJ0MpBhg" name="ALARM">
+      <components xsi:type="component:ExternalValue" xmi:id="_7P-3EOqxEeS-c5EJ0MpBhg" name="BOOLEAN_ALARM1" dataType="BOOLEAN" sourceName="modbus.data.S1.ALARM.ALARM1">
+        <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
+        <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
+      </components>
+      <components xsi:type="component:ExternalValue" xmi:id="_0FbfcOqyEeS-c5EJ0MpBhg" name="FLOAT_ALARM1" dataType="FLOAT" sourceName="modbus.data.S1.ALARM.ALARM2">
+        <masterOn href="world.esim#_1C94-cHlEeSt_YDd5zSHwg"/>
+        <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_xyApEMHmEeSt_YDd5zSHwg"/>
+      </components>
+    </levels>
   </levels>
   <levels xmi:id="_bfg9EMzLEeSjptOA6-rQCQ" name="SYS">
     <components xsi:type="common:CurrentTimeComponent" xmi:id="_i8uVgMzLEeSjptOA6-rQCQ" dateFormat="HH:mm:ss">

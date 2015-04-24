@@ -1,59 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <memory:TypeSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:memory="http://eclipse.org/SCADA/Configuration/Memory" name="TS1">
-  <types name="HOLDING_STANDARD"/>
-  <types name="HOLDING_INPUT">
-    <variables name="ST_LG_CA">
+  <types name="HOLDING_B1">
+    <variables name="FLOAT_VARIABLE">
       <type xsi:type="memory:UnsignedInteger16Type"/>
     </variables>
-    <variables name="Vel_Atual_Canhao_A">
-      <type xsi:type="memory:UnsignedInteger16Type" index="2"/>
+  </types>
+  <types name="HOLDING_B2">
+    <variables name="FLOAT_VARIABLE">
+      <type xsi:type="memory:UnsignedInteger16Type"/>
     </variables>
-    <variables name="ST_LG_CB">
-      <type xsi:type="memory:UnsignedInteger16Type" index="4"/>
-    </variables>
-    <variables name="Vel_Atual_Canhao_B">
-      <type xsi:type="memory:UnsignedInteger16Type" index="6"/>
-    </variables>
-    <variables name="ST_LG_CC">
-      <type xsi:type="memory:UnsignedInteger16Type" index="8"/>
-    </variables>
-    <variables name="Vel_Atual_Canhao_C">
-      <type xsi:type="memory:UnsignedInteger16Type" index="10"/>
-    </variables>
-    <variables name="ST_Vel_Linha">
-      <type xsi:type="memory:UnsignedInteger16Type" index="12"/>
-    </variables>
-    <variables name="ST_L_BK_ROSCA_A">
-      <type xsi:type="memory:UnsignedInteger16Type" index="14"/>
-    </variables>
-    <variables name="ST_L_BK_ROSCA_B">
-      <type xsi:type="memory:UnsignedInteger16Type" index="16"/>
-    </variables>
-    <variables name="ST_L_BK_ROSCA_C">
-      <type xsi:type="memory:UnsignedInteger16Type" index="18"/>
-    </variables>
-    <variables name="ST_L_BK_FD">
-      <type xsi:type="memory:UnsignedInteger16Type" index="20"/>
+  </types>
+  <types name="HOLDING_INPUT">
+    <variables name="BOOLEAN_VARIABLE">
+      <type xsi:type="memory:UnsignedInteger16Type"/>
     </variables>
   </types>
   <types name="HOLDING_OUTPUT">
-    <variables name="BT_LG_CA">
+    <variables name="FLOAT_OUTPUT">
       <type xsi:type="memory:UnsignedInteger16Type"/>
     </variables>
-    <variables name="STP_VEL_CA">
+  </types>
+  <types name="COIL_OUTPUT">
+    <variables name="BOOLEAN_VARIABLE">
+      <type xsi:type="memory:UnsignedInteger16Type"/>
+    </variables>
+  </types>
+  <types name="ALARM">
+    <variables name="ALARM1">
+      <type xsi:type="memory:UnsignedInteger16Type"/>
+    </variables>
+    <variables name="ALARM2">
       <type xsi:type="memory:UnsignedInteger16Type" index="2"/>
-    </variables>
-    <variables name="BT_LG_CB">
-      <type xsi:type="memory:UnsignedInteger16Type" index="4"/>
-    </variables>
-    <variables name="STP_VEL_CB">
-      <type xsi:type="memory:UnsignedInteger16Type" index="6"/>
-    </variables>
-    <variables name="BT_LG_CC">
-      <type xsi:type="memory:UnsignedInteger16Type" index="8"/>
-    </variables>
-    <variables name="STP_VEL_CC">
-      <type xsi:type="memory:UnsignedInteger16Type" index="10"/>
     </variables>
   </types>
 </memory:TypeSystem>

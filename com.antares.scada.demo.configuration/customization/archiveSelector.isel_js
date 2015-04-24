@@ -6,7 +6,7 @@ function select () {
 		return true;
 	}
 	
-	if ( request.isLocalTags ( [ "Vel_Atual_Canhao_A", "X" ] ) ) {
+	if ( request.isLocalTags ( [ "FLOAT_VARIABLE", "X" ] ) ) {
 		return true;
 	}
 	

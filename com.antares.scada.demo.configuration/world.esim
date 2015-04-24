@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="ASCII"?>
-<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_1C948MHlEeSt_YDd5zSHwg">
+<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:deployment="http://eclipse.org/SCADA/Configuration/World/Deployment" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_1C948MHlEeSt_YDd5zSHwg">
   <nodes xsi:type="infrastructure:SystemNode" xmi:id="_1C949sHlEeSt_YDd5zSHwg" hostName="localhost">
+    <deployment xsi:type="deployment:MsiDeploymentMechanism" xmi:id="_TDxLgOd0EeScPfWdGgloBQ" version="1.0" upgradeCode="621a5759-9728-4947-8bb6-7bb47db23816" enableFirewall="false" licenseFile="">
+      <localPlatform xmi:id="_XcSq8Od0EeScPfWdGgloBQ" name="Eclipse SCADA 0.2.0">
+        <repositories>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.2.0/R201501260629/p2/</repositories>
+        <repositories>http://download.eclipse.org/releases/kepler</repositories>
+      </localPlatform>
+    </deployment>
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_1C9498HlEeSt_YDd5zSHwg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
     <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_xyApEMHmEeSt_YDd5zSHwg" name="modbus" driverTypeId="org.eclipse.scada.da.server.modbus" devices="_Nw3WEMHmEeSt_YDd5zSHwg" instanceNumber="14"/>
     <valueArchives xmi:id="_1C94-MHlEeSt_YDd5zSHwg" name="hdserver" instanceNumber="2"/>
     <masters xmi:id="_1C94-cHlEeSt_YDd5zSHwg" name="master" configuration="_3YgZsMH1EeSt_YDd5zSHwg" driver="_1C9498HlEeSt_YDd5zSHwg _xyApEMHmEeSt_YDd5zSHwg" archiveTo="_1C94-MHlEeSt_YDd5zSHwg">
       <authoratives xmi:id="_1C94-sHlEeSt_YDd5zSHwg">
-        <hierarchy>COEX</hierarchy>
+        <hierarchy>LAMIFLEX</hierarchy>
       </authoratives>
     </masters>
   </nodes>
   <nodes xsi:type="infrastructure:ExternalNode" xmi:id="_JhaTEMHmEeSt_YDd5zSHwg" hostName="localhost">
     <devices xsi:type="modbus:ModbusDevice" xmi:id="_Nw3WEMHmEeSt_YDd5zSHwg" name="modbus" port="502">
       <slaves xmi:id="_qhyjwMHmEeSt_YDd5zSHwg" id="S1">
-        <blocks xmi:id="_rZfAwMHmEeSt_YDd5zSHwg" id="STANDARD" name="STANDARD" blockType="HOLDING" count="64" period="250" timeout="10000">
-          <type href="modbusTypes.mtd#HOLDING_STANDARD"/>
+        <blocks xmi:id="_rZfAwMHmEeSt_YDd5zSHwg" id="HOLDING_B1" name="HOLDING_B1" blockType="HOLDING" count="64" period="250" timeout="10000">
+          <type href="modbusTypes.mtd#HOLDING_B1"/>
         </blocks>
-        <blocks xmi:id="_L5qbEMnBEeSjptOA6-rQCQ" id="INPUT" name="INPUT" blockType="HOLDING" startAddress="64" count="64" period="250" timeout="10000">
+        <blocks xmi:id="_US9JIOquEeS-c5EJ0MpBhg" id="HOLDING_B2" name="HOLDING_B2" blockType="HOLDING" startAddress="64" count="64" period="250" timeout="10000">
+          <type href="modbusTypes.mtd#HOLDING_B2"/>
+        </blocks>
+        <blocks xmi:id="_f81LwOqtEeS-c5EJ0MpBhg" id="ALARM" name="ALARM" blockType="HOLDING" startAddress="1280" count="128" timeout="10000">
+          <type href="modbusTypes.mtd#ALARM"/>
+        </blocks>
+        <blocks xmi:id="_L5qbEMnBEeSjptOA6-rQCQ" id="DISCRETE_INPUT" name="DISCRETE_INPUT" blockType="DISCRETE" count="64" period="250" timeout="10000">
           <type href="modbusTypes.mtd#HOLDING_INPUT"/>
         </blocks>
-        <blocks xmi:id="_IHlhUMwWEeSjptOA6-rQCQ" id="OUTPUT" name="OUTPUT" blockType="HOLDING" startAddress="128" count="64" period="250" timeout="10000">
+        <blocks xmi:id="_IHlhUMwWEeSjptOA6-rQCQ" id="ANALOG_INPUT" name="ANALOG_INPUT" blockType="INPUT" count="64" period="250" timeout="10000">
           <type href="modbusTypes.mtd#HOLDING_OUTPUT"/>
+        </blocks>
+        <blocks xmi:id="_tWffEOquEeS-c5EJ0MpBhg" id="DISCRETE_OUTPUT" name="DISCRETE_OUTPUT" blockType="COIL" count="64" period="250" timeout="10000">
+          <type href="modbusTypes.mtd#COIL_OUTPUT"/>
+        </blocks>
+        <blocks xmi:id="_wJMv4OqxEeS-c5EJ0MpBhg" id="HOLDING_B1" name="HOLDING_B1" blockType="HOLDING" count="64" period="250" timeout="10000">
+          <type href="modbusTypes.mtd#HOLDING_B1"/>
         </blocks>
       </slaves>
       <typeSystem href="modbusTypes.mtd#TS1"/>
